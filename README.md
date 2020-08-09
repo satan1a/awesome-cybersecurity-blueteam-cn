@@ -1,4 +1,4 @@
-# Awesome Cybersecurity Blue Team - CN**[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)**
+# Awesome Cybersecurity Blue Team - CN[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 
 >   攻防对抗 · 蓝队清单，中文版
 
