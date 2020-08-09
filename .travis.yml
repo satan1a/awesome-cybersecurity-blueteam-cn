@@ -1,0 +1,16 @@
+language: python
+
+python:
+  - "3.7"
+
+install:
+  - pip install mkdocs
+  - pip install mkdocs-material
+  - echo -e "machine github.com\n  login ${TODO}" > ~/.netrc
+
+script:
+  - mkdocs gh-deploy --force --clean
+
+branches:
+  only:
+    - master
