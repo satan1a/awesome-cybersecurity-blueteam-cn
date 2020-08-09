@@ -2,9 +2,7 @@
 title: Index
 ---
 
-
-
-# Awesome Cybersecurity Blue Team - CN**[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)**
+# Awesome Cybersecurity Blue Team - CN[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)
 
 >   攻防对抗 · 蓝队清单，中文版
 
@@ -90,10 +88,9 @@ title: Index
 
 SOAR, Security Orchestration, Automation and Response, 安全编排自动化与响应。
 
-请另行查阅[Security Information and Event Management (SIEM)](#security-information-and-event-management-siem)，和[IR management consoles](#ir-management-consoles).
+另行查阅[Security Information and Event Management (SIEM)](#security-information-and-event-management-siem)和[IR management consoles](#ir-management-consoles).
 
-- [Shuffle](https://shuffler.io/) - Graphical generalized workflow (automation) builder for IT professionals and blue teamers.
-用于IT专家和蓝队成员的图形化工作流（自动化）生成器
+- [Shuffle](https://shuffler.io/) - 用于IT专家和蓝队成员的图形化工作流（自动化）生成器
 
 
 
@@ -105,7 +102,7 @@ SOAR, Security Orchestration, Automation and Response, 安全编排自动化与�
     - 补充：Terraform是一种安全有效地构建、更改和版本控制基础设施的工具(基础架构自动化的编排工具)[1]
     - 补充：[CIS](https://www.cisecurity.org/cis-benchmarks/)基准是安全配置系统的配置基线和最佳做法[2]
 - [Falco](https://falco.org/) - 行为活动监视器，旨在通过审核Linux内核和运行时数据（例如Kubernetes指标）进行拓展和丰富，以检测容器化的应用程序，以及主机和网络数据包流中的异常活动
-- [Istio](https://istio.io/) - Open platform for providing a uniform way to integrate microservices, manage traffic flow across microservices, enforce policies and aggregate telemetry data.提供统一的方式的开放平台，可以集成微服务，管理跨微服务的流量，执行策略和汇总遥测数据
+- [Istio](https://istio.io/) - 提供统一的方式的开放平台，可以集成微服务，管理跨微服务的流量，执行策略和汇总遥测数据
 - [Kata Containers](https://katacontainers.io/) - 使用轻量级虚拟机来保护容器的运行时，这些虚拟机的情况和性能类似于容器，但是使用硬件虚拟化技术作为第二层防御，可以提供更强的工作负载隔离
 - [Managed Kubernetes Inspection Tool (MKIT)](https://github.com/darkbitio/mkit) - 可提供查询和验证托管Kubernetes群集对象以及群集内运行的工作负载/资源的几种与安全性相关的常见设置
 - [Prowler](https://github.com/toniblyx/prowler) - 基于AWS-CLI命令的工具，用于Amazon Web Services帐户安全性评估和增强
@@ -176,8 +173,7 @@ COMSEC, Communications Security, 通讯安全
 - [Endlessh](https://github.com/skeeto/endlessh) - 一种SSH tarpit，可以缓慢地发送无休止的SSH banner
 
     - 补充，SSH Banner：即SSH警告横幅，在使用SSH进行交互式会话期间，登录前SSH警告横幅会显示在密码提示之前[4]，一些法律警告和相关条款
-- [LaBrea](http://labrea.sourceforge.net/labrea-info.html) - Program that answers ARP requests for unused IP space, creating the appearance of fake machines that answer further requests very slowly in order to slow down scanners, worms, etcetera.
-- 一种响应ARP请求中未使用的IP空间的程序，其伪造机器的外表，非常缓慢地响应其他请求，从而达到减慢扫描程序，蠕虫等速度的目的
+- [LaBrea](http://labrea.sourceforge.net/labrea-info.html) - 一种响应ARP请求中未使用的IP空间的程序，其伪造机器的外表，非常缓慢地响应其他请求，从而达到减慢扫描程序，蠕虫等速度的目的
 
 
 
@@ -194,8 +190,7 @@ COMSEC, Communications Security, 通讯安全
 
 ### 沙箱
 
-- [Firejail](https://firejail.wordpress.com/) - SUID program that reduces the risk of security breaches by restricting the running environment of untrusted applications using Linux namespaces and seccomp-bpf.
-- SUID程序，使用Linux命名空间和seccomp-bpf来限制不受信任的应用程序的运行环境，从而降低安全漏洞的风险
+- [Firejail](https://firejail.wordpress.com/) - SUID程序，使用Linux命名空间和seccomp-bpf来限制不受信任的应用程序的运行环境，从而降低安全漏洞的风险
     - 补充，Linux命名空间：是Linux内核的一项功能，它对内核资源进行分区，以使一组进程看到一组资源，而另一组进程看到另一组资源
     - 补充，seccomp-bpf
         - 先介绍即seccomp，是Linux的一种安全机制，通过限制程序使用某些系统调用，减少系统的暴露面，使得程序进入一种“安全”的状态
@@ -219,10 +214,8 @@ Incident Response management consoles，事件响应管理平台
 
 另请参阅 [Security Orchestration, Automation, and Response (SOAR)](#安全编排自动化与响应).
 
-- [CIRTKit](https://github.com/opensourcesec/CIRTKit) - Scriptable Digital Forensics and Incident Response (DFIR) toolkit built on Viper.
-- 基于Viper构建的、可编写脚本的数字取证和事件响应（Digital Forensics and Incident Response, DFIR）工具包
-- [Fast Incident Response (FIR)](https://github.com/certsocietegenerale/FIR) - Cybersecurity incident management platform allowing for easy creation, tracking, and reporting of cybersecurity incidents.
-- 一个网络安全事件管理平台，可以轻松创建，跟踪和报告网络安全事件
+- [CIRTKit](https://github.com/opensourcesec/CIRTKit) - 基于Viper构建的、可编写脚本的数字取证和事件响应（Digital Forensics and Incident Response, DFIR）工具包
+- [Fast Incident Response (FIR)](https://github.com/certsocietegenerale/FIR) - 一个网络安全事件管理平台，可以轻松创建，跟踪和报告网络安全事件
 - [Rekall](http://www.rekall-forensic.com/) - 一个先进的取证及事件响应的框架
 - [TheHive](https://thehive-project.org/) - 可扩展的免费安全事件响应平台，旨在[简化](https://thehive-project.org/)与SOC，CSIRT和[CERT的交互](https://thehive-project.org/)，并与MISP紧密集成。
     - 补充
@@ -287,10 +280,8 @@ Network perimeter defenses
 
 Preparedness training and wargaming，备战训练及演习。也同样被称为*adversary emulation*和*threat simulation*之类。此处使用大陆地区较为常见的说法：攻防演练。
 
-- [APTSimulator](https://github.com/NextronSystems/APTSimulator) - Toolset to make a system look as if it was the victim of an APT attack.
-- 可以使系统看起来像APT攻击受害者的工具集
-- [Atomic Red Team](https://atomicredteam.io/) - Library of simple, automatable tests to execute for testing security controls.
-- 一个简单，可自动执行的测试库，可以执行这些测试来测试安全性控件
+- [APTSimulator](https://github.com/NextronSystems/APTSimulator) - 可以使系统看起来像APT攻击受害者的工具集
+- [Atomic Red Team](https://atomicredteam.io/) - 一个简单，可自动执行的测试库，可以执行这些测试来测试安全性控件
 - [DumpsterFire](https://github.com/TryCatchHCF/DumpsterFire) - 一个模块化，菜单驱动的跨平台工具，可用于为蓝队演练和传感器/警报映射构建可重复的、延迟的、分布式的安全事件
 - [Metta](https://github.com/uber-common/metta) - 自动化的信息安全防范工具，可以进行对抗性模拟
 - [Network Flight Simulator (`flightsim`)](https://github.com/alphasoc/flightsim) - 用于生成恶意网络流量，可帮助安全团队评估安全控制以及审核他们网络的可见性
@@ -366,12 +357,10 @@ Threat hunting，也被称为*hunt teaming*和*threat detection*。
 
 - [CimSweep](https://github.com/PowerShellMafia/CimSweep) - 基于CIM / WMI的工具套件，可在所有Windows版本中进行远程事件响应和[Hunting](https://github.com/PowerShellMafia/CimSweep)操作
 - [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI) - 用于通过Windows事件日志进行寻线分组的PowerShell模块
-- [GRR Rapid Response](https://github.com/google/grr) - Incident response framework focused on remote live forensics consisting of a Python agent installed on assets and Python-based server infrastructure enabling analysts to quickly triage attacks and perform analysis remotely.
-- 一个专注于远程实时取证的事件响应框架，该组件由安装在资产上的Python代理和基于Python的服务器组成基础结构，使分析师能够快速分类攻击并进行远程分析
+- [GRR Rapid Response](https://github.com/google/grr) - 一个专注于远程实时取证的事件响应框架，该组件由安装在资产上的Python代理和基于Python的服务器组成基础结构，使分析师能够快速分类攻击并进行远程分析
 - [Hunting ELK (HELK)](https://github.com/Cyb3rWard0g/HELK) - 基于Elasticsearch，Logstash，Kafka和Kibana的多合一免费软件威胁狩猎套件，并具有包括Jupyter Notebook在内的各种内置集成分析功能
 - [MozDef](https://github.com/mozilla/MozDef) - 用于自动执行安全事件处理流程，并促进事件处理程序的实时活动
-- [PSHunt](https://github.com/Infocyte/PSHunt) - PowerShell module designed to scan remote endpoints for indicators of compromise or survey them for more comprehensive information related to state of those systems.
-- 一个PowerShell模块，设计用于扫描远程端点以发现威胁的痕迹，或用于调查，获取与系统状态有关的更多信息
+- [PSHunt](https://github.com/Infocyte/PSHunt) - 一个PowerShell模块，设计用于扫描远程端点以发现威胁的痕迹，或用于调查，获取与系统状态有关的更多信息
 - [PSRecon](https://github.com/gfoss/PSRecon) - 一个类似PSHunt的工具，可用于分析远程的Windows系统，该工具还会生成其发现信息的独立HTML报告
 - [PowerForensics](https://github.com/Invoke-IR/PowerForensics) - 基于PowerShell，用于实时硬盘取证分析的多合一平台
 - [rastrea2r](https://github.com/rastrea2r/rastrea2r) - 一个用于同时在众多端点上对可疑IOC进行分类，并与防病毒控制台集成的跨平台工具
@@ -386,8 +375,7 @@ Threat intelligence
 另请参阅：[awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence).
 
 - [Active Directory Control Paths](https://github.com/ANSSI-FR/AD-control-paths) - 可视化Active Directory权限配置并对其进行图形化处理，用来审核诸如“谁可以阅读CEO的电子邮件？”之类的问题
-- [AttackerKB](https://attackerkb.com/) - Free and public crowdsourced vulnerability assessment platform to help prioritize high-risk patch application and combat vulnerability fatigue.
-- 免费公开的漏洞评估平台，可帮助确定高风险补丁程序的优先级来消除漏洞疲劳
+- [AttackerKB](https://attackerkb.com/) - 免费公开的漏洞评估平台，可帮助确定高风险补丁程序的优先级来消除漏洞疲劳
     - 补：漏洞疲劳（vulnerability fatigue）指系统每天都会发现越来越多的漏洞，因此内部团队很难迅速提供纠正补丁。而黑客就会利用这段时间来分析信息系统，发现漏洞并发起成功的攻击。[9]
 - [DATA](https://github.com/hadojae/DATA) - 用于网络钓鱼凭据分析和自动化的工具，可以直接接收可疑网络钓鱼URL，或在观察到的包含此类URL的网络流量时触发
 - [Forager](https://github.com/opensourcesec/Forager) - 使用Python3构建的多线程威胁情报收集工具。基于文本进行了简单配置和数据存储，以简化使用和数据可移植性。
@@ -406,8 +394,7 @@ Tor Onion service defenses
 
 另请参阅：[awesome-tor](https://github.com/ajvb/awesome-tor).
 
-- [OnionBalance](https://onionbalance.readthedocs.io/) - Provides load-balancing while also making Onion services more resilient and reliable by eliminating single points-of-failure.
-- 该工具用于提供Tor网络代理的负载平衡，同时通过消除单个故障点使Onion服务更具弹性和可靠性
+- [OnionBalance](https://onionbalance.readthedocs.io/) - 该工具用于提供Tor网络代理的负载平衡，同时通过消除单个故障点使Onion服务更具弹性和可靠性
 - [Vanguards](https://github.com/mikeperry-tor/vanguards) - 用于在Onion 3版本防护并发现攻击缓解脚本（打算最终包含在Tor核心中）
 
 
