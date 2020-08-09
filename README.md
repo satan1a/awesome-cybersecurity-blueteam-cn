@@ -18,7 +18,7 @@
 
 
 
-在线文档请查看：
+在线文档请查看：https://y1ng.org/awesome-cybersecurity-blueteam-cn/
 
 
 
