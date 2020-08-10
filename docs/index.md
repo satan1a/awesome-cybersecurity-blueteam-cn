@@ -66,16 +66,16 @@ title: Index
 
 ### 零碎的
 
-- [Ansible Lockdown](https://ansiblelockdown.io/) - 以信息安全为主题的Ansible（运维工具）规则集合。经过精心地审核，并且维护积极
-- [Clevis](https://github.com/latchset/clevis) - 对于自动解密的可插入式工具，经常被用做[Tang](https://github.com/latchset/tang)客户端
-- [DShell](https://github.com/USArmyResearchLab/Dshell) - 用Python编写网络取证分析框架，支持扩展，可快速开发插件来分析捕获的网络数据包
-- [Dev-Sec.io](https://dev-sec.io/) - 服务器增强框架，提供各种基准安全配置的Ansible，Chef和Puppet实现
-- [peepdf](https://eternal-todo.com/tools/peepdf-pdf-analysis-tool) - 支持脚本编写的PDF文件分析器
+- [Ansible Lockdown](https://ansiblelockdown.io/) - 一个以信息安全为主题的Ansible（运维工具）规则集合。经过精心地审核，并且维护积极
+- [Clevis](https://github.com/latchset/clevis) - 一个对于自动解密的可插拔式工具，经常被用做[Tang](https://github.com/latchset/tang)客户端
+- [DShell](https://github.com/USArmyResearchLab/Dshell) - 一个用Python编写的网络取证分析框架，支持扩展，可快速开发插件来分析捕获的网络数据包
+- [Dev-Sec.io](https://dev-sec.io/) - 一个服务器增强框架，提供各种基准安全配置的Ansible，Chef和Puppet实现
+- [peepdf](https://eternal-todo.com/tools/peepdf-pdf-analysis-tool) - 一个支持脚本编写的PDF文件分析器
 
 ### 代码库和绑定
 
-- [MultiScanner](https://github.com/mitre/multiscanner) - 使用Python编写的文件分析框架，支持自动运行相关的工具，汇总输出帮助评估一组带分析的文件
-- [Posh-VirusTotal](https://github.com/darkoperator/Posh-VirusTotal) - 可与VirusTotal.com的API进行交互的PowerShell接口
+- [MultiScanner](https://github.com/mitre/multiscanner) - 一个使用Python编写的文件分析框架，支持自动运行相关的工具，汇总输出帮助评估一组带分析的文件
+- [Posh-VirusTotal](https://github.com/darkoperator/Posh-VirusTotal) - 一个可与VirusTotal.com的API进行交互的PowerShell接口
 - [censys-python](https://github.com/censys/censys-python) - 对Censys REST API的Python轻量级封装
 - [libcrafter](https://github.com/pellegre/libcrafter) - 一个c++的高级库，用于创建和解码网络数据包
 - [python-dshield](https://github.com/rshipp/python-dshield) - 连接SANS ISC/DShiel API的Python接口
@@ -138,14 +138,17 @@ COMSEC, Communications Security, 通讯安全
 - [git-crypt](https://www.agwa.name/projects/git-crypt/) - 同样用于防止用户将密钥提交到Git仓库。其中，选择保护的文件在提交时会加密，在签出时会解密
 - [Snyk](https://snyk.io/) - 用于查找并修复开源依赖项和容器映像中的漏洞和许可证违规信息
 - [SonarQube](https://sonarqube.org) - 持续性代码检查工具，可在自动测试期间提供详细的报告，并就新引入的安全漏洞提供警告
+
 ### 应用或二进制加固
 
 - [Egalito](https://egalito.org/) - 是一个二进制反编译器，可以完全反汇编、转换和重新生成用于二进制强化和安全性研究的普通Linux二进制文件。
+
 ### 模糊测试（Fuzzing）
 
 另请参阅： [Awesome-Fuzzing](https://github.com/secfigo/Awesome-Fuzzing).
 
 - [FuzzBench](https://google.github.io/fuzzbench/) -  用于根据Google规模的各种实际基准来评估模糊测试器的一项免费服务
+
 ### 策略执行
 
 - [OpenPolicyAgent](https://www.openpolicyagent.org/)  - 用于跨云原生环境进行统一策略控制的一套工具集和框架
