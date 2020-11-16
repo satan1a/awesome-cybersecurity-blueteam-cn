@@ -1,3 +1,16 @@
 site_name: 攻防对抗·蓝队清单
+
 theme:
-        name: 'material'
+  name: 'material'
+  language: 'zh'
+  palette:
+    primary: 'white'
+    accent: 'red'
+  icon:
+  logo: 'assets/logo_white.png'
+  favicon: 'assets/favicon.ico'
+
+
+extra:
+  search:
+    language: 'jp'
