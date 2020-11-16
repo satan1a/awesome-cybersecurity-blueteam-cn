@@ -1,5 +1,5 @@
 ---
-title: Awesome Cybersecurity Blue Team - CN
+title: 0x1_Awesome Cybersecurity Blue Team - CN
 ---
 
 # Awesome Cybersecurity Blue Team - CN[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)

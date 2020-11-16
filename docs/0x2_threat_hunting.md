@@ -1,5 +1,5 @@
 ---
-title: Awesome Threat Detection and Hunting
+title: 0x2_Awesome Threat Detection and Hunting
 ---
 
 # Awesome Threat Detection and Hunting
