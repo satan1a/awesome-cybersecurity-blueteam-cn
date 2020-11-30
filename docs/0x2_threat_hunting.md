@@ -119,22 +119,33 @@ title: 0x2_Awesome Threat Detection and Hunting
 - [Capa](https://github.com/fireeye/capa)
     - 一个用于识别可执行文件功能的开源工具
 
-#### Alerting Engine
+#### 告警引擎
 
-- [ElastAlert](https://github.com/Yelp/elastalert) - A framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch
-- [StreamAlert](https://github.com/airbnb/streamalert) - A serverless, realtime data analysis framework which empowers you to ingest, analyze, and alert on data from any environment, using datasources and alerting logic you define
+- [ElastAlert](https://github.com/Yelp/elastalert)
+    - 基于ELK的框架，用于从Elasticsearch中的数据中发出异常、峰值或其他设定规则的警报
+- [StreamAlert](https://github.com/airbnb/streamalert)
+    - 一个无服务器的实时数据分析框架，帮助使用自定的数据源和逻辑从任何环境中提取，分析和告警数据
 
-#### Endpoint Monitoring
+#### 端点监控
 
 - [osquery](https://osquery.io) ([github](https://github.com/osquery/osquery)) - SQL powered operating system instrumentation, monitoring, and analytics
+    -   SQL语句驱动的操作系统编排、监控和分析工具
 - [Kolide Fleet](https://github.com/kolide/fleet) - A flexible control server for osquery fleets
+    - 一个弹性的、用于osquery队列的控制服务器
 - [Zeek Agent](https://github.com/zeek/zeek-agent) - An endpoint monitoring agent that provides host activity to Zeek
+    - 用于对Zeek提供主机活动信息的端点监控agent
 - [Velociraptor](https://github.com/Velocidex/velociraptor) - Endpoint visibility and collection tool
+    - 用于端点可视化和收集的工具
 - [Sysdig](https://github.com/draios/sysdig) - A tool for deep Linux system visibility, with native support for containers. Think about sysdig as strace + tcpdump + htop + iftop + lsof + ...awesome sauce
+    - 一个用于深度挖掘Linux系统可见性的工具，支持容齐的原生支持。可以将其认为是strace + tcpdump + htop + iftop + lsof +...的整合
 - [go-audit](https://github.com/slackhq/go-audit) - An alternative to the Linux auditd daemon
+    -   一个Linux auditd守护进程的替代方法
 - [Sysmon](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon) - A Windows system service and device driver that monitors and logs system activity to the Windows event log
+    - 一个Windows系统服务（设备驱动程序），用于监视系统活动并将其日志到Windows的事件日志中
 - [OSSEC](github.com/ossec/ossec-hids) - An open-source Host-based Intrusion Detection System (HIDS)
+    - 一个开源的、基于主机的入侵检测系统（HIDS）
 - [WAZUH](https://github.com/wazuh/wazuh) - An open-source security platform
+    - 一个开源的安全平台
 
 #### Network Monitoring
 
