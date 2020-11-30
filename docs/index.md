@@ -1,5 +1,5 @@
 ---
-title: 0x0_Index
+title: index
 ---
 
 # Awesome Cybersecurity Blue Team[![Awesome](https://awesome.re/badge-flat2.svg)](https://awesome.re)

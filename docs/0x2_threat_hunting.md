@@ -42,9 +42,8 @@ title: 0x2_Awesome Threat Detection and Hunting
 
 威胁检测及威胁狩猎
 
-### Tools
 
-工具
+#### 工具类清单
 
 - [MITRE ATT&CK Navigator](https://mitre.github.io/attack-navigator/enterprise/)([source code](https://github.com/mitre/attack-navigator)) 
     - ATT&CK Navigator是旨在提供ATT＆CK矩阵的基本导航和注释，有点类似于Excel表格的形式
@@ -52,45 +51,73 @@ title: 0x2_Awesome Threat Detection and Hunting
     - 一个用于威胁狩猎的ELK (Elasticsearch, Logstash, Kibana)框架，集成了高级分析功能
 - [osquery-configuration](https://github.com/palantir/osquery-configuration)
     - 一个使用osquery进行事件检测和响应的存储库，是[osquery Across Enterprise](https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55)一文的配套内容
-    - 注：osquery是一个由FaceBook开源用于对系统进行查询、监控以及分析的一款软件[1]
+    - 注：osquery是一个由FaceBook开源用于对系统进行查询、监控以及分析的一款软件。
+        支持`MacOS`、`CentOS`、`Ubuntu`、`Windows`等操作系统[1]
 - [DetectionLab](https://github.com/clong/DetectionLab/)
     - 使用Vagrant＆Packer脚本，来构建包含安全工具和日志记录的实验环境，主要从防御者的角度进行设计，帮助快速构建一个具有安全工具的域环境
     - 注：Vagrant＆Packer脚本，可以用于自动化虚拟机的安装和配置流程，用来管理虚拟机
 - [Sysmon-DFIR](https://github.com/MHaggis/sysmon-dfir)
     -   一个用于学习Microsoft Sysmon来进行威胁检测的资源清单
     -   补：Microsoft Sysmon，是一个轻量级的系统监控工具，通过系统服务和驱动程序实现记录进程创建、文件访问以及网络信息的记录，并把相关的信息写入并展示在windows的日志事件里[2]
-- [sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config) - Sysmon configuration file template with default high-quality event tracing.
+- [sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config)
     - 一个Microsoft Sysmon配置文件模板，带有默认的高质量事件追踪
-- [sysmon-modular](https://github.com/olafhartong/sysmon-modular) - A repository of sysmon configuration modules. It also includes a [mapping](https://github.com/olafhartong/sysmon-modular/blob/master/attack_matrix/README.md) of Sysmon configurations to MITRE ATT&CK techniques.
+- [sysmon-modular](https://github.com/olafhartong/sysmon-modular)
     - 一个Microsoft Sysmon配置模块的存储库，包括从Sysmon配置到MITER ATT&CK技术框架的[映射](https://github.com/olafhartong/sysmon-modular/blob/master/attack_matrix/README.md)
-- [Revoke-Obfuscation](https://github.com/danielbohannon/Revoke-Obfuscation) - PowerShell Obfuscation Detection Framework.
+- [Revoke-Obfuscation](https://github.com/danielbohannon/Revoke-Obfuscation)
     - 一个Powershell的混淆检测框架
-- [Invoke-ATTACKAPI](https://github.com/Cyb3rWard0g/Invoke-ATTACKAPI) - A PowerShell script to interact with the MITRE ATT&CK Framework via its own API.
+- [Invoke-ATTACKAPI](https://github.com/Cyb3rWard0g/Invoke-ATTACKAPI)
     - 一个PowerShell脚本，可通过其自己的API和MITER ATT&CK框架进行交互
-- [Unfetter](https://github.com/unfetter-analytic/unfetter) - A reference implementation provides a framework for collecting events (process creation, network connections, Window Event Logs, etc.) from a client machine and performing CAR analytics to detect potential adversary activity.
-- [Flare](https://github.com/austin-taylor/flare) - An analytical framework for network traffic and behavioral analytics.
-- [RedHunt-OS](https://github.com/redhuntlabs/RedHunt-OS) - A Virtual Machine for Adversary Emulation and Threat Hunting. RedHunt aims to be a one stop shop for all your threat emulation and threat hunting needs by integrating attacker's arsenal as well as defender's toolkit to actively identify the threats in your environment.
-- [Oriana](https://github.com/mvelazc0/Oriana) - Lateral movement and threat hunting tool for Windows environments built on Django comes Docker ready.
-- [Bro-Osquery](https://github.com/bro/bro-osquery) - Bro integration with osquery
-- [Brosquery](https://github.com/jandre/brosquery) - A module for osquery to load Bro logs into tables
-- [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI) - A PowerShell Module for Hunt Teaming via Windows Event Logs
-- [Uncoder](https://uncoder.io) - An online translator for SIEM saved searches, filters, queries, API requests, correlation and Sigma rules
-- [Sigma](https://github.com/Neo23x0/sigma) - Generic Signature Format for SIEM Systems
-- [CimSweep](https://github.com/PowerShellMafia/CimSweep) - A suite of CIM/WMI-based tools that enable the ability to perform incident response and hunting operations remotely across all versions of Windows
-- [Dispatch](https://github.com/Netflix/dispatch) - An open-source crisis management orchestration framework
-- [EQL](https://github.com/endgameinc/eql) - Event Query Language
-    - [EQLLib](https://github.com/endgameinc/eqllib) - The Event Query Language Analytics Library (eqllib) is a library of event based analytics, written in EQL to detect adversary behaviors identified in MITRE ATT&CK™.
-- [BZAR](https://github.com/mitre-attack/bzar) (Bro/Zeek ATT&CK-based Analytics and Reporting) - A set of Zeek scripts to detect ATT&CK techniques
-- [Security Onion](https://github.com/Security-Onion-Solutions/security-onion) - An open-source Linux distribution for threat hunting, security monitoring, and log management. It includes ELK, Snort, Suricata, Zeek, Wazuh, Sguil, and many other security tools
-- [Varna](https://github.com/endgameinc/varna) - A quick & cheap AWS CloudTrail Monitoring with Event Query Language (EQL)
-- [BinaryAlert](https://github.com/airbnb/binaryalert) - Serverless, real-time & retroactive malware detection
-- [hollows_hunter](https://github.com/hasherezade/hollows_hunter) - Scans all running processes, recognizes and dumps a variety of potentially malicious implants (replaced/implanted PEs, shellcodes, hooks, in-memory patches).
-- [ThreatHunting](https://github.com/olafhartong/ThreatHunting) - A Splunk app mapped to MITRE ATT&CK to guide your threat hunts
-- [Sentinel Attack](https://github.com/BlueTeamLabs/sentinel-attack) - A repository of Azure Sentinel alerts and hunting queries leveraging sysmon and the MITRE ATT&CK framework
+- [Unfetter](https://github.com/unfetter-analytic/unfetter)
+    - 提供了一个框架，用于从客户端计算机（Windows 7）收集事件（进程创建，网络连接，窗口事件日志等），并执行[CAR](https://car.mitre.org/)分析来检测潜在的攻击者活动
+    - 补：[CAR](https://github.com/mitre-attack/car)，Cyber Analytics Repository，网络行为分析库，"是MITER基于MITER ATT＆CK对手模型开发的分析知识库，可以作为组织作为ATTCK进行行为检测分析的起点"[2]。
+- [Flare](https://github.com/austin-taylor/flare)
+    - 一个网络流量和行为的分析框架
+- [RedHunt-OS](https://github.com/redhuntlabs/RedHunt-OS)
+    - 专门用于攻防对抗仿真（Adversary Emulation）和威胁狩猎的虚拟机。RedHunt的目标是通过整合攻击者的武库和防御者的工具包来主动识别环境中的威胁，来提供威胁仿真（Threat Emulation）和威胁狩猎所有需求的一站式服务
+- [Oriana](https://github.com/mvelazc0/Oriana)
+    - 基于Django构建的Windows环境下横向移动及威胁狩猎工具，提供Docker镜像。
+- ~~[Bro-Osquery](https://github.com/bro/bro-osquery)~~
+    - 将Osquery的集成于Bro
+    - 该项目现已被[Zeek Agent](https://github.com/zeek/zeek-agent)取代，包含前者的功能
+- [Brosquery](https://github.com/jandre/brosquery)
+    - 一个帮助osquery加载Bro日志到osquery表中的模块
+- [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI)
+    - 一个PowerShell模块，用于从Windows事件日志中进行威胁狩猎
+- [Uncoder](https://uncoder.io)
+    - 一个在线的搜索/查询转换器，帮助SIEM转换和保存搜索、过滤器、查询语句、API请求、关联和Sigma规则
+- 🌿[Sigma](https://github.com/Neo23x0/sigma)
+    - 一个对SIEM系统的通用签名格式，帮助基于SIEM的威胁检测规则转换
+- [CimSweep](https://github.com/PowerShellMafia/CimSweep)
+    - 一套基于CIM / WMI的工具集，用于跨Windows系统版本来远程执行事件响应和威胁狩猎操作
+- [Dispatch](https://github.com/Netflix/dispatch)
+    - 一个开源的安全威胁事件管理框架，由Netflix开源
+- [EQL](https://github.com/endgameinc/eql)(Event Query Language)
+    - 事件查询语句
+    - [EQLLib](https://github.com/endgameinc/eqllib)(The Event Query Language Analytics Library)
+        - 事件查询语言分析库（EQLLib）是基于事件的分析库，使用EQL编写，可以检测基于MITER ATT＆CK™框架来识别攻击者行为。
+- [BZAR](https://github.com/mitre-attack/bzar) (Bro/Zeek ATT&CK-based Analytics and Reporting) 
+    - 一个用于检测ATT&CK技术的Zeek脚本集合
+    - 补：Zeek是一个网络安全监控工具，类似于Bro
+- [Security Onion](https://github.com/Security-Onion-Solutions/security-onion)
+    - 一个开源的Linux发行版，用于威胁狩猎，安全监视和日志管理。该发行版集成了ELK，Snort，Suricata，Zeek，Wazuh，Sguil和许多其他安全工具
+- [Varna](https://github.com/endgameinc/varna)
+    - 一个快速、便宜的AWS无服务（注：Serverless）云安全工具，使用事件查询语言（EQL）对CloudTrail日志进行解析和告警
+- [BinaryAlert](https://github.com/airbnb/binaryalert)
+    - 一个服务器的开源AWS pipeline，用于实施的恶意软件检测溯源和告警
+- [hollows_hunter](https://github.com/hasherezade/hollows_hunter)
+    - 可用于扫描运行的全部进程，识别并转储其中各种潜在的恶意植入物，例如：已被替换/植入的PE、shellcode、hooks及内存布丁
+- [ThreatHunting](https://github.com/olafhartong/ThreatHunting)
+    - 一个可以映射MITRE ATT&CK框架的Splunk APP，可以用于指导威胁狩猎
+- [Sentinel Attack](https://github.com/BlueTeamLabs/sentinel-attack)
+    - 用于简化Sysmon和ATT&CK框架在Azure Sentinel上进行威胁狩猎的快速部署
 - [Brim](https://github.com/brimsec/brim) - A desktop application to efficiently search large packet captures and Zeek logs
-- [YARA](https://github.com/virustotal/yara) - The pattern matching swiss knife
-- [Intel Owl](https://github.com/intelowlproject/IntelOwl) - An Open Source Intelligence, or OSINT solution to get threat intelligence data about a specific file, an IP or a domain from a single API at scale.
-- [Capa](https://github.com/fireeye/capa) - An open-source tool to identify capabilities in executable files.
+    - 一个桌面应用程序，可以高效地搜索、查询大型网络数据包和Zeek日志信息
+- [YARA](https://github.com/virustotal/yara)
+    - 用于规则匹配的瑞士军刀
+- [Intel Owl](https://github.com/intelowlproject/IntelOwl)
+    - 一种开源情报解决方案，可从单个API大规模获取特定文件，IP或域名的相关威胁情报数据
+- [Capa](https://github.com/fireeye/capa)
+    - 一个用于识别可执行文件功能的开源工具
 
 #### Alerting Engine
 
@@ -400,3 +427,6 @@ related or neighboring rights to this work.
 \[1] Osquery检测入侵痕迹, [EvilAnne](https://evilanne.github.io/about/), https://evilanne.github.io/2019/02/20/Osquery%E6%A3%80%E6%B5%8B%E5%85%A5%E4%BE%B5%E7%97%95%E8%BF%B9/
 
 \[2] 微软轻量级系统监控工具sysmon原理与实现完全分析（上篇）, [浪子_三少](https://www.anquanke.com/member/123937), https://www.anquanke.com/post/id/156704
+
+\[3] 甲方视角浅析MITRE ATT&CK ，[chiweiwei ](https://www.freebuf.com/author/chiweiwei)，https://www.freebuf.com/articles/es/249278.html
+
