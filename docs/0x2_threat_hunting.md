@@ -128,37 +128,46 @@ title: 0x2_Awesome Threat Detection and Hunting
 
 #### 端点监控
 
-- [osquery](https://osquery.io) ([github](https://github.com/osquery/osquery)) - SQL powered operating system instrumentation, monitoring, and analytics
+- [osquery](https://osquery.io) ([github](https://github.com/osquery/osquery)) 
     -   SQL语句驱动的操作系统编排、监控和分析工具
-- [Kolide Fleet](https://github.com/kolide/fleet) - A flexible control server for osquery fleets
+- [Kolide Fleet](https://github.com/kolide/fleet)
     - 一个弹性的、用于osquery队列的控制服务器
-- [Zeek Agent](https://github.com/zeek/zeek-agent) - An endpoint monitoring agent that provides host activity to Zeek
+- [Zeek Agent](https://github.com/zeek/zeek-agent)
     - 用于对Zeek提供主机活动信息的端点监控agent
-- [Velociraptor](https://github.com/Velocidex/velociraptor) - Endpoint visibility and collection tool
+- [Velociraptor](https://github.com/Velocidex/velociraptor)
     - 用于端点可视化和收集的工具
-- [Sysdig](https://github.com/draios/sysdig) - A tool for deep Linux system visibility, with native support for containers. Think about sysdig as strace + tcpdump + htop + iftop + lsof + ...awesome sauce
+- [Sysdig](https://github.com/draios/sysdig)
     - 一个用于深度挖掘Linux系统可见性的工具，支持容齐的原生支持。可以将其认为是strace + tcpdump + htop + iftop + lsof +...的整合
-- [go-audit](https://github.com/slackhq/go-audit) - An alternative to the Linux auditd daemon
+- [go-audit](https://github.com/slackhq/go-audit)
     -   一个Linux auditd守护进程的替代方法
-- [Sysmon](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon) - A Windows system service and device driver that monitors and logs system activity to the Windows event log
+- [Sysmon](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon) 
     - 一个Windows系统服务（设备驱动程序），用于监视系统活动并将其日志到Windows的事件日志中
-- [OSSEC](github.com/ossec/ossec-hids) - An open-source Host-based Intrusion Detection System (HIDS)
+- [OSSEC](github.com/ossec/ossec-hids)
     - 一个开源的、基于主机的入侵检测系统（HIDS）
-- [WAZUH](https://github.com/wazuh/wazuh) - An open-source security platform
-    - 一个开源的安全平台
+- [🌿WAZUH](https://github.com/wazuh/wazuh)
+    - 一个开源的综合安全平台，用于威胁预防、检测和响应。可以用于保护本地、虚拟机、容器及云端环境的工作负载
+    - 支持的功能：入侵检测、日志数据分析、文件完整性监控、漏洞检测、配置评估、事件响应、合规性、云安全、Docker安全
 
-#### Network Monitoring
+#### 网络监控
 
-- [Zeek](https://github.com/zeek/zeek) (formerly Bro) - A network security monitoring tool
-- [ntopng](https://github.com/ntop/ntopng) - A web-based network traffic monitoring tool
-- [Suricata](https://suricata-ids.org) - A network threat detection engine
-- [Snort](https://snort.org) ([github](https://github.com/snort3/snort3)) - A network intrusion detection tool 
-- [Joy](https://github.com/cisco/joy) - A package for capturing and analyzing network flow data and intraflow data, for network research, forensics, and security monitoring
-- [Netcap](https://github.com/dreadl0ck/netcap) - A framework for secure and scalable network traffic analysis
-- [Moloch](https://github.com/aol/moloch) - A large scale and open source full packet capture and search tool
-- [Stenographer](https://github.com/google/stenographer) - A full-packet-capture tool
+- [Zeek](https://github.com/zeek/zeek)
+    - 一个网络安全监控工具，前身为Bro
+- [ntopng](https://github.com/ntop/ntopng)
+    - 一个基于Web的网络流量监控工具
+- [Suricata](https://suricata-ids.org)
+    - 一个网络威胁监测引擎
+- [Snort](https://snort.org) ([github](https://github.com/snort3/snort3))
+    - 一个网络入侵检测工具 
+- [Joy](https://github.com/cisco/joy)
+    - 可用于网络流量抓取、分析的整合包，可用于网络调查、取证和安全监控
+- [Netcap](https://github.com/dreadl0ck/netcap)
+    - 可用于安全和可扩展性的网络流量数据分析工具
+- [🌿Arkime](https://github.com/aol/moloch)
+    -   一个开源的、大型全流量数据包捕获、搜索工具，前身为Moloch
+- [Stenographer](https://github.com/google/stenographer)
+    - 一个全流量网络数据包捕获工具
 
-##### Fingerprinting Tools
+##### 指纹识别工具
 
 - [JA3](https://github.com/salesforce/ja3) - A method for profiling SSL/TLS Clients and Servers
 - [HASSH](https://github.com/salesforce/hassh) - Profiling Method for SSH Clients and Servers
