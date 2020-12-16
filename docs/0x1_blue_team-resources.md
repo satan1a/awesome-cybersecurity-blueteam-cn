@@ -259,8 +259,7 @@ Network perimeter defenses
 
 ### 操作系统发行版
 
-- [Computer Aided Investigative Environment (CAINE)](https://caine-live.net/) - Italian GNU/Linux live distribution that pre-packages numerous digital forensics and evidence collection tools.
-- 意大利的GNU / Linux发行版，预先打包了许多用于数字取证和证据收集的工具
+- [Computer Aided Investigative Environment (CAINE)](https://caine-live.net/) - 意大利的GNU / Linux发行版，预先打包了许多用于数字取证和证据收集的工具
 - [Security Onion](https://securityonion.net/) - 免费和开源GNU / Linux发行版，用于入侵检测，企业安全监视和日志管理
 
 

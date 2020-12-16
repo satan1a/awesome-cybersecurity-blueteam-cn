@@ -2,9 +2,9 @@
 title: 0x3_Awesome Threat Intelligence
 ---
 
+>   转载自[awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence)
 
-
-# 转：威胁情报大合集
+# 威胁情报大合集
 
 最好的威胁情报资源的精选列表
 
