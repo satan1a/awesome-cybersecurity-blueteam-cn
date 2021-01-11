@@ -1,3 +1,7 @@
+---
+title: 0x6_VMs
+---
+
 # 虚拟机&集成环境
 
 本篇单独整理**适合蓝队使用**的虚拟机、集成环境。
@@ -26,3 +30,6 @@
     -   [GitHub](https://github.com/fireeye/commando-vm)
 
 
+-   KITT-Lite，[基于Python实现的轻量级命令行渗透测试工具集](https://4hou.win/wordpress/?p=47757)
+
+    -   [GitHub](https://github.com/Cisc0-gif/KITT-Lite)
