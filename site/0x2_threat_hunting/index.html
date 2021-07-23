@@ -1,0 +1,1447 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+    
+    
+      
+        <title>🏹️ 威胁狩猎大合集</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.b5d04df8.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9ab2c1f8.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#awesome-threat-detection-and-hunting" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header-nav__button md-logo" aria-label="攻防对抗·蓝队清单">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              🏹️ 威胁狩猎大合集
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="index" class="md-nav__link">
+      index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x1_blue_team-resources/" title="🎖️ 蓝队资源大合集" class="md-nav__link">
+      🎖️ 蓝队资源大合集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        🏹️ 威胁狩猎大合集
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="🏹️ 威胁狩猎大合集" class="md-nav__link md-nav__link--active">
+      🏹️ 威胁狩猎大合集
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-detection-and-hunting" class="md-nav__link">
+    Threat Detection and Hunting
+  </a>
+  
+    <nav class="md-nav" aria-label="Threat Detection and Hunting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    工具类清单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    告警引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    端点监控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    网络监控
+  </a>
+  
+    <nav class="md-nav" aria-label="网络监控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    指纹识别工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-and-control" class="md-nav__link">
+    Command and Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Command and Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doh" class="md-nav__link">
+    DoH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osquery" class="md-nav__link">
+    Osquery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sysmon" class="md-nav__link">
+    Sysmon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    PowerShell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fingerprinting" class="md-nav__link">
+    Fingerprinting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-papers" class="md-nav__link">
+    Research Papers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    Blogs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainings" class="md-nav__link">
+    Trainings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    Twitter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-simulation" class="md-nav__link">
+    Threat Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Threat Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources_1" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute" class="md-nav__link">
+    Contribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x3_threat_intelligence/" title="✉️ 威胁情报大合集" class="md-nav__link">
+      ✉️ 威胁情报大合集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x4_incident_response/" title="🚑 应急响应大合集" class="md-nav__link">
+      🚑 应急响应大合集
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x5_ioc_list/" title="🔍 威胁情报数据源" class="md-nav__link">
+      🔍 威胁情报数据源
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x6_VMs/" title="💿 虚拟机&集成环境" class="md-nav__link">
+      💿 虚拟机&集成环境
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x7_honeypots/" title="🍯 蜜罐" class="md-nav__link">
+      🍯 蜜罐
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../0x8_malware_analysis/" title="🦠 恶意软件分析" class="md-nav__link">
+      🦠 恶意软件分析
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-detection-and-hunting" class="md-nav__link">
+    Threat Detection and Hunting
+  </a>
+  
+    <nav class="md-nav" aria-label="Threat Detection and Hunting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    工具类清单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    告警引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    端点监控
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    网络监控
+  </a>
+  
+    <nav class="md-nav" aria-label="网络监控">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    指纹识别工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frameworks" class="md-nav__link">
+    Frameworks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-and-control" class="md-nav__link">
+    Command and Control
+  </a>
+  
+    <nav class="md-nav" aria-label="Command and Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#doh" class="md-nav__link">
+    DoH
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osquery" class="md-nav__link">
+    Osquery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sysmon" class="md-nav__link">
+    Sysmon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    PowerShell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fingerprinting" class="md-nav__link">
+    Fingerprinting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-papers" class="md-nav__link">
+    Research Papers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    Blogs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trainings" class="md-nav__link">
+    Trainings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    Twitter
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threat-simulation" class="md-nav__link">
+    Threat Simulation
+  </a>
+  
+    <nav class="md-nav" aria-label="Threat Simulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources_1" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute" class="md-nav__link">
+    Contribute
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    License
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="awesome-threat-detection-and-hunting">Awesome Threat Detection and Hunting</h1>
+<blockquote>
+<p>A curated list of awesome threat detection and hunting resources</p>
+</blockquote>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#threat-detection-and-hunting">Threat Detection and Hunting</a><ul>
+<li><a href="#tools">Tools</a><ul>
+<li><a href="#alerting-engine">Alerting Engine</a></li>
+<li><a href="#endpoint-monitoring">Endpoint Monitoring</a></li>
+<li><a href="#network-monitoring">Network Monitoring</a><ul>
+<li><a href="#fingerprinting-tools">Fingerprinting Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#dataset">DataSet</a></li>
+<li><a href="#resources">Resources</a><ul>
+<li><a href="#frameworks">Frameworks</a></li>
+<li><a href="#dns">DNS</a></li>
+<li><a href="#command-and-control">Command and Control</a></li>
+<li><a href="#osquery">Osquery</a></li>
+<li><a href="#windows">Windows</a><ul>
+<li><a href="#sysmon">Sysmon</a></li>
+<li><a href="#powershell">PowerShell</a></li>
+</ul>
+</li>
+<li><a href="#fingerprinting">Fingerprinting</a></li>
+<li><a href="#research-papers">Research Papers</a></li>
+<li><a href="#blogs">Blogs</a></li>
+</ul>
+</li>
+<li><a href="#videos">Videos</a></li>
+<li><a href="#trainings">Trainings</a></li>
+<li><a href="#twitter">Twitter</a></li>
+</ul>
+</li>
+<li><a href="#threat-simulation">Threat Simulation</a><ul>
+<li><a href="#tools-1">Tools</a></li>
+<li><a href="#resources-1">Resources</a></li>
+</ul>
+</li>
+<li><a href="#contribute">Contribute</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="threat-detection-and-hunting">Threat Detection and Hunting</h2>
+<p>威胁检测及威胁狩猎</p>
+<h4 id="_1">工具类清单</h4>
+<ul>
+<li><a href="https://mitre.github.io/attack-navigator/enterprise/">MITRE ATT&amp;CK Navigator</a>(<a href="https://github.com/mitre/attack-navigator">source code</a>) <ul>
+<li>ATT&amp;CK Navigator是旨在提供ATT＆CK矩阵的基本导航和注释，有点类似于Excel表格的形式</li>
+</ul>
+</li>
+<li><a href="https://github.com/Cyb3rWard0g/HELK">HELK</a><ul>
+<li>一个用于威胁狩猎的ELK (Elasticsearch, Logstash, Kibana)框架，集成了高级分析功能</li>
+</ul>
+</li>
+<li><a href="https://github.com/palantir/osquery-configuration">osquery-configuration</a><ul>
+<li>一个使用osquery进行事件检测和响应的存储库，是<a href="https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55">osquery Across Enterprise</a>一文的配套内容</li>
+<li>注：osquery是一个由FaceBook开源用于对系统进行查询、监控以及分析的一款软件。
+    支持<code>MacOS</code>、<code>CentOS</code>、<code>Ubuntu</code>、<code>Windows</code>等操作系统[1]</li>
+</ul>
+</li>
+<li><a href="https://github.com/clong/DetectionLab/">DetectionLab</a><ul>
+<li>使用Vagrant＆Packer脚本，来构建包含安全工具和日志记录的实验环境，主要从防御者的角度进行设计，帮助快速构建一个具有安全工具的域环境</li>
+<li>注：Vagrant＆Packer脚本，可以用于自动化虚拟机的安装和配置流程，用来管理虚拟机</li>
+</ul>
+</li>
+<li><a href="https://github.com/MHaggis/sysmon-dfir">Sysmon-DFIR</a><ul>
+<li>一个用于学习Microsoft Sysmon来进行威胁检测的资源清单</li>
+<li>补：Microsoft Sysmon，是一个轻量级的系统监控工具，通过系统服务和驱动程序实现记录进程创建、文件访问以及网络信息的记录，并把相关的信息写入并展示在windows的日志事件里[2]</li>
+</ul>
+</li>
+<li><a href="https://github.com/SwiftOnSecurity/sysmon-config">sysmon-config</a><ul>
+<li>一个Microsoft Sysmon配置文件模板，带有默认的高质量事件追踪</li>
+</ul>
+</li>
+<li><a href="https://github.com/olafhartong/sysmon-modular">sysmon-modular</a><ul>
+<li>一个Microsoft Sysmon配置模块的存储库，包括从Sysmon配置到MITER ATT&amp;CK技术框架的<a href="https://github.com/olafhartong/sysmon-modular/blob/master/attack_matrix/README.md">映射</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/danielbohannon/Revoke-Obfuscation">Revoke-Obfuscation</a><ul>
+<li>一个Powershell的混淆检测框架</li>
+</ul>
+</li>
+<li><a href="https://github.com/Cyb3rWard0g/Invoke-ATTACKAPI">Invoke-ATTACKAPI</a><ul>
+<li>一个PowerShell脚本，可通过其自己的API和MITER ATT&amp;CK框架进行交互</li>
+</ul>
+</li>
+<li><a href="https://github.com/unfetter-analytic/unfetter">Unfetter</a><ul>
+<li>提供了一个框架，用于从客户端计算机（Windows 7）收集事件（进程创建，网络连接，窗口事件日志等），并执行<a href="https://car.mitre.org/">CAR</a>分析来检测潜在的攻击者活动</li>
+<li>补：<a href="https://github.com/mitre-attack/car">CAR</a>，Cyber Analytics Repository，网络行为分析库，"是MITER基于MITER ATT＆CK对手模型开发的分析知识库，可以作为组织作为ATTCK进行行为检测分析的起点"[2]。</li>
+</ul>
+</li>
+<li><a href="https://github.com/austin-taylor/flare">Flare</a><ul>
+<li>一个网络流量和行为的分析框架</li>
+</ul>
+</li>
+<li><a href="https://github.com/redhuntlabs/RedHunt-OS">RedHunt-OS</a><ul>
+<li>专门用于攻防对抗仿真（Adversary Emulation）和威胁狩猎的虚拟机。RedHunt的目标是通过整合攻击者的武库和防御者的工具包来主动识别环境中的威胁，来提供威胁仿真（Threat Emulation）和威胁狩猎所有需求的一站式服务</li>
+</ul>
+</li>
+<li><a href="https://github.com/mvelazc0/Oriana">Oriana</a><ul>
+<li>基于Django构建的Windows环境下横向移动及威胁狩猎工具，提供Docker镜像。</li>
+</ul>
+</li>
+<li>~~<a href="https://github.com/bro/bro-osquery">Bro-Osquery</a>~~<ul>
+<li>将Osquery的集成于Bro</li>
+<li>该项目现已被<a href="https://github.com/zeek/zeek-agent">Zeek Agent</a>取代，包含前者的功能</li>
+</ul>
+</li>
+<li><a href="https://github.com/jandre/brosquery">Brosquery</a><ul>
+<li>一个帮助osquery加载Bro日志到osquery表中的模块</li>
+</ul>
+</li>
+<li><a href="https://github.com/sans-blue-team/DeepBlueCLI">DeepBlueCLI</a><ul>
+<li>一个PowerShell模块，用于从Windows事件日志中进行威胁狩猎</li>
+</ul>
+</li>
+<li><a href="https://uncoder.io">Uncoder</a><ul>
+<li>一个在线的搜索/查询转换器，帮助SIEM转换和保存搜索、过滤器、查询语句、API请求、关联和Sigma规则</li>
+</ul>
+</li>
+<li>🌿<a href="https://github.com/Neo23x0/sigma">Sigma</a><ul>
+<li>一个对SIEM系统的通用签名格式，帮助基于SIEM的威胁检测规则转换</li>
+</ul>
+</li>
+<li><a href="https://github.com/PowerShellMafia/CimSweep">CimSweep</a><ul>
+<li>一套基于CIM / WMI的工具集，用于跨Windows系统版本来远程执行事件响应和威胁狩猎操作</li>
+</ul>
+</li>
+<li><a href="https://github.com/Netflix/dispatch">Dispatch</a><ul>
+<li>一个开源的安全威胁事件管理框架，由Netflix开源</li>
+</ul>
+</li>
+<li><a href="https://github.com/endgameinc/eql">EQL</a>(Event Query Language)<ul>
+<li>事件查询语句</li>
+<li><a href="https://github.com/endgameinc/eqllib">EQLLib</a>(The Event Query Language Analytics Library)<ul>
+<li>事件查询语言分析库（EQLLib）是基于事件的分析库，使用EQL编写，可以检测基于MITER ATT＆CK™框架来识别攻击者行为。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://github.com/mitre-attack/bzar">BZAR</a> (Bro/Zeek ATT&amp;CK-based Analytics and Reporting) <ul>
+<li>一个用于检测ATT&amp;CK技术的Zeek脚本集合</li>
+<li>补：Zeek是一个网络安全监控工具，类似于Bro</li>
+</ul>
+</li>
+<li><a href="https://github.com/Security-Onion-Solutions/security-onion">Security Onion</a><ul>
+<li>一个开源的Linux发行版，用于威胁狩猎，安全监视和日志管理。该发行版集成了ELK，Snort，Suricata，Zeek，Wazuh，Sguil和许多其他安全工具</li>
+</ul>
+</li>
+<li><a href="https://github.com/endgameinc/varna">Varna</a><ul>
+<li>一个快速、便宜的AWS无服务（注：Serverless）云安全工具，使用事件查询语言（EQL）对CloudTrail日志进行解析和告警</li>
+</ul>
+</li>
+<li><a href="https://github.com/airbnb/binaryalert">BinaryAlert</a><ul>
+<li>一个服务器的开源AWS pipeline，用于实施的恶意软件检测溯源和告警</li>
+</ul>
+</li>
+<li><a href="https://github.com/hasherezade/hollows_hunter">hollows_hunter</a><ul>
+<li>可用于扫描运行的全部进程，识别并转储其中各种潜在的恶意植入物，例如：已被替换/植入的PE、shellcode、hooks及内存布丁</li>
+</ul>
+</li>
+<li><a href="https://github.com/olafhartong/ThreatHunting">ThreatHunting</a><ul>
+<li>一个可以映射MITRE ATT&amp;CK框架的Splunk APP，可以用于指导威胁狩猎</li>
+</ul>
+</li>
+<li><a href="https://github.com/BlueTeamLabs/sentinel-attack">Sentinel Attack</a><ul>
+<li>用于简化Sysmon和ATT&amp;CK框架在Azure Sentinel上进行威胁狩猎的快速部署</li>
+</ul>
+</li>
+<li><a href="https://github.com/brimsec/brim">Brim</a> - A desktop application to efficiently search large packet captures and Zeek logs<ul>
+<li>一个桌面应用程序，可以高效地搜索、查询大型网络数据包和Zeek日志信息</li>
+</ul>
+</li>
+<li><a href="https://github.com/virustotal/yara">YARA</a><ul>
+<li>用于规则匹配的瑞士军刀</li>
+</ul>
+</li>
+<li><a href="https://github.com/intelowlproject/IntelOwl">Intel Owl</a><ul>
+<li>一种开源情报解决方案，可从单个API大规模获取特定文件，IP或域名的相关威胁情报数据</li>
+</ul>
+</li>
+<li><a href="https://github.com/fireeye/capa">Capa</a><ul>
+<li>一个用于识别可执行文件功能的开源工具</li>
+</ul>
+</li>
+</ul>
+<h4 id="_2">告警引擎</h4>
+<ul>
+<li><a href="https://github.com/Yelp/elastalert">ElastAlert</a><ul>
+<li>基于ELK的框架，用于从Elasticsearch中的数据中发出异常、峰值或其他设定规则的警报</li>
+</ul>
+</li>
+<li><a href="https://github.com/airbnb/streamalert">StreamAlert</a><ul>
+<li>一个无服务器的实时数据分析框架，帮助使用自定的数据源和逻辑从任何环境中提取，分析和告警数据</li>
+</ul>
+</li>
+</ul>
+<h4 id="_3">端点监控</h4>
+<ul>
+<li><a href="https://osquery.io">osquery</a> (<a href="https://github.com/osquery/osquery">github</a>) <ul>
+<li>SQL语句驱动的操作系统编排、监控和分析工具</li>
+</ul>
+</li>
+<li><a href="https://github.com/kolide/fleet">Kolide Fleet</a><ul>
+<li>一个弹性的、用于osquery队列的控制服务器</li>
+</ul>
+</li>
+<li><a href="https://github.com/zeek/zeek-agent">Zeek Agent</a><ul>
+<li>用于对Zeek提供主机活动信息的端点监控agent</li>
+</ul>
+</li>
+<li><a href="https://github.com/Velocidex/velociraptor">Velociraptor</a><ul>
+<li>用于端点可视化和收集的工具</li>
+</ul>
+</li>
+<li><a href="https://github.com/draios/sysdig">Sysdig</a><ul>
+<li>一个用于深度挖掘Linux系统可见性的工具，支持容齐的原生支持。可以将其认为是strace + tcpdump + htop + iftop + lsof +...的整合</li>
+</ul>
+</li>
+<li><a href="https://github.com/slackhq/go-audit">go-audit</a><ul>
+<li>一个Linux auditd守护进程的替代方法</li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon">Sysmon</a> <ul>
+<li>一个Windows系统服务（设备驱动程序），用于监视系统活动并将其日志到Windows的事件日志中</li>
+</ul>
+</li>
+<li><a href="github.com/ossec/ossec-hids">OSSEC</a><ul>
+<li>一个开源的、基于主机的入侵检测系统（HIDS）</li>
+</ul>
+</li>
+<li><a href="https://github.com/wazuh/wazuh">🌿WAZUH</a><ul>
+<li>一个开源的综合安全平台，用于威胁预防、检测和响应。可以用于保护本地、虚拟机、容器及云端环境的工作负载</li>
+<li>支持的功能：入侵检测、日志数据分析、文件完整性监控、漏洞检测、配置评估、事件响应、合规性、云安全、Docker安全</li>
+</ul>
+</li>
+</ul>
+<h4 id="_4">网络监控</h4>
+<ul>
+<li><a href="https://github.com/zeek/zeek">Zeek</a><ul>
+<li>一个网络安全监控工具，前身为Bro</li>
+</ul>
+</li>
+<li><a href="https://github.com/ntop/ntopng">ntopng</a><ul>
+<li>一个基于Web的网络流量监控工具</li>
+</ul>
+</li>
+<li><a href="https://suricata-ids.org">Suricata</a><ul>
+<li>一个网络威胁监测引擎</li>
+</ul>
+</li>
+<li><a href="https://snort.org">Snort</a> (<a href="https://github.com/snort3/snort3">github</a>)<ul>
+<li>一个网络入侵检测工具 </li>
+</ul>
+</li>
+<li><a href="https://github.com/cisco/joy">Joy</a><ul>
+<li>可用于网络流量抓取、分析的整合包，可用于网络调查、取证和安全监控</li>
+</ul>
+</li>
+<li><a href="https://github.com/dreadl0ck/netcap">Netcap</a><ul>
+<li>可用于安全和可扩展性的网络流量数据分析工具</li>
+</ul>
+</li>
+<li><a href="https://github.com/aol/moloch">🌿Arkime</a><ul>
+<li>一个开源的、大型全流量数据包捕获、搜索工具，前身为Moloch</li>
+</ul>
+</li>
+<li><a href="https://github.com/google/stenographer">Stenographer</a><ul>
+<li>一个全流量网络数据包捕获工具</li>
+</ul>
+</li>
+</ul>
+<h5 id="_5">指纹识别工具</h5>
+<ul>
+<li><a href="https://github.com/salesforce/ja3">JA3</a> - A method for profiling SSL/TLS Clients and Servers</li>
+<li><a href="https://github.com/salesforce/hassh">HASSH</a> - Profiling Method for SSH Clients and Servers</li>
+<li><a href="https://github.com/yahoo/rdfp">RDFP</a> - Zeek Remote desktop fingerprinting script based on <a href="https://github.com/0x4D31/fatt">FATT</a> (Fingerprint All The Things)</li>
+<li><a href="https://github.com/0x4D31/fatt">FATT</a> - A pyshark based script for extracting network metadata and fingerprints from pcap files and live network traffic</li>
+<li><a href="https://github.com/LeeBrotherston/tls-fingerprinting">FingerprinTLS</a> - A TLS fingerprinting method</li>
+<li><a href="https://github.com/cisco/mercury">Mercury</a> - Network fingerprinting and packet metadata capture</li>
+<li><a href="https://github.com/salesforce/GQUIC_Protocol_Analyzer">GQUIC Protocol Analyzer for Zeek</a></li>
+<li><a href="https://github.com/rapid7/recog">Recog</a> - A framework for identifying products, services, operating systems, and hardware by matching fingerprints against data returned from various network probes</li>
+<li><a href="https://github.com/CERT-Polska/hfinger">Hfinger</a> - Fingerprinting HTTP requests</li>
+</ul>
+<h3 id="dataset">Dataset</h3>
+<ul>
+<li><a href="https://github.com/Cyb3rWard0g/mordor">Mordor</a> - Pre-recorded security events generated by simulated adversarial techniques in the form of JavaScript Object Notation (JSON) files. The data is categorized by platforms, adversary groups, tactics and techniques defined by the Mitre ATT&amp;CK Framework.</li>
+<li><a href="https://www.secrepo.com">SecRepo.com</a>(<a href="https://github.com/sooshie/secrepo">github repo</a>) - Samples of security related data.</li>
+<li><a href="https://github.com/splunk/botsv1">Boss of the SOC (BOTS) Dataset Version 1</a></li>
+<li><a href="https://github.com/splunk/botsv2">Boss of the SOC (BOTS) Dataset Version 2</a></li>
+<li><a href="https://github.com/splunk/botsv3">Boss of the SOC (BOTS) Dataset Version 3</a></li>
+<li><a href="https://github.com/endgameinc/ember">EMBER</a> (<a href="https://arxiv.org/abs/1804.04637">paper</a>) - The EMBER dataset is a collection of features from PE files that serve as a benchmark dataset for researchers</li>
+<li><a href="https://github.com/ytisf/theZoo">theZoo</a> - A repository of LIVE malwares</li>
+<li><a href="https://www.unb.ca/cic/datasets/index.html">CIC Datasets</a> - Canadian Institute for Cybersecurity datasets</li>
+<li><a href="https://www.netresec.com/?page=PcapFiles">Netresec's PCAP repo list</a> - A list of public packet capture repositories, which are freely available on the Internet.</li>
+<li><a href="https://github.com/sbousseaden/PCAP-ATTACK">PCAP-ATTACK</a> - A repo of PCAP samples for different ATT&amp;CK techniques.</li>
+<li><a href="https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES">EVTX-ATTACK-SAMPLES</a> - A repo of Windows event samples (EVTX) associated with ATT&amp;CK techniques (<a href="https://docs.google.com/spreadsheets/d/12V5T9j6Fi3JSmMpAsMwovnWqRFKzzI9l2iXS5dEsnrs/edit#gid=164587082">EVTX-ATT&amp;CK Sheet</a>).</li>
+</ul>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="docs/huntpedia.pdf">Huntpedia</a> - Your Threat Hunting Knowledge Compendium</li>
+<li><a href="docs/hunt-evil.pdf">Hunt Evil</a> - Your Practical Guide to Threat Hunting</li>
+<li><a href="docs/The-Hunters-Handbook.pdf">The Hunter's Handbook</a> - Endgame's guide to adversary hunting</li>
+<li><a href="https://github.com/Cyb3rWard0g/ThreatHunter-Playbook">ThreatHunter-Playbook</a> - A Threat hunter's playbook to aid the development of techniques and hypothesis for hunting campaigns.</li>
+<li><a href="https://github.com/ThreatHuntingProject/ThreatHunting">The ThreatHunting Project</a> - A great <a href="https://github.com/ThreatHuntingProject/ThreatHunting/tree/master/hunts">collection of hunts</a> and threat hunting resources.</li>
+<li><a href="https://github.com/A3sal0n/CyberThreatHunting">CyberThreatHunting</a> - A collection of resources for threat hunters.</li>
+<li><a href="https://github.com/MHaggis/hunt-detect-prevent">Hunt-Detect-Prevent</a> - Lists of sources and utilities to hunt, detect and prevent evildoers.</li>
+<li><a href="https://medium.com/@palantir/alerting-and-detection-strategy-framework-52dc33722df2">Alerting and Detection Strategy Framework</a></li>
+<li><a href="https://www.sans.org/reading-room/whitepapers/threats/generating-hypotheses-successful-threat-hunting-37172">Generating Hypotheses for Successful Threat Hunting</a></li>
+<li><a href="https://github.com/Foundstone/ExpertInvestigationGuides/tree/master/ThreatHunting">Expert Investigation Guide - Threat Hunting</a></li>
+<li><a href="https://adsecurity.org/wp-content/uploads/2017/04/2017-BSidesCharm-DetectingtheElusive-ActiveDirectoryThreatHunting-Final.pdf">Active Directory Threat Hunting</a></li>
+<li><a href="https://www.countercept.com/our-thinking/threat-hunting-for-fileless-malware/">Threat Hunting for Fileless Malware</a></li>
+<li><a href="http://blog.jpcert.or.jp/.s/2016/01/windows-commands-abused-by-attackers.html">Windows Commands Abused by Attackers</a></li>
+<li><a href="https://github.com/0x4D31/deception-as-detection">Deception-as-Detection</a> - Deception based detection techniques mapped to the MITRE’s ATT&amp;CK framework.</li>
+<li><a href="http://ryanstillions.blogspot.com.au/2014/04/on-ttps.html">On TTPs</a></li>
+<li>Hunting On The Cheap (<a href="https://www.sans.org/cyber-security-summit/archives/file/summit-archive-1492182404.pdf">Slides</a>)</li>
+<li><a href="https://www.cyberhuntz.com/2016/08/threat-hunting-techniques-av-proxy-dns.html">Threat Hunting Techniques - AV, Proxy, DNS and HTTP Logs</a></li>
+<li><a href="https://pleasefeedthegeek.wordpress.com/2012/12/20/detecting-malware-beacons-using-splunk/">Detecting Malware Beacons Using Splunk</a></li>
+<li><a href="http://www.austintaylor.io/network/traffic/threat/data/science/hunting/funnel/machine/learning/domain/expertise/2017/07/11/data-science-hunting-funnel/">Data Science Hunting Funnel</a></li>
+<li><a href="http://www.austintaylor.io/d3/python/pandas/2016/02/01/create-d3-chart-python-force-directed/">Use Python &amp; Pandas to Create a D3 Force Directed Network Diagram</a></li>
+<li><a href="https://slack.engineering/syscall-auditing-at-scale-e6a3ca8ac1b8">Syscall Auditing at Scale</a></li>
+<li><a href="https://summitroute.com/blog/2016/12/25/Catching_attackers_with_go-audit_and_a_logging_pipeline/">Catching attackers with go-audit and a logging pipeline</a></li>
+<li><a href="https://summitroute.com/blog/2015/06/10/the_conventry_conundrum_of_threat_intelligence/">The Coventry Conundrum of Threat Intelligence</a></li>
+<li><a href="https://www.pwc.co.uk/issues/cyber-security-data-privacy/research/signal-att-and-ck-part-1.html">Signal the ATT&amp;CK: Part 1</a> - Building a real-time threat detection capability with Tanium that focuses on documented adversarial techniques.</li>
+<li>SANS Summit Archives (<a href="https://www.sans.org/cyber-security-summit/archives/dfir">DFIR</a>, <a href="https://www.sans.org/cyber-security-summit/archives/cyber-defense">Cyber Defense</a>) - Threat hunting, Blue Team and DFIR summit slides</li>
+<li><a href="https://svs.informatik.uni-hamburg.de/publications/2018/2018-05-31-Haas-QueryCon-Bro-Osquery.pdf">Bro-Osquery</a> - Large-Scale Host and Network Monitoring Using Open-Source Software</li>
+<li><a href="https://github.com/Karneades/malware-persistence">Malware Persistence</a> - Collection of various information focused on malware persistence: detection (techniques), response, pitfalls and the log collection (tools).</li>
+<li><a href="https://posts.specterops.io/threat-hunting-with-jupyter-notebooks-part-1-your-first-notebook-9a99a781fde7">Threat Hunting with Jupyter Notebooks</a></li>
+<li><a href="https://dropbox.tech/security/how-dropbox-security-builds-better-tools-for-threat-detection-and-incident-response">How Dropbox Security builds tools for threat detection and incident response</a></li>
+<li><a href="https://www.elastic.co/blog/introducing-event-query-language">Introducing Event Query Language</a></li>
+<li><a href="https://www.varonis.com/blog/guide-no-hassle-eql-threat-hunting/">The No Hassle Guide to Event Query Language (EQL) for Threat Hunting</a> (<a href="docs/varonis.com-EQLforThreatHunting.pdf">PDF</a>)</li>
+<li><a href="https://posts.specterops.io/introducing-the-funnel-of-fidelity-b1bb59b04036">Introducing the Funnel of Fidelity</a> (<a href="docs/specterops-IntroducingtheFunnelofFidelity.pdf">PDF</a>)</li>
+<li><a href="https://posts.specterops.io/detection-spectrum-198a0bfb9302">Detection Spectrum</a> (<a href="docs/specterops-DetectionSpectrum.pdf">PDF</a>)</li>
+<li><a href="https://posts.specterops.io/capability-abstraction-fbeaeeb26384">Capability Abstraction</a> (<a href="docs/specterops-CapabilityAbstraction.pdf">PDF</a>)</li>
+<li><a href="https://github.com/InQuest/awesome-yara">Awesome YARA</a> - A curated list of awesome YARA rules, tools, and resources</li>
+<li><a href="https://medium.com/mitre-attack/defining-attack-data-sources-part-i-4c39e581454f">Defining ATT&amp;CK Data Sources</a> - A two-part blog series that outlines a new methodology to extend ATT&amp;CK’s current data sources.</li>
+</ul>
+<h4 id="frameworks">Frameworks</h4>
+<ul>
+<li><a href="https://attack.mitre.org/wiki/Main_Page">MITRE ATT&amp;CK</a> - A curated knowledge base and model for cyber adversary behavior, reflecting the various phases of an adversary’s lifecycle and the platforms they are known to target.</li>
+<li><a href="https://car.mitre.org/wiki/Main_Page">MITRE CAR</a> - The Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by MITRE based on the Adversary Tactics, Techniques, and Common Knowledge (ATT&amp;CK™) adversary model.</li>
+<li><a href="https://github.com/palantir/alerting-detection-strategy-framework">Alerting and Detection Strategies Framework</a> - A framework for developing alerting and detection strategies.</li>
+<li><a href="http://detect-respond.blogspot.com.au/2015/10/a-simple-hunting-maturity-model.html">A Simple Hunting Maturity Model</a> - The Hunting Maturity Model describes five levels of organizational hunting capability, ranging from HMM0 (the least capability) to HMM4 (the most).</li>
+<li><a href="http://detect-respond.blogspot.com.au/2013/03/the-pyramid-of-pain.html">The Pyramic of Pain</a> - The relationship between the types of indicators you might use to detect an adversary's activities and how much pain it will cause them when you are able to deny those indicators to them.</li>
+<li><a href="docs/Framework-for-Threat-Hunting-Whitepaper.pdf">A Framework for Cyber Threat Hunting</a></li>
+<li><a href="http://threathunter.guru/blog/the-paris-model/">The PARIS Model</a> - A model for threat hunting.</li>
+<li><a href="https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html">Cyber Kill Chain</a> - It is part of the Intelligence Driven Defense® model for identification and prevention of cyber intrusions activity. The model identifies what the adversaries must complete in order to achieve their objective.</li>
+<li><a href="http://ryanstillions.blogspot.com.au/2014/04/the-dml-model_21.html">The DML Model</a> - The Detection Maturity Level (DML) model is a capability maturity model for referencing ones maturity in detecting cyber attacks.</li>
+<li><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework</a></li>
+<li><a href="https://github.com/hunters-forge/OSSEM">OSSEM</a> (Open Source Security Events Metadata) - A community-led project that focuses on the documentation and standardization of security event logs from diverse data sources and operating systems</li>
+<li><a href="https://shield.mitre.org">MITRE Shield</a> - A knowledge base of active defense techniques and tactics (<a href="https://shield.mitre.org/matrix/">Active Defense Matrix</a>)</li>
+</ul>
+<h4 id="dns">DNS</h4>
+<ul>
+<li><a href="https://www.sans.org/reading-room/whitepapers/dns/detecting-dns-tunneling-34152">Detecting DNS Tunneling</a></li>
+<li><a href="https://www.splunk.com/pdfs/events/govsummit/hunting_the_known_unknowns_with_DNS.pdf">Hunting the Known Unknowns (with DNS)</a></li>
+<li><a href="https://www.splunk.com/blog/2015/08/04/detecting-dynamic-dns-domains-in-splunk.html">Detecting dynamic DNS domains in Splunk</a></li>
+<li><a href="https://www.splunk.com/blog/2015/10/01/random-words-on-entropy-and-dns.html">Random Words on Entropy and DNS</a></li>
+<li><a href="https://isc.sans.edu/diary/Tracking+Newly+Registered+Domains/23127">Tracking Newly Registered Domains</a></li>
+<li><a href="https://isc.sans.edu/forums/diary/Suspicious+Domains+Tracking+Dashboard/23046/">Suspicious Domains Tracking Dashboard</a></li>
+<li><a href="https://isc.sans.edu/forums/diary/Proactive+Malicious+Domain+Search/23065/">Proactive Malicious Domain Search</a></li>
+<li><a href="https://www.first.org/resources/papers/conf2017/DNS-is-NOT-Boring-Using-DNS-to-Expose-and-Thwart-Attacks.pdf">DNS is NOT Boring</a> - Using DNS to Expose and Thwart Attacks</li>
+<li><a href="https://prezi.com/vejpnxkm85ih/actionable-detects-dns-keynote/">Actionable Detects</a> - Blue Team Tactics</li>
+</ul>
+<h4 id="command-and-control">Command and Control</h4>
+<ul>
+<li><a href="docs/legit-services.pdf">Rise of Legitimate Services for Backdoor Command and Control</a></li>
+<li><a href="https://www.intezer.com/container-security/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/">Watch Your Containers</a> - A malware using DogeCoin based DGA to generate C2 domain names.</li>
+</ul>
+<h5 id="doh">DoH</h5>
+<ul>
+<li><a href="https://blog.huntresslabs.com/hiding-in-plain-sight-part-2-dfec817c036f">Hiding in Plain Sight</a> - A malware abusing Google DoH</li>
+<li><a href="https://twitter.com/stvemillertime/status/1196788709292687360">All the DoH</a> - A Twitter thread on malware families and utilities that use DNS-over-HTTPS.</li>
+</ul>
+<h4 id="osquery">Osquery</h4>
+<ul>
+<li><a href="https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55">osquery Across the Enterprise</a></li>
+<li><a href="https://medium.com/@clong/osquery-for-security-b66fffdf2daf">osquery for Security — Part 1</a></li>
+<li><a href="https://medium.com/@clong/osquery-for-security-part-2-2e03de4d3721">osquery for Security — Part 2</a> - Advanced osquery functionality, File integrity monitoring, process auditing, and more.</li>
+<li><a href="https://blog.trailofbits.com/2017/10/10/tracking-a-stolen-code-signing-certificate-with-osquery/">Tracking a stolen code-signing certificate with osquery</a></li>
+<li><a href="https://blog.kolide.com/monitoring-macos-hosts-with-osquery-ba5dcc83122d">Monitoring macOS hosts with osquery</a></li>
+<li><a href="https://blog.kolide.com/">Kolide's Blog</a></li>
+<li><a href="https://github.com/trailofbits/presentations/tree/master/Osquery%20Extensions">The osquery Extensions Skunkworks Project</a></li>
+</ul>
+<h4 id="windows">Windows</h4>
+<ul>
+<li><a href="https://www.sans.org/summit-archives/file/summit-archive-1524493093.pdf">Threat Hunting via Windows Event Logs</a></li>
+<li><a href="https://www.malwarearchaeology.com/cheat-sheets/">Windows Logging Cheat Sheets</a></li>
+<li><a href="https://adsecurity.org/wp-content/uploads/2017/04/2017-BSidesCharm-DetectingtheElusive-ActiveDirectoryThreatHunting-Final.pdf">Active Directory Threat Hunting</a></li>
+<li><a href="https://github.com/beahunt3r/Windows-Hunting">Windows Hunting</a> - A collection of Windows hunting queries</li>
+<li><a href="https://blogs.jpcert.or.jp/en/2016/01/windows-commands-abused-by-attackers.html">Windows Commands Abused by Attackers</a></li>
+<li><a href="https://blogs.jpcert.or.jp/en/2017/12/research-report-released-detecting-lateral-movement-through-tracking-event-logs-version-2.html">JPCERT - Detecting Lateral Movement through Tracking Event Logs</a><ul>
+<li><a href="https://jpcertcc.github.io/ToolAnalysisResultSheet/">Tool Analysis Result Sheet</a></li>
+</ul>
+</li>
+</ul>
+<h5 id="sysmon">Sysmon</h5>
+<ul>
+<li><a href="https://medium.com/@haggis_m/splunking-the-endpoint-threat-hunting-with-sysmon-9dd956e3e1bd">Splunking the Endpoint: Threat Hunting with Sysmon</a><ul>
+<li><a href="https://medium.com/@haggis_m/hunting-with-sysmon-38de012e62e6">Hunting with Sysmon</a></li>
+</ul>
+</li>
+<li><a href="http://www.syspanda.com/index.php/2017/10/10/threat-hunting-sysmon-word-document-macro/">Threat Hunting with Sysmon: Word Document with Macro</a></li>
+<li>Chronicles of a Threat Hunter: Hunting for In-Memory Mimikatz with Sysmon and ELK<ul>
+<li><a href="https://cyberwardog.blogspot.com.au/2017/03/chronicles-of-threat-hunter-hunting-for.html">Part I (Event ID 7)</a></li>
+<li><a href="https://cyberwardog.blogspot.com.au/2017/03/chronicles-of-threat-hunter-hunting-for_22.html">Part II (Event ID 10)</a></li>
+</ul>
+</li>
+<li>Advanced Incident Detection and Threat Hunting using Sysmon (and Splunk) (<a href="https://www.botconf.eu/wp-content/uploads/2016/11/PR12-Sysmon-UELTSCHI.pdf">botconf 2016 Slides</a>, <a href="https://www.first.org/resources/papers/conf2017/Advanced-Incident-Detection-and-Threat-Hunting-using-Sysmon-and-Splunk.pdf">FIRST 2017 Slides</a>)</li>
+<li><a href="https://www.peerlyst.com/posts/the-sysmon-and-threat-hunting-mimikatz-wiki-for-the-blue-team-guurhart">The Sysmon and Threat Hunting Mimikatz wiki for the blue team</a></li>
+<li><a href="https://www.crypsisgroup.com/wp-content/uploads/2017/07/CG_WhitePaper_Splunkmon_1216-1.pdf">Splunkmon — Taking Sysmon to the Next Level</a></li>
+<li><a href="https://www.varonis.com/blog/sysmon-threat-detection-guide/">Sysmon Threat Detection Guide</a> (<a href="docs/varonis.com-SysmonThreatAnalysisGuide.pdf">PDF</a>)</li>
+</ul>
+<h5 id="powershell">PowerShell</h5>
+<ul>
+<li>Revoke-Obfuscation: PowerShell Obfuscation Detection Using Science (<a href="https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science-wp.pdf">Paper</a>, <a href="https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science.pdf">Slides</a>)</li>
+<li><a href="https://conf.splunk.com/files/2016/slides/hunting-the-known-unknowns-the-powershell-edition.pdf">Hunting the Known Unknowns (With PowerShell)</a></li>
+<li><a href="https://www.splunk.com/blog/2017/07/06/hellsbells-lets-hunt-powershells.html">HellsBells, Let's Hunt PowerShells!</a></li>
+<li><a href="https://medium.com/@jshlbrd/hunting-for-powershell-using-heatmaps-69b70151fa5d">Hunting for PowerShell Using Heatmaps</a></li>
+</ul>
+<h4 id="fingerprinting">Fingerprinting</h4>
+<ul>
+<li><a href="https://engineering.salesforce.com/open-sourcing-ja3-92c9e53c3c41">JA3: SSL/TLS Client Fingerprinting for Malware Detection</a></li>
+<li><a href="https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967">TLS Fingerprinting with JA3 and JA3S</a></li>
+<li><a href="https://engineering.salesforce.com/open-sourcing-hassh-abed3ae5044c">HASSH - a profiling method for SSH Clients and Servers</a><ul>
+<li><a href="https://github.com/benjeems/Presentations/blob/master/BSides%202019%20%20-%20HASSH%20-%20a%20Profiling%20Method%20for%20SSH%20Clients%20and%20Servers.pdf">HASSH @BSides Canberra 2019 - Slides</a></li>
+</ul>
+</li>
+<li><a href="https://engineering.salesforce.com/finding-evil-on-the-network-using-ja3-s-and-hassh-11431a8606e4">Finding Evil on the Network Using JA3/S and HASSH</a></li>
+<li><a href="https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4">RDP Fingerprinting - Profiling RDP Clients with JA3 and RDFP</a></li>
+<li><a href="https://www.ntop.org/ndpi/effective-tls-fingerprinting-beyond-ja3/">Effective TLS Fingerprinting Beyond JA3</a></li>
+<li><a href="https://blogs.cisco.com/security/tls-fingerprinting-in-the-real-world">TLS Fingerprinting in the Real World</a></li>
+<li><a href="https://www.ssllabs.com/projects/client-fingerprinting/">HTTP Client Fingerprinting Using SSL Handshake Analysis</a> (source code: <a href="https://github.com/ssllabs/sslhaf">mod_sslhaf</a></li>
+<li><a href="https://blog.squarelemon.com/tls-fingerprinting/">TLS fingerprinting - Smarter Defending &amp; Stealthier Attacking</a></li>
+<li><a href="https://ja3er.com">JA3er</a> - a DB of JA3 fingerprints</li>
+<li><a href="https://www.net-square.com/httprint_paper.html">An Introduction to HTTP fingerprinting</a></li>
+<li><a href="https://tlsfingerprint.io/">TLS Fingerprints</a> collected from the University of Colorado Boulder campus network</li>
+<li><a href="https://tlsfingerprint.io/static/frolov2019.pdf">The use of TLS in Censorship Circumvention</a></li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/3355369.3355601">TLS Beyond the Browser: Combining End Host and Network Data to Understand Application Behavior</a></li>
+<li><a href="https://link.springer.com/article/10.1186/s13635-016-0030-7">HTTPS traffic analysis and client identification using passive SSL/TLS fingerprinting</a></li>
+<li><a href="https://drakkar.imag.fr/IMG/pdf/1569811033.pdf">Markov Chain Fingerprinting to Classify Encrypted Traffic</a></li>
+<li><a href="https://www.conand.me/publications/bortolameotti-headprint-2020.pdf">HeadPrint: Detecting Anomalous Communications through Header-based Application Fingerprinting</a></li>
+</ul>
+<h4 id="research-papers">Research Papers</h4>
+<ul>
+<li><a href="https://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf">Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains</a></li>
+<li><a href="http://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf">The Diamond Model of Intrusion Analysis</a></li>
+<li><a href="https://www.cs.ucsb.edu/~chris/research/doc/ndss11_exposure.pdf">EXPOSURE: Finding Malicious Domains Using Passive DNS Analysis</a></li>
+<li>A Comprehensive Approach to Intrusion Detection Alert Correlation (<a href="https://www.cs.ucsb.edu/~vigna/publications/2004_valeur_vigna_kruegel_kemmerer_TDSC_Correlation.pdf">Paper</a>, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.8310&amp;rep=rep1&amp;type=pdf">Dissertation</a>)</li>
+<li><a href="http://www.few.vu.nl/~herbertb/papers/feederbot_ec2nd11.pdf">On Botnets that use DNS for Command and Control</a></li>
+<li><a href="https://dl.acm.org/citation.cfm?id=2991111">Intelligent, Automated Red Team Emulation</a></li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/3097983.3098163">Machine Learning for Encrypted Malware Traffic Classification</a></li>
+</ul>
+<h4 id="blogs">Blogs</h4>
+<ul>
+<li><a href="https://detect-respond.blogspot.com">David Bianco's Blog</a></li>
+<li><a href="http://findingbad.blogspot.com">DFIR and Threat Hunting Blog</a></li>
+<li><a href="https://medium.com/@Cyb3rWard0g">CyberWardog's Blog</a> (<a href="https://cyberwardog.blogspot.com">old</a>)</li>
+<li><a href="https://chrissanders.org">Chris Sanders' Blog</a></li>
+<li><a href="https://blog.kolide.com/">Kolide Blog</a></li>
+</ul>
+<h3 id="videos">Videos</h3>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLfouvuAjspTr95R60Kt7ZcoerR6tYoCLA">SANS Threat Hunting and IR Summit 2017</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLfouvuAjspTokaa-LdUHqszL-KACkCsKT">SANS Threat Hunting and IR Summit 2016</a></li>
+<li><a href="https://www.youtube.com/watch?v=vv_VXntQTpE">BotConf 2016 - Advanced Incident Detection and Threat Hunting using Sysmon and Splunk</a></li>
+<li><a href="https://www.youtube.com/watch?v=9Uo7V9OUaUw">BSidesCharm 2017 - Detecting the Elusive: Active Directory Threat Hunting</a></li>
+<li><a href="https://www.youtube.com/watch?v=c-c-IQ5pFXw">BSidesAugusta 2017 - Machine Learning Fueled Cyber Threat Hunting</a></li>
+<li><a href="https://www.youtube.com/watch?v=7q7GGg-Ws9s">Toppling the Stack: Outlier Detection for Threat Hunters</a></li>
+<li><a href="https://www.youtube.com/watch?v=bDdsGBCUa8I">BSidesPhilly 2017 - Threat Hunting: Defining the Process While Circumventing Corporate Obstacles</a></li>
+<li><a href="https://www.youtube.com/watch?v=x97ejtv56xw">Black Hat 2017 - Revoke-Obfuscation: PowerShell Obfuscation Detection (And Evasion) Using Science</a></li>
+<li><a href="https://www.youtube.com/watch?v=LUtluTaEAUU">DefCon 25 - MS Just Gave the Blue Team Tactical Nukes</a></li>
+<li><a href="https://www.youtube.com/watch?v=19H7j_sZcKc">BSides London 2017 - Hunt or be Hunted</a></li>
+<li><a href="https://www.youtube.com/watch?v=_QVhMPGtIeU">SecurityOnion 2017 - Pivoting Effectively to Catch More Bad Guys</a></li>
+<li><a href="https://www.youtube.com/watch?v=mKxGulV2Z74">SkyDogCon 2016 - Hunting: Defense Against The Dark Arts</a></li>
+<li><a href="https://www.youtube.com/watch?v=1mfVPLPxKTc">BSidesAugusta 2017 - Don't Google 'PowerShell Hunting'</a></li>
+<li><a href="https://www.youtube.com/watch?v=8qM-DnmHNv8">BSidesAugusta 2017 - Hunting Adversaries w Investigation Playbooks &amp; OpenCNA</a></li>
+<li><a href="https://www.youtube.com/watch?v=98MrgfTFeMo">Visual Hunting with Linked Data</a></li>
+<li><a href="https://www.youtube.com/watch?v=zlAWbdSlhaQ">RVAs3c - Pyramid of Pain: Intel-Driven Detection/Response to Increase Adversary's Cost</a></li>
+<li><a href="https://www.youtube.com/watch?v=2MrrOxsJk_M">BSidesLV 2016 - Hunting on the Endpoint w/ Powershell</a></li>
+<li><a href="https://www.youtube.com/watch?v=MUUseTJp3jM">Derbycon 2015 - Intrusion Hunting for the Masses A Practical Guide</a></li>
+<li><a href="https://www.youtube.com/watch?v=2FvP7nwb2UE&amp;feature=youtu.be">BSides DC 2016 - Practical Cyborgism: Getting Start with Machine Learning for Incident Detection</a></li>
+<li><a href="https://www.youtube.com/watch?v=7JIftAw8wQY">SANS Webcast 2018 - What Event Logs? Part 1: Attacker Tricks to Remove Event Logs</a></li>
+<li><a href="https://www.youtube.com/watch?v=oprPu7UIEuk">Profiling And Detecting All Things SSL With JA3</a></li>
+<li><a href="https://www.youtube.com/watch?v=kG-kenOypLk">ACoD 2019 - HASSH SSH Client/Server Profiling</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLlSdCcsTOu5STvaoPlr-PJE-zbYmlAGrX">QueryCon 2018</a> - An annual conference for the osquery open-source community (<a href="https://querycon.io">querycon.io</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=EpK7MkWCh1I">Visual Hunting with Linked Data Graphs</a></li>
+<li><a href="https://www.youtube.com/watch?v=A6hBoeSNJJw">SecurityOnion Con 2018 - Introduction to Data Analysis</a></li>
+</ul>
+<h3 id="trainings">Trainings</h3>
+<ul>
+<li><a href="https://www.sans.org/course/siem-with-tactical-analytics">SANS SEC555</a> - SIEM with Tactical Analytics.</li>
+<li><a href="https://github.com/specterops/at-ps">SpecterOps Adversary Tactics: PowerShell</a> (FREE)</li>
+<li><a href="https://specterops.io/how-we-help/training-offerings/adversary-tactics-detection">SpecterOps Adversary Tactics: Detection</a></li>
+<li><a href="https://www.elearnsecurity.com/course/threat_hunting_professional/">eLearnSecurity THP</a> - Threat Hunting Professional</li>
+</ul>
+<h3 id="twitter">Twitter</h3>
+<ul>
+<li><a href="https://twitter.com/0x4d31/lists/awesome-detection">"Awesome Detection" Twitter List</a> - Security guys who tweet about threat detection, hunting, DFIR, and red teaming</li>
+</ul>
+<h2 id="threat-simulation">Threat Simulation</h2>
+<p>A curated list of awesome adversary simulation resources</p>
+<h3 id="tools">Tools</h3>
+<ul>
+<li><a href="https://github.com/mitre/caldera">MITRE CALDERA</a> - An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks.</li>
+<li><a href="https://github.com/NextronSystems/APTSimulator">APTSimulator</a> - A Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised.</li>
+<li><a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team</a> - Small and highly portable detection tests mapped to the Mitre ATT&amp;CK Framework.</li>
+<li><a href="https://github.com/alphasoc/flightsim">Network Flight Simulator</a> - flightsim is a lightweight utility used to generate malicious network traffic and help security teams to evaluate security controls and network visibility.</li>
+<li><a href="https://github.com/uber-common/metta">Metta</a> - A security preparedness tool to do adversarial simulation.</li>
+<li><a href="https://github.com/endgameinc/RTA">Red Team Automation (RTA)</a> - RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&amp;CK.</li>
+<li><a href="https://github.com/mdsecactivebreach/SharpShooter">SharpShooter</a> - Payload Generation Framework.</li>
+<li><a href="https://github.com/mdsecactivebreach/CACTUSTORCH">CACTUSTORCH</a> - Payload Generation for Adversary Simulations.</li>
+<li><a href="https://github.com/TryCatchHCF/DumpsterFire">DumpsterFire</a> - A modular, menu-driven, cross-platform tool for building repeatable, time-delayed, distributed security events.</li>
+<li><a href="https://github.com/EmpireProject/Empire">Empire</a>(<a href="http://www.powershellempire.com">website</a>) - A PowerShell and Python post-exploitation agent.</li>
+<li><a href="https://github.com/PowerShellMafia/PowerSploit/">PowerSploit</a> - A PowerShell Post-Exploitation Framework.</li>
+<li><a href="https://github.com/redhuntlabs/RedHunt-OS">RedHunt-OS</a> - A Virtual Machine for Adversary Emulation and Threat Hunting. RedHunt aims to be a one stop shop for all your threat emulation and threat hunting needs by integrating attacker's arsenal as well as defender's toolkit to actively identify the threats in your environment.</li>
+<li><a href="https://github.com/guardicore/monkey">Infection Monkey</a> - An open source Breach and Attack Simulation (BAS) tool that assesses the resiliency of private and public cloud environments to post-breach attacks and lateral movement.</li>
+<li><a href="https://github.com/splunk/attack_range">Splunk Attack Range</a> - A tool that allows you to create vulnerable instrumented local or cloud environments to simulate attacks against and collect the data into Splunk.</li>
+</ul>
+<h3 id="resources_1">Resources</h3>
+<ul>
+<li><a href="https://attack.mitre.org/wiki/Adversary_Emulation_Plans">MITRE's Adversary Emulation Plans</a></li>
+<li><a href="https://github.com/yeyintminthuhtut/Awesome-Red-Teaming">Awesome Red Teaming</a> - A list of awesome red teaming resources</li>
+<li><a href="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki">Red-Team Infrastructure Wiki</a> - Wiki to collect Red Team infrastructure hardening resources.</li>
+<li><a href="https://www.mdsec.co.uk/2018/03/payload-generation-using-sharpshooter/">Payload Generation using SharpShooter</a></li>
+<li><a href="https://posts.specterops.io/">SpecterOps Blog</a><ul>
+<li><a href="https://posts.specterops.io/tagged/threat-hunting">Threat Hunting</a></li>
+</ul>
+</li>
+<li><a href="https://blog.cobaltstrike.com/2015/09/30/advanced-threat-tactics-course-and-notes/">Advanced Threat Tactics</a> - A free course on red team operations and adversary simulations.</li>
+<li><a href="https://www.pwc.co.uk/issues/cyber-security-data-privacy/research/signal-att-and-ck-part-1.html">Signal the ATT&amp;CK: Part 1</a> - Modelling APT32 in CALDERA </li>
+<li><a href="https://github.com/infosecn1nja/Red-Teaming-Toolkit">Red Teaming/Adversary Simulation Toolkit</a> - A collection of open source and commercial tools that aid in red team operations.</li>
+<li><a href="https://www.thec2matrix.com/matrix">C2 Matrix</a> (<a href="https://docs.google.com/spreadsheets/d/1b4mUxa6cDQuTV2BPC6aA-GR4zGZi0ooPYtBe4IgPsSc">Google Sheets</a>)</li>
+</ul>
+<h2 id="contribute">Contribute</h2>
+<p>Contributions welcome! Read the <a href="CONTRIBUTING.md">contribution guidelines</a> first.</p>
+<h2 id="license">License</h2>
+<p><a href="http://creativecommons.org/publicdomain/zero/1.0"><img alt="CC0" src="http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg" /></a></p>
+<p>To the extent possible under law, Adel &#34;0x4D31&#34; Karimi has waived all copyright and
+related or neighboring rights to this work.</p>
+<h2 id="references">References</h2>
+<p>[1] Osquery检测入侵痕迹, <a href="https://evilanne.github.io/about/">EvilAnne</a>, https://evilanne.github.io/2019/02/20/Osquery%E6%A3%80%E6%B5%8B%E5%85%A5%E4%BE%B5%E7%97%95%E8%BF%B9/</p>
+<p>[2] 微软轻量级系统监控工具sysmon原理与实现完全分析（上篇）, <a href="https://www.anquanke.com/member/123937">浪子_三少</a>, https://www.anquanke.com/post/id/156704</p>
+<p>[3] 甲方视角浅析MITRE ATT&amp;CK ，<a href="https://www.freebuf.com/author/chiweiwei">chiweiwei </a>，https://www.freebuf.com/articles/es/249278.html</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../0x1_blue_team-resources/" title="🎖️ 蓝队资源大合集" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                🎖️ 蓝队资源大合集
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../0x3_threat_intelligence/" title="✉️ 威胁情报大合集" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                ✉️ 威胁情报大合集
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.92ffa368.min.js"></script>
+      <script src="../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
