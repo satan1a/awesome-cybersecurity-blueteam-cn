@@ -224,22 +224,22 @@ title: 🏹️ 威胁狩猎大合集
     - 威胁狩猎实用指南
     
 - [The Hunter's Handbook](assets/The-Hunters-Handbook.pdf)
-    
+  
     - Endgame公司的威胁狩猎手册（Handbook）
     
 - [ThreatHunter-Playbook](https://github.com/Cyb3rWard0g/ThreatHunter-Playbook)
-    
+  
     - 威胁猎人的演练脚本，可以帮助开发用于威胁狩猎活动的技术和理论假设
     
 - 🌟[The ThreatHunting Project](https://github.com/ThreatHuntingProject/ThreatHunting) 
     - 大量的[狩猎案例](https://github.com/ThreatHuntingProject/ThreatHunting/tree/master/hunts)和狩猎资源
     
 - [CyberThreatHunting](https://github.com/A3sal0n/CyberThreatHunting)
-    
+  
     - 威胁猎人的资源集合
     
 - [Hunt-Detect-Prevent](https://github.com/MHaggis/hunt-detect-prevent)
-    
+  
     - 用于追捕、检测和阻止攻击者的资源与实用工具
     
 - [Alerting and Detection Strategy Framework](https://medium.com/@palantir/alerting-and-detection-strategy-framework-52dc33722df2)
@@ -261,7 +261,7 @@ title: 🏹️ 威胁狩猎大合集
     - 被攻击者滥用的Windows命令
     
 - [Deception-as-Detection](https://github.com/0x4D31/deception-as-detection)
-    
+  
     - 与MITRE的ATT&CK框架对应的基于欺骗的检测技术
     
 - [On TTPs](http://ryanstillions.blogspot.com.au/2014/04/on-ttps.html)
@@ -357,64 +357,108 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-#### Frameworks
+#### 框架/模型
 
-- [MITRE ATT&CK](https://attack.mitre.org/wiki/Main_Page) - A curated knowledge base and model for cyber adversary behavior, reflecting the various phases of an adversary’s lifecycle and the platforms they are known to target.
-- [MITRE CAR](https://car.mitre.org/wiki/Main_Page) - The Cyber Analytics Repository (CAR) is a knowledge base of analytics developed by MITRE based on the Adversary Tactics, Techniques, and Common Knowledge (ATT&CK™) adversary model.
-- [Alerting and Detection Strategies Framework](https://github.com/palantir/alerting-detection-strategy-framework) - A framework for developing alerting and detection strategies.
-- [A Simple Hunting Maturity Model](http://detect-respond.blogspot.com.au/2015/10/a-simple-hunting-maturity-model.html) - The Hunting Maturity Model describes five levels of organizational hunting capability, ranging from HMM0 (the least capability) to HMM4 (the most).
-- [The Pyramic of Pain](http://detect-respond.blogspot.com.au/2013/03/the-pyramid-of-pain.html) - The relationship between the types of indicators you might use to detect an adversary's activities and how much pain it will cause them when you are able to deny those indicators to them.
+- [MITRE ATT&CK](https://attack.mitre.org/wiki/Main_Page)
+    - 针对行为的精心设计的知识库和模型，反映了攻击者生命周期的各个阶段以及他们已知的目标
+- [MITRE CAR](https://car.mitre.org/wiki/Main_Page)
+    - Cyber Analytics Repository (CAR) 是 MITRE 基于 Adversary Tactics, Techniques, and Common Knowledge (ATT&CK™) 对手模型开发的分析知识库
+- [Alerting and Detection Strategies Framework](https://github.com/palantir/alerting-detection-strategy-framework)
+    - 用于开发告警和检测策略的框架
+- [A Simple Hunting Maturity Model](http://detect-respond.blogspot.com.au/2015/10/a-simple-hunting-maturity-model.html)
+    - 狩猎成熟度模型描述了组织狩猎能力的五个级别，范围从 HMM0（最低能力）到 HMM4（最高能力）
+- [The Pyramic of Pain](http://detect-respond.blogspot.com.au/2013/03/the-pyramid-of-pain.html)
+    - 可用于检测对手活动的指标类型之间的关系、评估情报价值
 - [A Framework for Cyber Threat Hunting](assets/Framework-for-Threat-Hunting-Whitepaper.pdf)
-- [The PARIS Model](http://threathunter.guru/blog/the-paris-model/) - A model for threat hunting.
-- [Cyber Kill Chain](https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html) - It is part of the Intelligence Driven Defense® model for identification and prevention of cyber intrusions activity. The model identifies what the adversaries must complete in order to achieve their objective.
-- [The DML Model](http://ryanstillions.blogspot.com.au/2014/04/the-dml-model_21.html) - The Detection Maturity Level (DML) model is a capability maturity model for referencing ones maturity in detecting cyber attacks.
+    - 狩猎成熟度模型的介绍手册
+- [The PARIS Model](http://threathunter.guru/blog/the-paris-model/)
+    - PARIS威胁狩猎模型
+    - 注：因为其模型形状类似于巴黎埃菲尔铁塔而得名
+- [Cyber Kill Chain](https://www.lockheedmartin.com/us/what-we-do/aerospace-defense/cyber/cyber-kill-chain.html)
+    - 杀伤链模型，是Intelligence Driven Defense® 模型的一部分，用于识别和预防网络入侵活动。该模型确定了对手必须完成哪些任务才能实现其目标，定义攻击里程碑
+- [The DML Model](http://ryanstillions.blogspot.com.au/2014/04/the-dml-model_21.html)
+    - 检测成熟度级别 (DML) 模型是一种能力成熟度模型，用于参考检测网络攻击的成熟度
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [OSSEM](https://github.com/hunters-forge/OSSEM) (Open Source Security Events Metadata) - A community-led project that focuses on the documentation and standardization of security event logs from diverse data sources and operating systems
-- [MITRE Shield](https://shield.mitre.org) - A knowledge base of active defense techniques and tactics ([Active Defense Matrix](https://shield.mitre.org/matrix/))
+    - 美国国家标准暨技术研究院（NIST）的网络安全模型
+- [OSSEM](https://github.com/hunters-forge/OSSEM) (Open Source Security Events Metadata)
+    - 一个开源社区主导的项目，专注于来自不同数据源和操作系统的安全事件日志的文档和标准化
+- [MITRE Shield](https://shield.mitre.org)
+    - 与ATT&CK模型相对应的主动防御技术和战术的知识库（[Active Defense Matrix](https://shield.mitre.org/matrix/), [主动防御矩阵](https://shield.mitre.org/matrix/)）
 
-#### DNS
+
+
+#### 基于DNS数据的威胁狩猎
 
 - [Detecting DNS Tunneling](https://www.sans.org/reading-room/whitepapers/dns/detecting-dns-tunneling-34152)
+    - 检测DNS隐蔽隧道
 - [Hunting the Known Unknowns (with DNS)](https://www.splunk.com/pdfs/events/govsummit/hunting_the_known_unknowns_with_DNS.pdf)
-- [Detecting dynamic DNS domains in Splunk](https://www.splunk.com/blog/2015/08/04/detecting-dynamic-dns-domains-in-splunk.html)
+    - 使用DNS数据发现已知与未知的安全威胁
+- 🌟[Detecting dynamic DNS domains in Splunk](https://www.splunk.com/blog/2015/08/04/detecting-dynamic-dns-domains-in-splunk.html)
+    - 在Splunk中检测使用动态DNS服务的域名
 - [Random Words on Entropy and DNS](https://www.splunk.com/blog/2015/10/01/random-words-on-entropy-and-dns.html)
+    - 介绍在威胁狩猎过程中对DNS数据中的具有相对较高熵的域和子域进行检测的过程
 - [Tracking Newly Registered Domains](https://isc.sans.edu/diary/Tracking+Newly+Registered+Domains/23127)
+    - 监测新注册域名
 - [Suspicious Domains Tracking Dashboard](https://isc.sans.edu/forums/diary/Suspicious+Domains+Tracking+Dashboard/23046/)
+    - 可疑域名监测面板
 - [Proactive Malicious Domain Search](https://isc.sans.edu/forums/diary/Proactive+Malicious+Domain+Search/23065/)
-- [DNS is NOT Boring](https://www.first.org/resources/papers/conf2017/DNS-is-NOT-Boring-Using-DNS-to-Expose-and-Thwart-Attacks.pdf) - Using DNS to Expose and Thwart Attacks
-- [Actionable Detects](https://prezi.com/vejpnxkm85ih/actionable-detects-dns-keynote/) - Blue Team Tactics
+    -   借助证书透明度项目进行主动的恶意域名发现
+- [DNS is NOT Boring](https://www.first.org/resources/papers/conf2017/DNS-is-NOT-Boring-Using-DNS-to-Expose-and-Thwart-Attacks.pdf)
+    - 使用DNS数据发现和组织恶意攻击
+- [Actionable Detects](https://prezi.com/vejpnxkm85ih/actionable-detects-dns-keynote/)
+    - 使用DNS数据进行防守的蓝队策略
 
-#### Command and Control
+
+
+#### 命令与控制（C2）相关
 
 - [Rise of Legitimate Services for Backdoor Command and Control](assets/legit-services.pdf)
-- [Watch Your Containers](https://www.intezer.com/container-security/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/) - A malware using DogeCoin based DGA to generate C2 domain names.
+    -   使用合法的互联网服务作为命令和控制 (C2) 模式一部分的恶意软件技术
+- [Watch Your Containers](https://www.intezer.com/container-security/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/)
+    -  一种使用基于 DogeCoin的DGA生成 C2 域名的恶意软件
 
 ##### DoH
 
-- [Hiding in Plain Sight](https://blog.huntresslabs.com/hiding-in-plain-sight-part-2-dfec817c036f) - A malware abusing Google DoH
-- [All the DoH](https://twitter.com/stvemillertime/status/1196788709292687360) - A Twitter thread on malware families and utilities that use DNS-over-HTTPS.
+- [Hiding in Plain Sight](https://blog.huntresslabs.com/hiding-in-plain-sight-part-2-dfec817c036f)
+    - 一种滥用 Google DoH 的恶意软件
+- [All the DoH](https://twitter.com/stvemillertime/status/1196788709292687360)
+    - 使用DNS-over-HTTPS 的恶意软件，Twitter贴文
 
 
 
 #### Osquery
 
-- [osquery Across the Enterprise](https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55)
-- [osquery for Security — Part 1](https://medium.com/@clong/osquery-for-security-b66fffdf2daf)
-- [osquery for Security — Part 2](https://medium.com/@clong/osquery-for-security-part-2-2e03de4d3721) - Advanced osquery functionality, File integrity monitoring, process auditing, and more.
-- [Tracking a stolen code-signing certificate with osquery](https://blog.trailofbits.com/2017/10/10/tracking-a-stolen-code-signing-certificate-with-osquery/)
-- [Monitoring macOS hosts with osquery](https://blog.kolide.com/monitoring-macos-hosts-with-osquery-ba5dcc83122d)
-- [Kolide's Blog](https://blog.kolide.com/)
-- [The osquery Extensions Skunkworks Project](https://github.com/trailofbits/presentations/tree/master/Osquery%20Extensions)
+-   注：Osquery一个 SQL 驱动的操作系统检测、监控和分析框架
+-   [osquery Across the Enterprise](https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55)
+    -   使用Osquery进行企业安全检测和威胁狩猎
+-   [osquery for Security — Part 1](https://medium.com/@clong/osquery-for-security-b66fffdf2daf)
+    -   Osquery教程-Part 1，本篇主要讲解在企业安全环境下部署
+-   [osquery for Security — Part 2](https://medium.com/@clong/osquery-for-security-part-2-2e03de4d3721)
+    -   Osquery教程-Part 2，本篇主要讲解高级 osquery 功能、文件完整性监控、进程审计等
+-   [Tracking a stolen code-signing certificate with osquery](https://blog.trailofbits.com/2017/10/10/tracking-a-stolen-code-signing-certificate-with-osquery/)
+    -   使用Osquery追踪被窃取的证书签名
+-   [Monitoring macOS hosts with osquery](https://blog.kolide.com/monitoring-macos-hosts-with-osquery-ba5dcc83122d)
+    -   使用Osquery监控macOS主机
+-   [Threat hunting with Kolide and osquery](https://resources.infosecinstitute.com/topic/threat-hunting-with-kolide-and-osquery/)
+    -   使用使用[Kolide Fleet](https://kolide.com/fleet/)进行威胁狩猎
+    -   注：Kolide Fleet 是一个灵活的控制服务器，可用于管理Osquery队列
 
 #### Windows
 
 - [Threat Hunting via Windows Event Logs](https://www.sans.org/summit-archives/file/summit-archive-1524493093.pdf)
+    - 通过 Windows 事件日志进行威胁追踪
 - [Windows Logging Cheat Sheets](https://www.malwarearchaeology.com/cheat-sheets/)
+    -   调查受感染系统时可以重点关注的的Windows日志路径，备忘清单
 - [Active Directory Threat Hunting](https://adsecurity.org/wp-content/uploads/2017/04/2017-BSidesCharm-DetectingtheElusive-ActiveDirectoryThreatHunting-Final.pdf)
-- [Windows Hunting](https://github.com/beahunt3r/Windows-Hunting) - A collection of Windows hunting queries
+    - 在Windows活动目录中
+- [Windows Hunting](https://github.com/beahunt3r/Windows-Hunting)
+    - 整理在Windows系统中进行威胁狩猎的常见
 - [Windows Commands Abused by Attackers](https://blogs.jpcert.or.jp/en/2016/01/windows-commands-abused-by-attackers.html)
+    - 被攻击者滥用的Windows命令
 - [JPCERT - Detecting Lateral Movement through Tracking Event Logs](https://blogs.jpcert.or.jp/en/2017/12/research-report-released-detecting-lateral-movement-through-tracking-event-logs-version-2.html)
-    - [Tool Analysis Result Sheet](https://jpcertcc.github.io/ToolAnalysisResultSheet/)
+    - 通过跟踪事件日志检测攻击者的横向渗透
+- [Tool Analysis Result Sheet](https://jpcertcc.github.io/ToolAnalysisResultSheet/)
+    - 总结了49种常用于渗透的工具在执行后，对应在Windows中的日志
 
 ##### Sysmon
 
