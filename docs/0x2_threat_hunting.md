@@ -4,44 +4,15 @@ title: 🏹️ 威胁狩猎大合集
 
 # Awesome Threat Detection and Hunting
 
-> A curated list of awesome threat detection and hunting resources
+威胁检测及威胁狩猎的工具、资源大合集，翻译和修改自[awesome-threat-detection](https://github.com/0x4D31/awesome-threat-detection)项目，感谢原作者的整理 :-)
+
+## 目录
 
 
-## Contents
-
-- [Threat Detection and Hunting](#threat-detection-and-hunting)
-    - [Tools](#tools)
-        - [Alerting Engine](#alerting-engine)
-        - [Endpoint Monitoring](#endpoint-monitoring)
-        - [Network Monitoring](#network-monitoring)
-            - [Fingerprinting Tools](#fingerprinting-tools)
-    - [DataSet](#dataset)
-    - [Resources](#resources)
-        - [Frameworks](#frameworks)
-        - [DNS](#dns)
-        - [Command and Control](#command-and-control)
-        - [Osquery](#osquery)
-        - [Windows](#windows)
-            - [Sysmon](#sysmon)
-            - [PowerShell](#powershell)
-        - [Fingerprinting](#fingerprinting)
-        - [Research Papers](#research-papers)
-        - [Blogs](#blogs)
-    - [Videos](#videos)
-    - [Trainings](#trainings)
-    - [Twitter](#twitter)
-- [Threat Simulation](#threat-simulation)
-    - [Tools](#tools-1)
-    - [Resources](#resources-1)
-- [Contribute](#contribute)
-- [License](#license)
-
-## Threat Detection and Hunting
-
-威胁检测及威胁狩猎
+[TOC]
 
 
-#### 工具类清单
+## 工具
 
 - [MITRE ATT&CK Navigator](https://mitre.github.io/attack-navigator/enterprise/)([source code](https://github.com/mitre/attack-navigator)) 
     - ATT&CK Navigator是旨在提供ATT＆CK矩阵的基本导航和注释，有点类似于Excel表格的形式
@@ -83,7 +54,7 @@ title: 🏹️ 威胁狩猎大合集
     - 一个PowerShell模块，用于从Windows事件日志中进行威胁狩猎
 - [Uncoder](https://uncoder.io)
     - 一个在线的搜索/查询转换器，帮助SIEM转换和保存搜索、过滤器、查询语句、API请求、关联和Sigma规则
-- 🌿[Sigma](https://github.com/Neo23x0/sigma)
+- 🌟[Sigma](https://github.com/Neo23x0/sigma)
     - 一个对SIEM系统的通用签名格式，帮助基于SIEM的威胁检测规则转换
 - [CimSweep](https://github.com/PowerShellMafia/CimSweep)
     - 一套基于CIM / WMI的工具集，用于跨Windows系统版本来远程执行事件响应和威胁狩猎操作
@@ -117,14 +88,14 @@ title: 🏹️ 威胁狩猎大合集
 - [Capa](https://github.com/fireeye/capa)
     - 一个用于识别可执行文件功能的开源工具
 
-#### 告警引擎
+### 告警引擎
 
 - [ElastAlert](https://github.com/Yelp/elastalert)
     - 基于ELK的框架，用于从Elasticsearch中的数据中发出异常、峰值或其他设定规则的警报
 - [StreamAlert](https://github.com/airbnb/streamalert)
     - 一个无服务器的实时数据分析框架，帮助使用自定的数据源和逻辑从任何环境中提取，分析和告警数据
 
-#### 端点监控
+### 端点监控
 
 - [osquery](https://osquery.io) ([github](https://github.com/osquery/osquery)) 
     -   SQL语句驱动的操作系统编排、监控和分析工具
@@ -142,11 +113,11 @@ title: 🏹️ 威胁狩猎大合集
     - 一个Windows系统服务（设备驱动程序），用于监视系统活动并将其日志到Windows的事件日志中
 - [OSSEC](github.com/ossec/ossec-hids)
     - 一个开源的、基于主机的入侵检测系统（HIDS）
-- [🌿WAZUH](https://github.com/wazuh/wazuh)
+- 🌟[WAZUH](https://github.com/wazuh/wazuh)
     - 一个开源的综合安全平台，用于威胁预防、检测和响应。可以用于保护本地、虚拟机、容器及云端环境的工作负载
     - 支持的功能：入侵检测、日志数据分析、文件完整性监控、漏洞检测、配置评估、事件响应、合规性、云安全、Docker安全
 
-#### 网络监控
+### 网络监控
 
 - [Zeek](https://github.com/zeek/zeek)
     - 一个网络安全监控工具，前身为Bro
@@ -165,7 +136,7 @@ title: 🏹️ 威胁狩猎大合集
 - [Stenographer](https://github.com/google/stenographer)
     - 一个全流量网络数据包捕获工具
 
-##### 指纹识别工具
+#### 指纹工具
 
 - [JA3](https://github.com/salesforce/ja3)
     - 一种分析 SSL/TLS 客户端和服务器的方法
@@ -188,7 +159,9 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-### 数据集
+
+
+## 数据集
 
 -   [Security Datasets](https://github.com/Cyb3rWard0g/mordor)
     -   以模拟攻防对抗技术出发，以JSON文件格式生成的各类安全事件数据集。数据按 Miter ATT&CK 框架定义的平台、对手组、策略和技术进行分类
@@ -215,7 +188,9 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-### 资源
+
+
+## 资源
 
 - [Huntpedia](assets/huntpedia.pdf)
     -   威胁狩猎知识纲领
@@ -357,7 +332,7 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-#### 框架/模型
+### 框架/模型
 
 - [MITRE ATT&CK](https://attack.mitre.org/wiki/Main_Page)
     - 针对行为的精心设计的知识库和模型，反映了攻击者生命周期的各个阶段以及他们已知的目标
@@ -387,7 +362,7 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-#### 基于DNS数据的威胁狩猎
+### 基于DNS数据的威胁狩猎
 
 - [Detecting DNS Tunneling](https://www.sans.org/reading-room/whitepapers/dns/detecting-dns-tunneling-34152)
     - 检测DNS隐蔽隧道
@@ -410,14 +385,12 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-#### 命令与控制（C2）相关
+### 命令与控制（C2）相关
 
 - [Rise of Legitimate Services for Backdoor Command and Control](assets/legit-services.pdf)
     -   使用合法的互联网服务作为命令和控制 (C2) 模式一部分的恶意软件技术
 - [Watch Your Containers](https://www.intezer.com/container-security/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/)
     -  一种使用基于 DogeCoin的DGA生成 C2 域名的恶意软件
-
-##### DoH
 
 - [Hiding in Plain Sight](https://blog.huntresslabs.com/hiding-in-plain-sight-part-2-dfec817c036f)
     - 一种滥用 Google DoH 的恶意软件
@@ -426,7 +399,7 @@ title: 🏹️ 威胁狩猎大合集
 
 
 
-#### Osquery
+### Osquery
 
 -   注：Osquery一个 SQL 驱动的操作系统检测、监控和分析框架
 -   [osquery Across the Enterprise](https://medium.com/@palantir/osquery-across-the-enterprise-3c3c9d13ec55)
@@ -443,7 +416,7 @@ title: 🏹️ 威胁狩猎大合集
     -   使用使用[Kolide Fleet](https://kolide.com/fleet/)进行威胁狩猎
     -   注：Kolide Fleet 是一个灵活的控制服务器，可用于管理Osquery队列
 
-#### Windows
+### Windows
 
 - [Threat Hunting via Windows Event Logs](https://www.sans.org/summit-archives/file/summit-archive-1524493093.pdf)
     - 通过 Windows 事件日志进行威胁追踪
@@ -460,27 +433,36 @@ title: 🏹️ 威胁狩猎大合集
 - [Tool Analysis Result Sheet](https://jpcertcc.github.io/ToolAnalysisResultSheet/)
     - 总结了49种常用于渗透的工具在执行后，对应在Windows中的日志
 
-##### Sysmon
+#### Sysmon
+
+-   注：Sysmon是微软的一款轻量级的系统监控工具，它通过系统服务和驱动程序实现记录进程创建、文件访问以及网络信息的记录，并把相关的信息写入并展示在windows的日志事件里
 
 - [Splunking the Endpoint: Threat Hunting with Sysmon](https://medium.com/@haggis_m/splunking-the-endpoint-threat-hunting-with-sysmon-9dd956e3e1bd)
     - [Hunting with Sysmon](https://medium.com/@haggis_m/hunting-with-sysmon-38de012e62e6)
+    - 基于Sysmon进行威胁狩猎
 - [Threat Hunting with Sysmon: Word Document with Macro](http://www.syspanda.com/index.php/2017/10/10/threat-hunting-sysmon-word-document-macro/)
+    - 基于Sysmon狩猎带有宏的Word文档
 - Chronicles of a Threat Hunter: Hunting for In-Memory Mimikatz with Sysmon and ELK
     - [Part I (Event ID 7)](https://cyberwardog.blogspot.com.au/2017/03/chronicles-of-threat-hunter-hunting-for.html)
     - [Part II (Event ID 10)](https://cyberwardog.blogspot.com.au/2017/03/chronicles-of-threat-hunter-hunting-for_22.html)
+    - 使用Sysmon和ELK发现内存中的 Mimikatz
 - Advanced Incident Detection and Threat Hunting using Sysmon (and Splunk) ([botconf 2016 Slides](https://www.botconf.eu/wp-content/uploads/2016/11/PR12-Sysmon-UELTSCHI.pdf), [FIRST 2017 Slides](https://www.first.org/resources/papers/conf2017/Advanced-Incident-Detection-and-Threat-Hunting-using-Sysmon-and-Splunk.pdf))
-- [The Sysmon and Threat Hunting Mimikatz wiki for the blue team](https://www.peerlyst.com/posts/the-sysmon-and-threat-hunting-mimikatz-wiki-for-the-blue-team-guurhart)
-- [Splunkmon — Taking Sysmon to the Next Level](https://www.crypsisgroup.com/wp-content/uploads/2017/07/CG_WhitePaper_Splunkmon_1216-1.pdf)
+    - 使用 Sysmon和Splunk进行高级事件检测和狩猎
 - [Sysmon Threat Detection Guide](https://www.varonis.com/blog/sysmon-threat-detection-guide/) ([PDF](assets/varonis.com-SysmonThreatAnalysisGuide.pdf))
+    - Sysmon威胁分析指南
 
-##### PowerShell
+#### PowerShell
 
 - Revoke-Obfuscation: PowerShell Obfuscation Detection Using Science ([Paper](https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science-wp.pdf), [Slides](https://www.blackhat.com/docs/us-17/thursday/us-17-Bohannon-Revoke-Obfuscation-PowerShell-Obfuscation-Detection-And%20Evasion-Using-Science.pdf))
+    - 使用数据科学进行PowerShell混淆检测
 - [Hunting the Known Unknowns (With PowerShell)](https://conf.splunk.com/files/2016/slides/hunting-the-known-unknowns-the-powershell-edition.pdf)
+    - 使用PowerShell进行威胁狩猎
 - [HellsBells, Let's Hunt PowerShells!](https://www.splunk.com/blog/2017/07/06/hellsbells-lets-hunt-powershells.html)
+    - 检测PowerShell的一些方法和技巧
 - [Hunting for PowerShell Using Heatmaps](https://medium.com/@jshlbrd/hunting-for-powershell-using-heatmaps-69b70151fa5d)
+    - 可视化（热图）狩猎PowerShell
 
-#### 指纹
+### 指纹
 
 - [JA3: SSL/TLS Client Fingerprinting for Malware Detection](https://engineering.salesforce.com/open-sourcing-ja3-92c9e53c3c41)
     - 使用JA3指纹进行恶意软件检测
@@ -519,7 +501,7 @@ title: 🏹️ 威胁狩猎大合集
 - [HeadPrint: Detecting Anomalous Communications through Header-based Application Fingerprinting](https://www.conand.me/publications/bortolameotti-headprint-2020.pdf)
     - 论文，通过基于标题的应用程序指纹检测异常通信
 
-#### 研究报告
+### 研究报告
 
 - [Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains](https://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf)
   - 论文，通过分析对抗行为和入侵杀伤链进行情报驱动的计算机网络防护
@@ -536,7 +518,7 @@ title: 🏹️ 威胁狩猎大合集
 - [Machine Learning for Encrypted Malware Traffic Classification](https://dl.acm.org/doi/pdf/10.1145/3097983.3098163)
   - 论文，用于加密恶意软件流量分类的机器学习
 
-#### Blogs
+### 相关博客
 
 - [David Bianco's Blog](https://detect-respond.blogspot.com)
 - [DFIR and Threat Hunting Blog](http://findingbad.blogspot.com)
@@ -544,7 +526,7 @@ title: 🏹️ 威胁狩猎大合集
 - [Chris Sanders' Blog](https://chrissanders.org)
 - [Kolide Blog](https://blog.kolide.com/)
 
-### Videos
+### 相关视频
 
 - [SANS Threat Hunting and IR Summit 2017](https://www.youtube.com/playlist?list=PLfouvuAjspTr95R60Kt7ZcoerR6tYoCLA)
 - [SANS Threat Hunting and IR Summit 2016](https://www.youtube.com/playlist?list=PLfouvuAjspTokaa-LdUHqszL-KACkCsKT)
@@ -572,64 +554,12 @@ title: 🏹️ 威胁狩猎大合集
 - [Visual Hunting with Linked Data Graphs](https://www.youtube.com/watch?v=EpK7MkWCh1I)
 - [SecurityOnion Con 2018 - Introduction to Data Analysis](https://www.youtube.com/watch?v=A6hBoeSNJJw)
 
-### Trainings
+### 相关课程
 
 - [SANS SEC555](https://www.sans.org/course/siem-with-tactical-analytics) - SIEM with Tactical Analytics.
+    - 在SIEM中进行战术（Tactics）分析
 - [SpecterOps Adversary Tactics: PowerShell](https://github.com/specterops/at-ps) (FREE)
 - [SpecterOps Adversary Tactics: Detection](https://specterops.io/how-we-help/training-offerings/adversary-tactics-detection)
-- [eLearnSecurity THP](https://www.elearnsecurity.com/course/threat_hunting_professional/) - Threat Hunting Professional
-
-
-### Twitter
-
-- ["Awesome Detection" Twitter List](https://twitter.com/0x4d31/lists/awesome-detection) - Security guys who tweet about threat detection, hunting, DFIR, and red teaming
-
-## Threat Simulation
-
-A curated list of awesome adversary simulation resources
-
-### Tools
-
-- [MITRE CALDERA](https://github.com/mitre/caldera) - An automated adversary emulation system that performs post-compromise adversarial behavior within Windows Enterprise networks.
-- [APTSimulator](https://github.com/NextronSystems/APTSimulator) - A Windows Batch script that uses a set of tools and output files to make a system look as if it was compromised.
-- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) - Small and highly portable detection tests mapped to the Mitre ATT&CK Framework.
-- [Network Flight Simulator](https://github.com/alphasoc/flightsim) - flightsim is a lightweight utility used to generate malicious network traffic and help security teams to evaluate security controls and network visibility.
-- [Metta](https://github.com/uber-common/metta) - A security preparedness tool to do adversarial simulation.
-- [Red Team Automation (RTA)](https://github.com/endgameinc/RTA) - RTA provides a framework of scripts designed to allow blue teams to test their detection capabilities against malicious tradecraft, modeled after MITRE ATT&CK.
-- [SharpShooter](https://github.com/mdsecactivebreach/SharpShooter) - Payload Generation Framework.
-- [CACTUSTORCH](https://github.com/mdsecactivebreach/CACTUSTORCH) - Payload Generation for Adversary Simulations.
-- [DumpsterFire](https://github.com/TryCatchHCF/DumpsterFire) - A modular, menu-driven, cross-platform tool for building repeatable, time-delayed, distributed security events.
-- [Empire](https://github.com/EmpireProject/Empire)([website](http://www.powershellempire.com)) - A PowerShell and Python post-exploitation agent.
-- [PowerSploit](https://github.com/PowerShellMafia/PowerSploit/) - A PowerShell Post-Exploitation Framework.
-- [RedHunt-OS](https://github.com/redhuntlabs/RedHunt-OS) - A Virtual Machine for Adversary Emulation and Threat Hunting. RedHunt aims to be a one stop shop for all your threat emulation and threat hunting needs by integrating attacker's arsenal as well as defender's toolkit to actively identify the threats in your environment.
-- [Infection Monkey](https://github.com/guardicore/monkey) - An open source Breach and Attack Simulation (BAS) tool that assesses the resiliency of private and public cloud environments to post-breach attacks and lateral movement.
-- [Splunk Attack Range](https://github.com/splunk/attack_range) - A tool that allows you to create vulnerable instrumented local or cloud environments to simulate attacks against and collect the data into Splunk.
-
-
-### Resources
-
-- [MITRE's Adversary Emulation Plans](https://attack.mitre.org/wiki/Adversary_Emulation_Plans)
-- [Awesome Red Teaming](https://github.com/yeyintminthuhtut/Awesome-Red-Teaming) - A list of awesome red teaming resources
-- [Red-Team Infrastructure Wiki](https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki) - Wiki to collect Red Team infrastructure hardening resources.
-- [Payload Generation using SharpShooter](https://www.mdsec.co.uk/2018/03/payload-generation-using-sharpshooter/)
-- [SpecterOps Blog](https://posts.specterops.io/)
-    - [Threat Hunting](https://posts.specterops.io/tagged/threat-hunting)
-- [Advanced Threat Tactics](https://blog.cobaltstrike.com/2015/09/30/advanced-threat-tactics-course-and-notes/) - A free course on red team operations and adversary simulations.
-- [Signal the ATT&CK: Part 1](https://www.pwc.co.uk/issues/cyber-security-data-privacy/research/signal-att-and-ck-part-1.html) - Modelling APT32 in CALDERA 
-- [Red Teaming/Adversary Simulation Toolkit](https://github.com/infosecn1nja/Red-Teaming-Toolkit) - A collection of open source and commercial tools that aid in red team operations.
-- [C2 Matrix](https://www.thec2matrix.com/matrix) ([Google Sheets](https://docs.google.com/spreadsheets/d/1b4mUxa6cDQuTV2BPC6aA-GR4zGZi0ooPYtBe4IgPsSc))
-
-## Contribute
-
-Contributions welcome! Read the [contribution guidelines](CONTRIBUTING.md) first.
-
-
-## License
-
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
-
-To the extent possible under law, Adel &#34;0x4D31&#34; Karimi has waived all copyright and
-related or neighboring rights to this work.
 
 
 
