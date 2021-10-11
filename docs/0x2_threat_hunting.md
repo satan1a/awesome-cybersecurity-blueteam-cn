@@ -480,36 +480,61 @@ title: 🏹️ 威胁狩猎大合集
 - [HellsBells, Let's Hunt PowerShells!](https://www.splunk.com/blog/2017/07/06/hellsbells-lets-hunt-powershells.html)
 - [Hunting for PowerShell Using Heatmaps](https://medium.com/@jshlbrd/hunting-for-powershell-using-heatmaps-69b70151fa5d)
 
-#### Fingerprinting
+#### 指纹
 
 - [JA3: SSL/TLS Client Fingerprinting for Malware Detection](https://engineering.salesforce.com/open-sourcing-ja3-92c9e53c3c41)
+    - 使用JA3指纹进行恶意软件检测
+    - 注：JA3指纹属于SSL/TLS协商指纹，其计算所需字段从协商信息中获取，用于在流量层识别特定客户端与服务器之间的加密通讯
 - [TLS Fingerprinting with JA3 and JA3S](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967)
+    - 对JA3/JA3S指纹计算原理及应用场景的讲解
 - [HASSH - a profiling method for SSH Clients and Servers](https://engineering.salesforce.com/open-sourcing-hassh-abed3ae5044c)
     - [HASSH @BSides Canberra 2019 - Slides](https://github.com/benjeems/Presentations/blob/master/BSides%202019%20%20-%20HASSH%20-%20a%20Profiling%20Method%20for%20SSH%20Clients%20and%20Servers.pdf)
+    - HASSH，对SSH协议进行流量层指纹识别的一个方案
 - [Finding Evil on the Network Using JA3/S and HASSH](https://engineering.salesforce.com/finding-evil-on-the-network-using-ja3-s-and-hassh-11431a8606e4)
+    - 使用JA3/JA3S和HASSH进行威胁狩猎的演讲
 - [RDP Fingerprinting - Profiling RDP Clients with JA3 and RDFP](https://medium.com/@0x4d31/rdp-client-fingerprinting-9e7ac219f7f4)
+    - 使用JA3和RDFP识别RDP客户端
 - [Effective TLS Fingerprinting Beyond JA3](https://www.ntop.org/ndpi/effective-tls-fingerprinting-beyond-ja3/)
+    - 在JA3计算的基础上，提出了的优化方向，包括使用ALPN（应用层协议协商）和客户端支持的TLS协议版本
 - [TLS Fingerprinting in the Real World](https://blogs.cisco.com/security/tls-fingerprinting-in-the-real-world)
-- [HTTP Client Fingerprinting Using SSL Handshake Analysis](https://www.ssllabs.com/projects/client-fingerprinting/) (source code: [mod_sslhaf](https://github.com/ssllabs/sslhaf)
+    - 对TLS指纹的业务场景介绍
+- [HTTP Client Fingerprinting Using SSL Handshake Analysis](https://www.ssllabs.com/projects/client-fingerprinting/) (source code: [mod_sslhaf](https://github.com/ssllabs/sslhaf))
+    - 基于SSL协商进行HTTP指纹的识别
 - [TLS fingerprinting - Smarter Defending & Stealthier Attacking](https://blog.squarelemon.com/tls-fingerprinting/)
-- [JA3er](https://ja3er.com) - a DB of JA3 fingerprints
+    - 介绍TLS指纹的定义和工具（包括FingerprinTLS和Fingerprintout）
+- [JA3er](https://ja3er.com)
+    - JA3指纹库
 - [An Introduction to HTTP fingerprinting](https://www.net-square.com/httprint_paper.html)
-- [TLS Fingerprints](https://tlsfingerprint.io/) collected from the University of Colorado Boulder campus network
+    - 对HTTP指纹的简介
+- [TLS Fingerprints](https://tlsfingerprint.io/)
+    - 从科罗拉多大学博尔德校区网络收集的TLS指纹
 - [The use of TLS in Censorship Circumvention](https://tlsfingerprint.io/static/frolov2019.pdf)
+    - 论文，TLS在规避审查中的应用
 - [TLS Beyond the Browser: Combining End Host and Network Data to Understand Application Behavior](https://dl.acm.org/doi/pdf/10.1145/3355369.3355601)
+    - 论文，结合终端主机和网络数据来了解应用程序行为
 - [HTTPS traffic analysis and client identification using passive SSL/TLS fingerprinting](https://link.springer.com/article/10.1186/s13635-016-0030-7)
+    - 论文，使用被动SSL/TLS指纹识别的HTTPS流量分析进行客户端识别
 - [Markov Chain Fingerprinting to Classify Encrypted Traffic](https://drakkar.imag.fr/IMG/pdf/1569811033.pdf)
+    - 论文，使用马尔可夫链指纹（Markov Chain Fingerprinting）对加密流量进行分类
 - [HeadPrint: Detecting Anomalous Communications through Header-based Application Fingerprinting](https://www.conand.me/publications/bortolameotti-headprint-2020.pdf)
+    - 论文，通过基于标题的应用程序指纹检测异常通信
 
-#### Research Papers
+#### 研究报告
 
 - [Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains](https://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf)
+  - 论文，通过分析对抗行为和入侵杀伤链进行情报驱动的计算机网络防护
 - [The Diamond Model of Intrusion Analysis](http://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf)
+  - 论文，入侵分析的钻石模型
 - [EXPOSURE: Finding Malicious Domains Using Passive DNS Analysis](https://www.cs.ucsb.edu/~chris/research/doc/ndss11_exposure.pdf)
+  - 论文，通过被动DNS（Passive DNS）分析查找恶意域名
 - A Comprehensive Approach to Intrusion Detection Alert Correlation ([Paper](https://www.cs.ucsb.edu/~vigna/publications/2004_valeur_vigna_kruegel_kemmerer_TDSC_Correlation.pdf), [Dissertation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.115.8310&rep=rep1&type=pdf))
+  - 论文，入侵检测告警关联的综合方法
 - [On Botnets that use DNS for Command and Control](http://www.few.vu.nl/~herbertb/papers/feederbot_ec2nd11.pdf)
+  - 使用DNS进行C2的僵尸网络
 - [Intelligent, Automated Red Team Emulation](https://dl.acm.org/citation.cfm?id=2991111)
+  - 论文，自动化红队模拟
 - [Machine Learning for Encrypted Malware Traffic Classification](https://dl.acm.org/doi/pdf/10.1145/3097983.3098163)
+  - 论文，用于加密恶意软件流量分类的机器学习
 
 #### Blogs
 
