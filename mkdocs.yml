@@ -14,3 +14,6 @@ theme:
 extra:
   search:
     language: 'jp'
+
+repo_url: https://github.com/satan1a/awesome-cybersecurity-blueteam-cn
+repo_name: Toky/BlueTeam-CN
