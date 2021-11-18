@@ -123,9 +123,11 @@ title: 👨🏻‍⚕数字取证大合集
 - [THOR Lite](https://www.nextron-systems.com/thor-lite/)
     - 免费但不开源的IOC/YARA扫描器，与Loki一家，使用Golang编写，相当于开源Loki的增强版
 
-### Acquisition
+### 采集器
 
 - [artifactcollector](https://github.com/forensicanalysis/artifactcollector) - A customizable agent to collect forensic artifacts on any Windows, macOS or Linux system
+    - 一个可定制的代理，可用于在任何
+
 - [ArtifactExtractor](https://github.com/Silv3rHorn/ArtifactExtractor) - Extract common Windows artifacts from source images and VSCs
 - [AVML](https://github.com/microsoft/avml) - A portable volatile memory acquisition tool for Linux
 - [Belkasoft RAM Capturer](https://belkasoft.com/ram-capturer) - Volatile Memory Acquisition Tool
@@ -137,6 +139,23 @@ title: 👨🏻‍⚕数字取证大合集
 - [Magnet RAM Capture](https://www.magnetforensics.com/resources/magnet-ram-capture/) - A free imaging tool designed to capture the physical memory 
 - [Velociraptor](https://github.com/Velocidex/velociraptor) - Velociraptor is a tool for collecting host based state information using Velocidex Query Language (VQL) queries
 - [WinTriage](https://www.securizame.com/wintriage-the-triage-tool-for-windows-dfirers/) - Wintriage is a live response tool that extracts Windows artifacts. It must be executed with local or domain administrator privileges and recommended to be done from an external drive.
+
+---
+
+-   [artifactcollector](https://github.com/forensicanalysis/artifactcollector) - 一个可定制的代理，用于在任何 Windows、macOS 或 Linux 系统上收集取证工件
+-   [ArtifactExtractor](https://github.com/Silv3rHorn/ArtifactExtractor) - 从源图像和 VSC 中提取常见的 Windows 工件
+-   [AVML](https://github.com/microsoft/avml) - 适用于 Linux 的便携式易失性内存获取工具
+-   [Belkasoft RAM Capturer](https://belkasoft.com/ram-capturer) - 易失性内存采集工具
+-   [CrowdResponse](https://www.crowdstrike.com/resources/community-tools/crowdresponse/) - CrowdStrike 的静态主机数据收集工具
+-   [DFIR ORC](https://dfir-orc.github.io/) - 用于运行 Microsoft Windows 的系统的取证人工制品收集工具
+-   [FastIR 收集器](https://github.com/SekoiaLab/Fastir_Collector)- 在 Windows 上收集工件
+-   [FireEye Memoryze](https://www.fireeye.com/services/freeware/memoryze.html) - 免费的内存取证软件
+-   [LiME](https://github.com/504ensicsLabs/LiME) - 可加载内核模块 (LKM)，允许从 Linux 和基于 Linux 的设备（以前称为 DMD）获取易失性内存
+-   [Magnet RAM Capture](https://www.magnetforensics.com/resources/magnet-ram-capture/) - 一种免费的映像工具，旨在捕获物理内存
+-   [Velociraptor](https://github.com/Velocidex/velociraptor) - Velociraptor 是一种使用 Velocidex 查询语言 (VQL) 查询收集基于主机的状态信息的工具
+-   [WinTriage](https://www.securizame.com/wintriage-the-triage-tool-for-windows-dfirers/) - Wintriage 是一种实时响应工具，可提取 Windows 工件。它必须以本地或域管理员权限执行，并建议从外部驱动器执行。
+
+###  
 
 ### Imaging
 
