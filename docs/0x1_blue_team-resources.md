@@ -194,6 +194,7 @@ COMSEC, Communications Security, 通讯安全
 - [OpenSCAP Base](https://www.open-scap.org/tools/openscap-base/) - 即代表库又代表命令行（扫描）工具，可用于解析和评估[SCAP标准的](https://www.open-scap.org/features/standards/)每个组件，即根据SCAP基线配置文件来评估系统，从而报告被扫描系统的安全状态
 - [Open Source HIDS SECurity (OSSEC)](https://www.ossec.net/) - 完全开源、免费的，功能丰富的基于主机的入侵检测系统（HIDS）
 - [Rootkit Hunter (rkhunter)](http://rkhunter.sourceforge.net/) - 该工具兼容POSIX的Bash脚本，用以扫描主机来查找各种恶意软件迹象
+- [ELkeid](https://github.com/bytedance/Elkeid) - 一个云原生的基于主机的安全(入侵检测与风险识别)解决方案，字节跳动团队开源
 
 ### 沙箱
 
