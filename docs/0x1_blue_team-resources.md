@@ -335,6 +335,8 @@ Network Security Monitoring (NSM)
         - NBNS：Network Basic Input/Output System, ,网上基本输入输出系统。提供了OSI模型中会话层服务，让在不同计算机上运行的不同程序，可以在局域网中，互相连线，以及分享数据
 - [Stenographer](https://github.com/google/stenographer) - 可进行全包捕获的实用程序，用于将数据包缓冲到磁盘以进行入侵检测和事件响应
 - [Suricata](https://suricata-ids.org/) - 一个免费的，跨平台的IDS / IPS，具有在线和离线分析模式以及深度数据包检查功能，该功能也可以通过Lua语言编写
+    - [proofpoint开源的Suricata规则合集](https://rules.emergingthreats.net/): 覆盖约20K+
+
 - [VAST](https://github.com/tenzir/vast) - 一个用于数据驱动的安全调查的免费开源网络遥测引擎
 - [Wireshark](https://www.wireshark.org) - 一个免费、开源的数据包分析器，广泛使用，具有较好的GUI，可用于网络故障排除或数字取证方面的网络流分析
 - [Zeek](https://zeek.org/) - 一个强大的网络分析框架，专注于安全监控，以前称为Bro
