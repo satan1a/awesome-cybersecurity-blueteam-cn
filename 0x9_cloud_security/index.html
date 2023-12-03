@@ -1,0 +1,1270 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0x8_malware_analysis/">
+      
+      
+        <link rel="next" href="../0xA_vm/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>☁️云安全大合集 - 攻防对抗·蓝队清单</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ☁️云安全大合集
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x1_blue_team-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎖️ 蓝队资源大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x2_threat_hunting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏹️ 威胁狩猎大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x3_threat_intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✉️ 威胁情报大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x4_incident_response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚑 应急响应大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x5_ioc_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔍 威胁情报数据源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x6_digital_forensics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    👨🏻‍⚕数字取证大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x7_honeypots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🍯 蜜罐大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x8_malware_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🦠 恶意软件分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ☁️云安全大合集
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ☁️云安全大合集
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    云服务工具
+  </a>
+  
+    <nav class="md-nav" aria-label="云服务工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    辅助工具
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    综合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure" class="md-nav__link">
+    Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp" class="md-nav__link">
+    GCP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    阿里云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    腾讯云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    华为云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    天翼云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    青云
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    利用工具
+  </a>
+  
+    <nav class="md-nav" aria-label="利用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    多云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws_1" class="md-nav__link">
+    AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure_1" class="md-nav__link">
+    Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp_1" class="md-nav__link">
+    GCP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-workspace" class="md-nav__link">
+    Google Workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    阿里云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    腾讯云
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    云原生工具
+  </a>
+  
+    <nav class="md-nav" aria-label="云原生工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    辅助工具
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    综合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform" class="md-nav__link">
+    Terraform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    利用工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xA_vm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💿 虚拟机&集成环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xB_threat_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🤖️ BAS与对手仿真
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xC_security_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📦甲方安全项目合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xD_security_dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊安全领域数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    云服务工具
+  </a>
+  
+    <nav class="md-nav" aria-label="云服务工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    辅助工具
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    综合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure" class="md-nav__link">
+    Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp" class="md-nav__link">
+    GCP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    阿里云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    腾讯云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    华为云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    天翼云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    青云
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    利用工具
+  </a>
+  
+    <nav class="md-nav" aria-label="利用工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    多云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws_1" class="md-nav__link">
+    AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure_1" class="md-nav__link">
+    Azure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp_1" class="md-nav__link">
+    GCP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-workspace" class="md-nav__link">
+    Google Workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    阿里云
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    腾讯云
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    云原生工具
+  </a>
+  
+    <nav class="md-nav" aria-label="云原生工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    辅助工具
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    综合
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraform" class="md-nav__link">
+    Terraform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    利用工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<blockquote>
+<p>转载、改写自：<a href="https://github.com/teamssix/awesome-cloud-security">awesome-cloud-security</a></p>
+</blockquote>
+<h1 id="_1">云安全资源</h1>
+<h2 id="_2">目录</h2>
+<div class="toc">
+<ul>
+<li><a href="#_1">云安全资源</a><ul>
+<li><a href="#_2">目录</a></li>
+<li><a href="#_3">云服务工具</a><ul>
+<li><a href="#_4">辅助工具</a><ul>
+<li><a href="#_5">综合</a></li>
+<li><a href="#aws">AWS</a></li>
+<li><a href="#azure">Azure</a></li>
+<li><a href="#gcp">GCP</a></li>
+<li><a href="#_6">阿里云</a></li>
+<li><a href="#_7">腾讯云</a></li>
+<li><a href="#_8">华为云</a></li>
+<li><a href="#_9">天翼云</a></li>
+<li><a href="#_10">青云</a></li>
+</ul>
+</li>
+<li><a href="#_11">利用工具</a><ul>
+<li><a href="#_12">多云</a></li>
+<li><a href="#aws_1">AWS</a></li>
+<li><a href="#azure_1">Azure</a></li>
+<li><a href="#gcp_1">GCP</a></li>
+<li><a href="#google-workspace">Google Workspace</a></li>
+<li><a href="#_13">阿里云</a></li>
+<li><a href="#_14">腾讯云</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_15">云原生工具</a><ul>
+<li><a href="#_16">辅助工具</a><ul>
+<li><a href="#_17">综合</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#kubernetes">Kubernetes</a></li>
+<li><a href="#terraform">Terraform</a></li>
+<li><a href="#_18">利用工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_3">云服务工具</h2>
+<h3 id="_4">辅助工具</h3>
+<h4 id="_5">综合</h4>
+<ul>
+<li><a href="https://recon.cloud/">recon.cloud</a>: 在线搜索目标网站下的云资产</li>
+<li><a href="https://www.cloudbility.com/">行云管家</a>: 在线多云管理平台</li>
+<li><a href="https://github.com/trufflesecurity/trufflehog">trufflehog</a>: AK 等敏感信息查找工具</li>
+<li><a href="https://github.com/nccgroup/ScoutSuite">ScoutSuite</a>: 多云基线扫描工具</li>
+<li><a href="https://github.com/aquasecurity/cloudsploit">CloudSploit</a>: 云安全态势管理工具</li>
+<li><a href="https://github.com/lyft/cartography">Cartography</a>: 基础设施关系绘制工具</li>
+<li><a href="https://github.com/willnewii/qiniuClient">qiniuClient</a>: 多云对象存储管理工具</li>
+<li><a href="https://github.com/BishopFox/cloudfox">cloudfox</a>: 云渗透信息收集工具</li>
+<li><a href="https://github.com/initstring/cloud_enum">cloud_enum</a>: 云服务资源枚举工具</li>
+<li><a href="https://github.com/riskscanner/riskscanner">RiskScanner</a>: 开源多云安全合规扫描平台</li>
+<li><a href="https://github.com/UzJu/Cloud-Bucket-Leak-Detection-Tools">Cloud-Bucket-Leak-Detection-Tools</a>: 多云对象存储扫描工具</li>
+<li><a href="https://github.com/cyberark/SkyArk">SkyArk</a>: 适用于 AWS 和 Azure 的扫描工具</li>
+<li><a href="https://github.com/0xsha/CloudBrute">CloudBrute</a>: 云上公开资产枚举</li>
+<li><a href="https://github.com/projectdiscovery/cloudlist">cloudlist</a>: 多云资产收集工具</li>
+<li><a href="https://github.com/carlospolop/PurplePanda">PurplePanda</a>: 权限升级路径分析工具</li>
+<li><a href="https://github.com/WithSecureLabs/leonidas">Leonidas</a>: 云上攻击模拟工具</li>
+<li><a href="https://github.com/CloudExplorer-Dev/CloudExplorer-Lite">CloudExplorer Lite</a>: 开源的轻量级云管平台</li>
+<li><a href="https://github.com/RedTeamOperations/RedCloud-OS">RedCloudOS</a>: 红队云操作系统</li>
+<li><a href="https://github.com/NotSoSecure/cloud-service-enum">cloud service enum</a>: 云服务枚举工具</li>
+</ul>
+<h4 id="aws">AWS</h4>
+<ul>
+<li><a href="https://buckets.grayhatwarfare.com/">buckets.grayhatwarfare.com</a>: 在线搜索公开的存储桶</li>
+<li><a href="https://www.awsdocsgpt.com">AWS 文档 GPT 工具</a></li>
+<li><a href="https://github.com/aws/aws-cli">AWS 官方 CLI 工具</a></li>
+<li><a href="https://github.com/duo-labs/cloudmapper">CloudMapper</a>: AWS 环境分析工具</li>
+<li><a href="https://github.com/sa7mon/S3Scanner">S3Scanner</a>: S3 策略扫描工具  </li>
+<li><a href="https://github.com/nccgroup/PMapper">Principal Mapper</a>: AWS IAM 权限枚举工具</li>
+<li><a href="https://github.com/andresriancho/enumerate-iam">enumerate-iam</a>: AWS IAM 权限枚举工具</li>
+<li><a href="https://github.com/Eilonh/s3crets_scanner">S3cret Scanner</a>: S3 公开存储桶密钥扫描工具</li>
+<li><a href="https://github.com/padok-team/yatas">YATAS</a>: AWS 常见配置错误审计工具</li>
+<li><a href="https://github.com/anirudhbiyani/findmytakeover">findmytakeover</a>: 检测多云环境中存在 dangling DNS 记录的工具</li>
+<li><a href="https://github.com/prevade/cloudjack">Route53/CloudFront 漏洞评估工具</a></li>
+<li><a href="https://github.com/carlospolop/Cloudtrail2IAM">Cloudtrail2IAM</a>: CloudTrail 日志分析 IAM 权限工具</li>
+</ul>
+<h4 id="azure">Azure</h4>
+<ul>
+<li><a href="https://github.com/Azure/azure-cli">Azure 官方 CLI 工具</a></li>
+<li><a href="https://github.com/dafthack/MFASweep">Azure MFA 检测工具</a></li>
+<li><a href="https://github.com/Gerenios/AADInternals">AADInternals</a>: Azure AD 和 Office 365 的 PowerShell 管理模块</li>
+<li><a href="https://github.com/BloodHoundAD/AzureHound">AzureHound</a>: BloodHound 收集 Azure 数据工具</li>
+<li><a href="https://github.com/JoelGMSec/AzureGraph">AzureGraph</a>: Azure AD 信息收集工具</li>
+</ul>
+<h4 id="gcp">GCP</h4>
+<ul>
+<li><a href="https://cloud.google.com/sdk/gcloud/">GCP 官方 CLI 工具</a></li>
+<li><a href="https://gitlab.com/gitlab-com/gl-security/threatmanagement/redteam/redteam-public/gcp_enum">GCP 资源枚举工具</a></li>
+<li><a href="https://gitlab.com/gitlab-com/gl-security/threatmanagement/redteam/redteam-public/gcp_firewall_enum">GCP 攻击面资源枚举工具</a></li>
+<li><a href="https://github.com/DenizParlak/hayat">Hayat</a>: GCP 资源分析工具</li>
+<li><a href="https://github.com/marcin-kolda/gcp-iam-collector">gcp-iam-collector</a>: GCP IAM 权限收集工具</li>
+<li><a href="https://github.com/RedTeamOperations/GoogleWorkspaceDirectoryDump">Google Workspace Directory Dump Tool</a>: Google Workspace 目录转储工具</li>
+</ul>
+<h4 id="_6">阿里云</h4>
+<ul>
+<li><a href="https://github.com/aliyun/oss-browser">阿里云官方 OSS 管理工具</a></li>
+<li><a href="https://github.com/aliyun/aliyun-cli">阿里云官方 CLI 工具</a></li>
+</ul>
+<h4 id="_7">腾讯云</h4>
+<ul>
+<li><a href="https://www.qqvps.com/d/1011">腾讯云轻量服务器管理工具</a></li>
+<li><a href="https://cosbrowser.cloud.tencent.com/">腾讯云官方 COS 辅助工具</a></li>
+<li><a href="https://github.com/TencentCloud/tencentcloud-cli">腾讯云官方 CLI 工具</a></li>
+</ul>
+<h4 id="_8">华为云</h4>
+<ul>
+<li><a href="https://support.huaweicloud.com/browsertg-obs/obs_03_1003.html">华为云 OBS 官方管理工具 OBS Browser+</a></li>
+</ul>
+<h4 id="_9">天翼云</h4>
+<ul>
+<li><a href="https://www.ctyun.cn/document/10000101/10006768">天翼云对象存储连接工具</a></li>
+</ul>
+<h4 id="_10">青云</h4>
+<ul>
+<li><a href="https://docsv4.qingcloud.com/user_guide/development_docs/cli/install/install">青云官方 CLI 工具</a></li>
+</ul>
+<h3 id="_11">利用工具</h3>
+<h4 id="_12">多云</h4>
+<ul>
+<li><a href="https://github.com/wyzxxz/aksk_tool">阿里云/腾讯云 AK 资源管理工具</a></li>
+<li><a href="https://github.com/TROUBLE-1/Vajra">Vajra</a>: 支持 GUI 的 AWS、GCP 利用工具</li>
+</ul>
+<h4 id="aws_1">AWS</h4>
+<ul>
+<li><a href="https://github.com/RhinoSecurityLabs/pacu">AWS 综合利用工具 pacu</a></li>
+<li><a href="https://github.com/RhinoSecurityLabs/Security-Research/tree/master/tools/aws-pentest-tools">AWS 渗透工具集 aws-pentest-tools</a></li>
+<li><a href="https://github.com/ustayready/CredKing">CredKing</a>: AWS Lambda 密码喷洒工具</li>
+<li><a href="https://github.com/Aabyss-Team/awsKeyTools">awsKeyTools</a>: AWS AccessKey 泄漏利用工具</li>
+<li><a href="https://github.com/DavidDikker/endgame">Endgame</a>: AWS 渗透测试工具</li>
+<li><a href="https://github.com/NetSPI/aws_consoler">aws_consoler</a>: AWS 控制台接管利用工具</li>
+<li><a href="https://github.com/ihamburglar/Redboto">Redboto</a>: AWS 红队利用脚本</li>
+<li><a href="https://github.com/Static-Flow/CloudCopy">CloudCopy</a>: AWS 域控卷影拷贝工具</li>
+</ul>
+<h4 id="azure_1">Azure</h4>
+<ul>
+<li><a href="https://github.com/NetSPI/MicroBurst">MicroBurst</a>: Azure 安全评估 PowerShell 工具包</li>
+<li><a href="https://github.com/Azure/Stormspotter">Stormspotter</a>: Azure 红队利用工具</li>
+<li><a href="https://github.com/dirkjanm/ROADtools">ROADtools</a>: Azure AD 利用工具集</li>
+<li><a href="https://github.com/Flangvik/TeamFiltration">TeamFiltration</a>: 枚举、喷洒、渗透 O365 AAD 帐户工具</li>
+<li><a href="https://github.com/rvrsh3ll/TokenTactics">TokenTactics</a>: Azure JWT 令牌操作工具集</li>
+<li><a href="https://github.com/DanielChronlund/DCToolbox">DCToolbox</a>: Microsoft 365 安全工具箱</li>
+<li><a href="https://github.com/optiv/Microsoft365_devicePhish">Microsoft365_devicePhish</a>: 滥用 Microsoft 365 OAuth 授权流程进行网络钓鱼攻击的概念验证脚本</li>
+<li><a href="https://github.com/jsa2/aadcookiespoof">aadcookiespoof</a>: Azure AD 身份保护 Cookie 重放测试工具</li>
+<li><a href="https://github.com/NetSPI/FuncoPop">FuncoPop</a>: 用于攻击 Azure Function 应用程序的 PowerShell 工具</li>
+</ul>
+<h4 id="gcp_1">GCP</h4>
+<ul>
+<li><a href="https://gitlab.com/gitlab-com/gl-security/threatmanagement/redteam/redteam-public/gcp_misc">GCP 利用工具集</a></li>
+<li><a href="https://github.com/RhinoSecurityLabs/GCPBucketBrute">GCPBucketBrute</a>: GCP Bucket 枚举工具</li>
+<li><a href="https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation">GCP-IAM-Privilege-Escalation</a>: GCP IAM 权限提升方法</li>
+<li><a href="https://github.com/RedTeamOperations/">GCPTokenReuse</a>: GCP Token 复用工具</li>
+</ul>
+<h4 id="google-workspace">Google Workspace</h4>
+<ul>
+<li><a href="https://github.com/elastic/SWAT">Simple Workspace ATT&amp;CK Tool - SWAT</a></li>
+</ul>
+<h4 id="_13">阿里云</h4>
+<ul>
+<li><a href="https://github.com/mrknow001/aliyun-accesskey-Tools">aliyun-accesskey-Tools</a>: 阿里云 AccessKey 利用工具</li>
+<li><a href="https://github.com/iiiusky/alicloud-tools">alicloud-tools</a>: 阿里云 ECS、策略组辅助小工具</li>
+<li><a href="https://github.com/NS-Sp4ce/AliyunAccessKeyTools">AliyunAccessKeyTools</a>: 阿里云 AccessKey 泄漏利用工具</li>
+</ul>
+<h4 id="_14">腾讯云</h4>
+<ul>
+<li><a href="https://github.com/freeFV/Tencent_Yun_tools">Tencent_Yun_tools</a>: 腾讯云 AccessKey 利用工具</li>
+</ul>
+<h2 id="_15">云原生工具</h2>
+<h3 id="_16">辅助工具</h3>
+<h4 id="_17">综合</h4>
+<ul>
+<li><a href="https://github.com/HummerRisk/HummerRisk">HummerRisk</a>: 开源的云原生安全平台</li>
+<li><a href="https://github.com/neuvector/neuvector">neuvector</a>: 开源云原生安全防护平台</li>
+</ul>
+<h4 id="docker">Docker</h4>
+<ul>
+<li><a href="https://contains.dev/">contains</a>: 一个支持在线分析容器镜像的网站</li>
+<li><a href="https://github.com/wagoodman/dive">DIVE</a>: 容器镜像分析工具</li>
+<li><a href="https://github.com/aquasecurity/trivy">trivy</a>: 镜像扫描工具</li>
+<li><a href="https://github.com/quay/clair">Clair</a>: 容器镜像漏洞静态扫描工具</li>
+<li><a href="https://github.com/docker/docker-bench-security">Docker_Bench_Security</a>: 检查生产环境中部署容器的最佳实践</li>
+<li><a href="https://github.com/draios/sysdig">sysdig</a>: 原生支持容器的系统可见性工具</li>
+<li><a href="https://github.com/anchore/syft/">Anchore</a>: Docker 镜像扫描工具</li>
+<li><a href="https://github.com/eliasgranderubio/dagda/">Dagda</a>: Docker 静态分析工具</li>
+<li><a href="https://github.com/teamssix/container-escape-check">container-escape-check</a>: 容器逃逸检测工具</li>
+</ul>
+<h4 id="kubernetes">Kubernetes</h4>
+<ul>
+<li><a href="https://github.com/derailed/k9s">k9s</a>: 基于终端 UI 的 k8s 集群管理工具</li>
+<li><a href="https://github.com/falcosecurity/falco">Falco</a>: k8s 异常活动检测工具</li>
+<li><a href="https://github.com/aquasecurity/kube-bench">kube bench</a>: CIS 基准检测工具</li>
+<li><a href="https://github.com/aquasecurity/kube-hunter">kube hunter</a>: k8s 集群安全漏洞发现工具</li>
+<li><a href="https://github.com/cyberark/KubiScan">KubiScan</a>: k8s 集群风险权限扫描工具</li>
+<li><a href="https://github.com/stackrox/stackrox">StackRox</a>: k8s 安全风险检测工具</li>
+<li><a href="https://github.com/vchinnipilli/kubestriker">kubestriker</a>: k8s 安全审计工具</li>
+<li><a href="https://github.com/lightspin-tech/red-kube">red kube</a>: 基于 kubectl 的红队 k8s 安全评估工具</li>
+<li><a href="https://github.com/komodorio/validkube">validkube</a>: k8s 调试辅助工具</li>
+</ul>
+<h4 id="terraform">Terraform</h4>
+<ul>
+<li><a href="https://github.com/hieven/terraform-visual">Terraform 可视化</a></li>
+</ul>
+<h4 id="_18">利用工具</h4>
+<ul>
+<li><a href="https://github.com/cdk-team/CDK">CDK</a>: 容器渗透工具集</li>
+<li><a href="https://github.com/chaitin/veinmind-tools">veinmind-tools</a>: 容器安全工具集</li>
+<li><a href="https://github.com/inguardians/peirates">Peirates</a>: k8s 渗透测试工具</li>
+<li><a href="https://github.com/brompwnie/botb">BOtB</a>: 容器渗透测试工具</li>
+<li><a href="https://github.com/RhinoSecurityLabs/ccat">CCAT</a>: 容器利用工具</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

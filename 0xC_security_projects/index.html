@@ -1,0 +1,1041 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0xB_threat_simulation/">
+      
+      
+        <link rel="next" href="../0xD_security_dataset/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>📦甲方安全项目合集 - 攻防对抗·蓝队清单</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📦甲方安全项目合集
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x1_blue_team-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎖️ 蓝队资源大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x2_threat_hunting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏹️ 威胁狩猎大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x3_threat_intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✉️ 威胁情报大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x4_incident_response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚑 应急响应大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x5_ioc_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔍 威胁情报数据源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x6_digital_forensics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    👨🏻‍⚕数字取证大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x7_honeypots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🍯 蜜罐大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x8_malware_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🦠 恶意软件分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x9_cloud_security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ☁️云安全大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xA_vm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💿 虚拟机&集成环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xB_threat_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🤖️ BAS与对手仿真
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    📦甲方安全项目合集
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    📦甲方安全项目合集
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    资产管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    漏洞管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    安全开发
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    自动化代码审计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iast" class="md-nav__link">
+    IAST
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    WAF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    堡垒机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hids" class="md-nav__link">
+    HIDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    网络流量分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siemsoc" class="md-nav__link">
+    SIEM/SOC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    企业云盘
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    钓鱼网站系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    安全运维
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub监控
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    蜜罐技术
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    风控系统
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xD_security_dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊安全领域数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    资产管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    漏洞管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    安全开发
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    自动化代码审计
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iast" class="md-nav__link">
+    IAST
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    WAF
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    堡垒机
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hids" class="md-nav__link">
+    HIDS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    网络流量分析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siemsoc" class="md-nav__link">
+    SIEM/SOC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    企业云盘
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    钓鱼网站系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    安全运维
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub监控
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    蜜罐技术
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    风控系统
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<blockquote>
+<p>转载、改写自<a href="https://github.com/Bypass007/Safety-Project-Collection">Safety-Project-Collection</a></p>
+</blockquote>
+<h1 id="_1">优秀甲方安全开源项目</h1>
+<h2 id="_2">目录</h2>
+<div class="toc">
+<ul>
+<li><a href="#_1">优秀甲方安全开源项目</a><ul>
+<li><a href="#_2">目录</a></li>
+<li><a href="#_3">资产管理</a></li>
+<li><a href="#_4">漏洞管理</a></li>
+<li><a href="#_5">安全开发</a></li>
+<li><a href="#_6">自动化代码审计</a></li>
+<li><a href="#iast">IAST</a></li>
+<li><a href="#waf">WAF</a></li>
+<li><a href="#_7">堡垒机</a></li>
+<li><a href="#hids">HIDS</a></li>
+<li><a href="#_8">网络流量分析</a></li>
+<li><a href="#siemsoc">SIEM/SOC</a></li>
+<li><a href="#_9">企业云盘</a></li>
+<li><a href="#_10">钓鱼网站系统</a></li>
+<li><a href="#_11">安全运维</a></li>
+<li><a href="#github">GitHub监控</a></li>
+<li><a href="#_12">蜜罐技术</a></li>
+<li><a href="#_13">风控系统</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_3">资产管理</h2>
+<ul>
+<li>BlueKing CMDB：一个面向资产及应用的企业级配置管理平台</li>
+<li>OpsManage：一款代码部署、应用部署、计划任务、设备资产管理平台</li>
+<li>Assets View：资产发现、网络拓扑管理系统</li>
+<li>Ansible：一种集成 IT 系统的配置管理、应用部署、执行特定任务的开源平台</li>
+<li>Saltstack：一个具备puppet与func功能为一身的集中化管理平台</li>
+</ul>
+<h2 id="_4">漏洞管理</h2>
+<ul>
+<li>insight：洞察-宜信集应用系统资产管理、漏洞全生命周期管理、安全知识库管理三位一体的平台</li>
+<li>xunfeng：一款适用于企业内网的漏洞快速应急，巡航扫描系统</li>
+<li>SRCMS:企业应急响应与缺陷管理系统 </li>
+<li>laravel-src:基于 Laravel 的开源安全应急响应中心平台</li>
+<li>DefectDojo:一个安全程序和漏洞管理工具</li>
+<li>Fuxi-Scanner：一款开源的网络安全检测工具，适用于中小型企业对企业信息系统进行安全巡航检测</li>
+<li>SeMF：企业内网安全管理平台，包含资产管理，漏洞管理，账号管理，知识库管、安全扫描自动化功能模块，可用于企业内部的安全管理</li>
+</ul>
+<h2 id="_5">安全开发</h2>
+<ul>
+<li>secguide：腾讯代码安全指南开源，涉及C/C++、JavaScript、Node、Go、Java、Python六门编程语言</li>
+<li>rhizobia_J：JAVA安全SDK及编码规范</li>
+<li>rhizobia_P：PHP安全SDK及编码规范</li>
+</ul>
+<h2 id="_6">自动化代码审计</h2>
+<ul>
+<li>fortify：静态代码扫描工具。⚠️注：为商业软件</li>
+<li>RIPS：用于PHP脚本漏洞的静态源代码分析器</li>
+<li>OpenStack Bandit：基于Python AST的静态分析器，用来查找Python代码中存在的通用安全问题的工具</li>
+<li>Cobra：一款源代码安全审计工具，支持检测多种开发语言源代码中的大部分显著的安全问题和漏洞</li>
+<li>banruo：基于的fotify的自动化代码审计系统</li>
+<li>VCG：一种用于C++、C语言、VB、PHP、Java和PL/SQL的自动代码安全审查工具</li>
+<li>Find Security Bugs：用于Java Web应用程序的安全审计</li>
+<li>Hades：静态代码脆弱性检测系统</li>
+</ul>
+<h2 id="iast">IAST</h2>
+<ul>
+<li>火线~洞态IAST：一款专为甲方安全人员、代码审计工程师和0 Day漏洞挖掘人员量身打造的辅助工具，可用于集成devops环境进行漏洞检测、作为代码审计的辅助工具和自动化挖掘0 Day</li>
+<li>openrasp-iast：一款灰盒扫描工具，能够结合应用内部hook点信息精确的检测漏洞</li>
+<li>Semmle QL：Semmle公司提供了一个免费的检测平台，可以分析用Java，Python，JavaScript，TypeScript，C＃，Go，C和C ++编写的项目</li>
+</ul>
+<h2 id="waf">WAF</h2>
+<ul>
+<li>ngx_lua_waf：一个基于LUA-nginx的模块（openresty）的网络应用防火墙</li>
+<li>OpenRASP：一款免费、开源的应用运行时自我保护产品</li>
+<li>ModSecurity：一个入侵侦测与防护引擎</li>
+<li>锦衣盾：基于openresty(nginx+lua)开发的下一代web应用防火墙</li>
+<li>x-waf：适用于中小企业的云waf </li>
+<li>Juggler：可以与waf联动 ，一个也许能骗到黑客的系统</li>
+</ul>
+<h2 id="_7">堡垒机</h2>
+<ul>
+<li>Jumpserver：全球首款完全开源的堡垒机，是符合4A的专业运维审计系统</li>
+<li>teleport：一款简单易用的开源堡垒机系统，支持RDP/SSH/SFTP/Telnet 协议的远程连接和审计管理</li>
+<li>CrazyEye：基于Python的开发的一款简单易用的IT审计堡垒机</li>
+<li>gateone：一款使用HTML5技术编写的网页版SSH终端模拟器</li>
+<li>JXOTP：一款企业SSH登陆双因素认证系统</li>
+<li>麒麟堡垒机：开源版只支持一部分功能，剩下的功能需要购买</li>
+</ul>
+<h2 id="hids">HIDS</h2>
+<ul>
+<li>OSSEC：一款开源的IDS检测系统，包括了日志分析、完整性检查、rook-kit检测，基于时间的警报和主动响应</li>
+<li>Wazuh：一个免费的，开源的企业级安全监控解决方案，用于威胁检测，完整性监控，事件响应和合规性</li>
+<li>Suricata：一个免费的开源，成熟，快速和强大的网络威胁检测引擎</li>
+<li>Snort：网络入侵检测和预防系统</li>
+<li>Osquery:一个SQL驱动操作系统检测和分析工具</li>
+<li>Samhain Labs：用于集中式主机完整性监控的全面开源解决方案</li>
+<li>Firestorm：一种极高性能的网络入侵检测系统（NIDS）</li>
+<li>MozDef：Mozilla防御平台,一套实时集成化平台，能够实现监控、反应、协作并改进相关保护功能</li>
+<li>驭龙HIDS：开源的主机入侵检测系统</li>
+<li>whids:带有检测驱动的工件收集的EDR</li>
+<li>AgentSmith-HIDS：轻量级的HIDS系统，低性能损失，使用LKM技术的HIDS工具</li>
+<li>Sobek-Hids：一个基于python的HostIDS系统</li>
+<li>Security Onion:免费开源网络安全监控系统</li>
+<li>OpenWIPS-ng：一款开源的模块化无线IPS（Intrusion Prevention System，入侵防御系统）</li>
+<li>Moloch: 网络流量收集与分析</li>
+</ul>
+<h2 id="_8">网络流量分析</h2>
+<ul>
+<li>Zeek：一个功能强大的网络分析框架</li>
+<li>Kismet：一种无线网络和设备检测器，嗅探器，驱动工具和WIDS（无线入侵检测）框架</li>
+</ul>
+<h2 id="siemsoc">SIEM/SOC</h2>
+<ul>
+<li>OSSIM：开源安全信息管理系统，它是一个开源安全信息和事件的管理系统，集成了一系列的能够帮助管理员更好的进行计算机安全，入侵检测和预防的工具</li>
+<li>Apache Metron：一种网络安全应用程序框架，使组织能够检测网络异常并使组织能够快速响应已识别的异常情况</li>
+<li>SIEMonster：以很小的成本监控整个网络</li>
+<li>w3a_SOC：Web日志审计与网络监控集合一身的平台</li>
+<li>OpenSOC：致力于提供一个可扩展和可扩展的高级安全分析工具</li>
+<li>Prelude：一个结合了其他各种开源工具的SIEM框架</li>
+<li>MozDef：Mozilla防御平台,一套实时集成化平台，能够实现监控、反应、协作并改进相关保护功能</li>
+</ul>
+<h2 id="_9">企业云盘</h2>
+<ul>
+<li>KodExplorer：可道云，是基于Web技术的私有云在线文档管理解决方案</li>
+<li>Seafile：一款开源的企业云盘，注重可靠性和性能</li>
+<li>NextCloud:一款开源网络硬盘系统</li>
+<li>owncloud：一个基于Linux的开源云项目</li>
+<li>iBarn：基于PHP的开源网盘</li>
+<li>Cloudreve：以最低的成本快速搭建公私兼备的网盘系统</li>
+<li>Filebrowser：一个基于GO的轻量级文件管理系统</li>
+<li>FileRun：一款强大的多功能网盘和文件管理器</li>
+<li>kiftd：一款专门面向个人、团队和小型组织的私有网盘系统</li>
+</ul>
+<h2 id="_10">钓鱼网站系统</h2>
+<ul>
+<li>HFish:一款基于 Golang 开发的跨平台多功能主动诱导型蜜罐框架系统</li>
+<li>mail_fishing： 基于thinkphp写的一个内部钓鱼网站系统</li>
+<li>Gophish：开源钓鱼工具包</li>
+<li>BLACKEYE：开源钓鱼工具包</li>
+<li>phishing:甲方网络钓鱼的安全实践</li>
+<li>Phishing Frenzy:开源的钓鱼测试工具</li>
+<li>King Phisher:一款专业的钓鱼活动工具包</li>
+</ul>
+<h2 id="_11">安全运维</h2>
+<ul>
+<li>Scout： URL 监控系统</li>
+<li>OpenDnsdb：开源的基于Python语言的DNS管理系统 </li>
+<li>cuckoo：一个自动化的动态恶意软件分析系统</li>
+<li>theZoo：一个恶意软件分析项目</li>
+<li>OpenDLP：一个免费的，开源的，基于代理和无代理的，集中管理，可大规模分发的数据丢失防护工具</li>
+</ul>
+<h2 id="github">GitHub监控</h2>
+<ul>
+<li>GSIL：GitHub敏感信息泄漏工具</li>
+<li>Hawkeye：监控github代码库，及时发现员工托管公司代码到GitHub行为并预警，降低代码泄露风险</li>
+<li>x-patrol：GitHub的泄露扫描系统--MiSecurity</li>
+<li>Github-Monitor：用于监控Github代码仓库的系统</li>
+<li>gshark：轻松有效地扫描Github中的敏感信息</li>
+<li>GitGuardian：实时扫描GitHub活动的解决方案</li>
+<li>code6：码小六 - GitHub 代码泄露监控系统</li>
+</ul>
+<h2 id="_12">蜜罐技术</h2>
+<ul>
+<li>T-Pot：多蜜罐平台，可视化分析</li>
+<li>HFish：一种基于Golang开发的跨平台多功能主动诱导型蜜罐框架系统</li>
+<li>opencanary_web：蜜罐的网络管理平台</li>
+<li>Honeyd：一个小型守护进程，可以在网络上创建虚拟主机</li>
+<li>mhn：现代蜜罐网络</li>
+<li>Glastopf：Python Web应用程序蜜罐</li>
+<li>Cowrie：一种中等交互式SSH和Telnet蜜罐，用于记录暴力攻击和攻击者执行的shell交互</li>
+<li>Kippo：一个中等交互式SSH蜜罐，用于记录暴力攻击，最重要的是，攻击者执行的整个shell交互</li>
+<li>Dionaea：一个低交互的蜜罐，能够模拟FTP/HTTP/MSSQL/MYSQL/SMB等服务</li>
+<li>Conpot：一个ICS蜜罐，其目标是收集有关针对工业控制系统的敌人的动机和方法的情报</li>
+<li>Wordpot：一个Wordpress蜜罐，可以检测用于指纹wordpress安装的插件，主题，timthumb和其他常用文件的探针</li>
+<li>elastichoney：一个简单的Elasticsearch蜜罐</li>
+<li>beeswarm：一个蜜罐项目，为蜜罐的配置、部署和管理提供了便利</li>
+<li>Shockpot：一个Web应用程序蜜罐，旨在找到试图利用Bash远程代码漏洞的攻击者，CVE-2014-6271</li>
+</ul>
+<h2 id="_13">风控系统</h2>
+<ul>
+<li>TH-Nebula：星云风控系统是一套互联网风控分析和检测平台</li>
+<li>Liudao：六道”实时业务风控系统</li>
+<li>陌陌风控系统：静态规则引擎，零基础简易便捷的配置多种复杂规则，实时高效管控用户异常行为</li>
+<li>Drools：基于java的功能强大的开源规则引擎</li>
+<li>Radar风控引擎:轻量级实时风控引擎，适用于反欺诈应用场景，极简的配置，真正做到了开箱即用</li>
+<li>
+<p>RiskControl:轻量级JAVA实时业务风控系统</p>
+</li>
+<li>
+<p>Urule:一款纯Java规则引擎，可快速实现规则的定义、维护与发布。</p>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

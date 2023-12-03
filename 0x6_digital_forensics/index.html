@@ -1,0 +1,1589 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0x5_ioc_list/">
+      
+      
+        <link rel="next" href="../0x7_honeypots/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>👨🏻‍⚕数字取证大合集 - 攻防对抗·蓝队清单</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              👨🏻‍⚕数字取证大合集
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x1_blue_team-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎖️ 蓝队资源大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x2_threat_hunting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏹️ 威胁狩猎大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x3_threat_intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✉️ 威胁情报大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x4_incident_response/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚑 应急响应大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x5_ioc_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔍 威胁情报数据源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    👨🏻‍⚕数字取证大合集
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    👨🏻‍⚕数字取证大合集
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    合集
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    工具
+  </a>
+  
+    <nav class="md-nav" aria-label="工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    取证系统发行版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    取证框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实时取证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ioc" class="md-nav__link">
+    IOC扫描器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    采集器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carving" class="md-nav__link">
+    Carving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-forensics" class="md-nav__link">
+    Memory Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-forensics" class="md-nav__link">
+    Network Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-artifacts" class="md-nav__link">
+    Windows Artifacts
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ntfsmft-processing" class="md-nav__link">
+    NTFS/MFT Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-x-forensics" class="md-nav__link">
+    OS X Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-forensics" class="md-nav__link">
+    Mobile Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-forensics" class="md-nav__link">
+    Docker Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-artifacts" class="md-nav__link">
+    Internet Artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-analysis" class="md-nav__link">
+    Timeline Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-image-handling" class="md-nav__link">
+    Disk image handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decryption" class="md-nav__link">
+    Decryption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management" class="md-nav__link">
+    Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picture-analysis" class="md-nav__link">
+    Picture Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-forensics" class="md-nav__link">
+    Metadata Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steganography" class="md-nav__link">
+    Steganography
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-forensics" class="md-nav__link">
+    Learn Forensics
+  </a>
+  
+    <nav class="md-nav" aria-label="Learn Forensics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctfs-and-challenges" class="md-nav__link">
+    CTFs and Challenges
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    Blogs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#books" class="md-nav__link">
+    Books
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-system-corpora" class="md-nav__link">
+    File System Corpora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    Twitter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-awesome-lists" class="md-nav__link">
+    Related Awesome Lists
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x7_honeypots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🍯 蜜罐大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x8_malware_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🦠 恶意软件分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x9_cloud_security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ☁️云安全大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xA_vm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💿 虚拟机&集成环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xB_threat_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🤖️ BAS与对手仿真
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xC_security_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📦甲方安全项目合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xD_security_dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊安全领域数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    合集
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    工具
+  </a>
+  
+    <nav class="md-nav" aria-label="工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    取证系统发行版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    取证框架
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实时取证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ioc" class="md-nav__link">
+    IOC扫描器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    采集器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imaging" class="md-nav__link">
+    Imaging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#carving" class="md-nav__link">
+    Carving
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memory-forensics" class="md-nav__link">
+    Memory Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-forensics" class="md-nav__link">
+    Network Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows-artifacts" class="md-nav__link">
+    Windows Artifacts
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ntfsmft-processing" class="md-nav__link">
+    NTFS/MFT Processing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#os-x-forensics" class="md-nav__link">
+    OS X Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-forensics" class="md-nav__link">
+    Mobile Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-forensics" class="md-nav__link">
+    Docker Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet-artifacts" class="md-nav__link">
+    Internet Artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-analysis" class="md-nav__link">
+    Timeline Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disk-image-handling" class="md-nav__link">
+    Disk image handling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decryption" class="md-nav__link">
+    Decryption
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management" class="md-nav__link">
+    Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#picture-analysis" class="md-nav__link">
+    Picture Analysis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metadata-forensics" class="md-nav__link">
+    Metadata Forensics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steganography" class="md-nav__link">
+    Steganography
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learn-forensics" class="md-nav__link">
+    Learn Forensics
+  </a>
+  
+    <nav class="md-nav" aria-label="Learn Forensics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctfs-and-challenges" class="md-nav__link">
+    CTFs and Challenges
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    Blogs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#books" class="md-nav__link">
+    Books
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-system-corpora" class="md-nav__link">
+    File System Corpora
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#twitter" class="md-nav__link">
+    Twitter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-awesome-lists" class="md-nav__link">
+    Related Awesome Lists
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="_1">数字取证</h1>
+<p>本篇翻译整合数字取证相关资源和工具（偏向于免费、开源软件），感谢原作者们:-)</p>
+<ul>
+<li><a href="#awesome-forensics">Awesome Forensics</a></li>
+<li><a href="#collections">Collections</a></li>
+<li><a href="#tools">Tools</a></li>
+<li><a href="#distributions">Distributions</a></li>
+<li><a href="#frameworks">Frameworks</a></li>
+<li><a href="#live-forensics">Live Forensics</a></li>
+<li><a href="#ioc-scanner">IOC Scanner</a></li>
+<li><a href="#acquisition">Acquisition</a></li>
+<li><a href="#imageing">Imageing</a></li>
+<li><a href="#carving">Carving</a></li>
+<li><a href="#memory-forensics">Memory Forensics</a></li>
+<li><a href="#network-forensics">Network Forensics</a></li>
+<li><a href="#windows-artifacts">Windows Artifacts</a><ul>
+<li><a href="#ntfsmft-processing">NTFS/MFT Processing</a></li>
+</ul>
+</li>
+<li><a href="#os-x-forensics">OS X Forensics</a></li>
+<li><a href="#mobile-forensics">Mobile Forensics</a></li>
+<li><a href="#docker-forensics">Docker Forensics</a></li>
+<li><a href="#internet-artifacts">Internet Artifacts</a></li>
+<li><a href="#timeline-analysis">Timeline Analysis</a></li>
+<li><a href="#disk-image-handling">Disk image handling</a></li>
+<li><a href="#decryption">Decryption</a></li>
+<li><a href="#management">Management</a></li>
+<li><a href="#picture-analysis">Picture Analysis</a></li>
+<li><a href="#learn-forensics">Learn Forensics</a></li>
+<li><a href="#ctfs-and-challenges">CTFs and Challenges</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#books">Books</a></li>
+<li><a href="#file-system-corpora">File System Corpora</a></li>
+<li><a href="#twitter">Twitter</a></li>
+<li><a href="#blogs">Blogs</a></li>
+<li><a href="#other">Other</a></li>
+<li><a href="#related-awesome-lists">Related Awesome Lists</a></li>
+<li><a href="#contributing">Contributing</a></li>
+</ul>
+<hr />
+<h2 id="_2">合集</h2>
+<ul>
+<li><a href="https://aboutdfir.com">AboutDFIR – The Definitive Compendium Project</a><ul>
+<li>用于学习和研究的取证资源集合，提供认证、书籍、博客、挑战等列表</li>
+</ul>
+</li>
+<li><a href="https://www.dfir.training/">DFIR.Training</a><ul>
+<li>专注于事件、工具等的取证资源数据库</li>
+</ul>
+</li>
+<li>:star:<a href="https://github.com/ForensicArtifacts/artifacts">ForensicArtifacts.com Artifact Repository</a><ul>
+<li>机器可读的取证组件知识库</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">工具</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_digital_forensics_tools">Forensics tools on Wikipedia</a><ul>
+<li>维基百科上的取证工具整理</li>
+</ul>
+</li>
+<li><a href="https://ericzimmerman.github.io/#!index.md">Eric Zimmerman's Tools</a><ul>
+<li>EricZimmerman整理的取证工具大全，附带.ps1文件帮助一键安装</li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">取证系统发行版</h3>
+<ul>
+<li><a href="https://github.com/vitaly-kamluk/bitscout">bitscout</a><ul>
+<li>用于远程取证和分析的 LiveCD/LiveUSB</li>
+</ul>
+</li>
+<li><a href="https://remnux.org/">Remnux</a><ul>
+<li>用于逆向工程和分析恶意软件的Linux发行版</li>
+</ul>
+</li>
+<li><a href="https://github.com/teamdfir/sift">SANS Investigative Forensics Toolkit (sift)</a><ul>
+<li>用于取证分析的 Linux 发行版</li>
+</ul>
+</li>
+<li><a href="https://tsurugi-linux.org/">Tsurugi Linux</a><ul>
+<li>用于取证分析的 Linux 发行版</li>
+</ul>
+</li>
+<li><a href="https://www.winfe.net/home">WinFE</a><ul>
+<li>Windows 取证环境</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">取证框架</h3>
+<ul>
+<li>:star:<a href="http://www.sleuthkit.org/autopsy/">Autopsy</a><ul>
+<li>图形化的数字取证工具/平台</li>
+</ul>
+</li>
+<li><a href="https://github.com/arxsys/dff">dff</a><ul>
+<li>一个开源计算机取证平台，建立在API之上，为简单使用和自动化而设计</li>
+</ul>
+</li>
+<li><a href="https://github.com/coinbase/dexter">dexter</a><ul>
+<li>Dexter 是一个取证采集框架，旨在实现可扩展性和安全性</li>
+</ul>
+</li>
+<li>🌟<a href="https://github.com/certtools/intelmq">IntelMQ</a><ul>
+<li>使用消息队列协议收集和处理安全源的解决方案，可用于：自动事件处理、态势感知、自动通知以及作为其他工具的数据收集等</li>
+</ul>
+</li>
+<li><a href="https://github.com/DFIRKuiper/Kuiper">Kuiper</a><ul>
+<li>一个数字调查平台，为调查团队和个人提供解析、搜索、可视化取证的能力</li>
+</ul>
+</li>
+<li><a href="https://github.com/lmco/laikaboss">Laika BOSS</a><ul>
+<li>一个对象扫描器和入侵检测系统</li>
+<li>🐞注：对象扫描器（object scanner）？</li>
+</ul>
+</li>
+<li><a href="https://github.com/Invoke-IR/PowerForensics">PowerForensics</a><ul>
+<li>一个用于实时磁盘取证分析的框架</li>
+</ul>
+</li>
+<li>:star: <a href="https://github.com/sleuthkit/sleuthkit">The Sleuth Kit</a><ul>
+<li>用于分析 Microsoft 和 UNIX 文件系统和磁盘，能从事件响应期间或实时系统中获取的图像中识别和恢复证据</li>
+</ul>
+</li>
+<li><a href="https://github.com/google/turbinia">turbinia</a><ul>
+<li>一个开源框架，用于在云平台上部署、管理和运行取证工作负载</li>
+</ul>
+</li>
+<li><a href="https://github.com/sepinf-inc/IPED">IPED - Indexador e Processador de Evidências Digitais</a><ul>
+<li>巴西联邦警察的数字取证调查工具</li>
+</ul>
+</li>
+<li><a href="https://github.com/pjrinaldi/wombatforensics">Wombat Forensics</a><ul>
+<li>使用C/C++构建的可视化取证工具</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">实时取证</h3>
+<ul>
+<li><a href="https://github.com/google/grr">grr</a><ul>
+<li>一个Python编写的客户端，用于事件响应时的远程实时取证</li>
+</ul>
+</li>
+<li><a href="https://github.com/intezer/linux-explorer">Linux Expl0rer</a><ul>
+<li>一个易于使用的实时取证工具箱，适用于Linux终端节点，使用Python&amp;Flask编写</li>
+</ul>
+</li>
+<li><a href="https://github.com/mozilla/mig">mig</a><ul>
+<li>云上的分布式、实时数字取证平台，属于Mozilla维护，现已弃用</li>
+</ul>
+</li>
+<li><a href="https://github.com/osquery/osquery">osquery</a><ul>
+<li>一个SQL驱动的操作系统检测、监控和分析框架</li>
+</ul>
+</li>
+<li><a href="https://github.com/tclahr/uac">UAC</a><ul>
+<li>UAC（类Unix组件收集器）是事件响应的实时响应收集工具，它利用内置工具自动收集类 Unix 系统工件。支持的系统包括：AIX、FreeBSD、Linux、macOS、NetBSD、Netscaler、OpenBSD 和 Solaris</li>
+</ul>
+</li>
+</ul>
+<h3 id="ioc">IOC扫描器</h3>
+<ul>
+<li><a href="https://github.com/Neo23x0/Fenrir">Fenrir</a><ul>
+<li>一个简单的 IOC 扫描器（Bash脚本），支持扫描 Linux/Unix/macOS系统</li>
+</ul>
+</li>
+<li><a href="https://github.com/Neo23x0/Loki">Loki</a><ul>
+<li>IOC/YARA扫描器，支持四种检测方法：文件名检测、YARA规则检测、哈希值检测、C2反向连接检测</li>
+</ul>
+</li>
+<li><a href="https://www.fireeye.com/services/freeware/redline.html">Redline</a><ul>
+<li>FireEye提供的免费终端安全工具，通过内存和文件分析以及威胁评估配置文件的开发来查找恶意活动的迹象</li>
+</ul>
+</li>
+<li><a href="https://www.nextron-systems.com/thor-lite/">THOR Lite</a><ul>
+<li>免费但不开源的IOC/YARA扫描器，与Loki一家，使用Golang编写，相当于开源Loki的增强版</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">采集器</h3>
+<ul>
+<li>
+<p><a href="https://github.com/forensicanalysis/artifactcollector">artifactcollector</a> - A customizable agent to collect forensic artifacts on any Windows, macOS or Linux system</p>
+<ul>
+<li>一个可定制的代理，可用于在任何</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/Silv3rHorn/ArtifactExtractor">ArtifactExtractor</a> - Extract common Windows artifacts from source images and VSCs</p>
+</li>
+<li><a href="https://github.com/microsoft/avml">AVML</a> - A portable volatile memory acquisition tool for Linux</li>
+<li><a href="https://belkasoft.com/ram-capturer">Belkasoft RAM Capturer</a> - Volatile Memory Acquisition Tool</li>
+<li><a href="https://www.crowdstrike.com/resources/community-tools/crowdresponse/">CrowdResponse</a> - A static host data collection tool by CrowdStrike</li>
+<li><a href="https://dfir-orc.github.io/">DFIR ORC</a> - Forensics artefact collection tool for systems running Microsoft Windows</li>
+<li><a href="https://github.com/SekoiaLab/Fastir_Collector">FastIR Collector</a> - Collect artifacts on windows</li>
+<li><a href="https://www.fireeye.com/services/freeware/memoryze.html">FireEye Memoryze</a> - A free memory forensic software </li>
+<li><a href="https://github.com/504ensicsLabs/LiME">LiME</a> - Loadable Kernel Module (LKM), which allows the acquisition of volatile memory from Linux and Linux-based devices, formerly called DMD</li>
+<li><a href="https://www.magnetforensics.com/resources/magnet-ram-capture/">Magnet RAM Capture</a> - A free imaging tool designed to capture the physical memory </li>
+<li><a href="https://github.com/Velocidex/velociraptor">Velociraptor</a> - Velociraptor is a tool for collecting host based state information using Velocidex Query Language (VQL) queries</li>
+<li><a href="https://www.securizame.com/wintriage-the-triage-tool-for-windows-dfirers/">WinTriage</a> - Wintriage is a live response tool that extracts Windows artifacts. It must be executed with local or domain administrator privileges and recommended to be done from an external drive.</li>
+</ul>
+<hr />
+<ul>
+<li><a href="https://github.com/forensicanalysis/artifactcollector">artifactcollector</a> - 一个可定制的代理，用于在任何 Windows、macOS 或 Linux 系统上收集取证工件</li>
+<li><a href="https://github.com/Silv3rHorn/ArtifactExtractor">ArtifactExtractor</a> - 从源图像和 VSC 中提取常见的 Windows 工件</li>
+<li><a href="https://github.com/microsoft/avml">AVML</a> - 适用于 Linux 的便携式易失性内存获取工具</li>
+<li><a href="https://belkasoft.com/ram-capturer">Belkasoft RAM Capturer</a> - 易失性内存采集工具</li>
+<li><a href="https://www.crowdstrike.com/resources/community-tools/crowdresponse/">CrowdResponse</a> - CrowdStrike 的静态主机数据收集工具</li>
+<li><a href="https://dfir-orc.github.io/">DFIR ORC</a> - 用于运行 Microsoft Windows 的系统的取证人工制品收集工具</li>
+<li><a href="https://github.com/SekoiaLab/Fastir_Collector">FastIR 收集器</a>- 在 Windows 上收集工件</li>
+<li><a href="https://www.fireeye.com/services/freeware/memoryze.html">FireEye Memoryze</a> - 免费的内存取证软件</li>
+<li><a href="https://github.com/504ensicsLabs/LiME">LiME</a> - 可加载内核模块 (LKM)，允许从 Linux 和基于 Linux 的设备（以前称为 DMD）获取易失性内存</li>
+<li><a href="https://www.magnetforensics.com/resources/magnet-ram-capture/">Magnet RAM Capture</a> - 一种免费的映像工具，旨在捕获物理内存</li>
+<li><a href="https://github.com/Velocidex/velociraptor">Velociraptor</a> - Velociraptor 是一种使用 Velocidex 查询语言 (VQL) 查询收集基于主机的状态信息的工具</li>
+<li><a href="https://www.securizame.com/wintriage-the-triage-tool-for-windows-dfirers/">WinTriage</a> - Wintriage 是一种实时响应工具，可提取 Windows 工件。它必须以本地或域管理员权限执行，并建议从外部驱动器执行。</li>
+</ul>
+<h3 id="_8"></h3>
+<h3 id="imaging">Imaging</h3>
+<ul>
+<li><a href="https://sourceforge.net/projects/dc3dd/">dc3dd</a> - Improved version of dd</li>
+<li><a href="http://dcfldd.sourceforge.net">dcfldd</a> - Different improved version of dd (this version has some bugs!, another version is on github <a href="https://github.com/adulau/dcfldd">adulau/dcfldd</a>)</li>
+<li><a href="https://accessdata.com/product-download/ftk-imager-version-3-4-3">FTK Imager</a> - Free imageing tool for windows</li>
+<li>:star: <a href="https://guymager.sourceforge.io/">Guymager</a> - Open source version for disk imageing on linux systems</li>
+</ul>
+<h3 id="carving">Carving</h3>
+<ul>
+<li><a href="https://github.com/EricZimmerman/bstrings">bstrings</a> - Improved strings utility</li>
+<li><a href="https://github.com/simsong/bulk_extractor">bulk_extractor</a> - Extracts information such as email addresses, creditcard numbers and histrograms from disk images</li>
+<li><a href="https://github.com/mandiant/flare-floss">floss</a> - Static analysis tool to automatically deobfuscate strings from malware binaries</li>
+<li>:star: <a href="https://www.cgsecurity.org/wiki/PhotoRec">photorec</a> - File carving tool</li>
+<li><a href="https://github.com/sevagas/swap_digger">swap_digger</a> - A bash script used to automate Linux swap analysis, automating swap extraction and searches for Linux user credentials, Web form credentials, Web form emails, etc.</li>
+</ul>
+<h3 id="memory-forensics">Memory Forensics</h3>
+<ul>
+<li><a href="https://github.com/ShaneK2/inVtero.net">inVtero.net</a> - High speed memory analysis framework
+  developed in .NET supports all Windows x64, includes code integrity and write support</li>
+<li><a href="https://github.com/denandz/KeeFarce">KeeFarce</a> - Extract KeePass passwords from memory</li>
+<li><a href="https://github.com/ufrisk/MemProcFS">MemProcFS</a> - An easy and convenient way of accessing physical memory as files a virtual file system.</li>
+<li><a href="https://github.com/google/rekall">Rekall</a> - Memory Forensic Framework</li>
+<li><a href="https://github.com/volatilityfoundation/volatility">volatility</a> - The memory forensic framework</li>
+<li><a href="https://github.com/kevthehermit/VolUtility">VolUtility</a> - Web App for Volatility framework</li>
+</ul>
+<h3 id="network-forensics">Network Forensics</h3>
+<ul>
+<li><a href="https://github.com/kismetwireless/kismet">Kismet</a> - A passive wireless sniffer</li>
+<li><a href="https://www.netresec.com/?page=Networkminer">NetworkMiner</a> - Network Forensic Analysis Tool</li>
+<li>:star: <a href="https://www.wireshark.org/">WireShark</a> - A network protocol analyzer</li>
+</ul>
+<h3 id="windows-artifacts">Windows Artifacts</h3>
+<ul>
+<li><a href="https://github.com/yampelo/beagle">Beagle</a> -  Transform data sources and logs into graphs</li>
+<li><a href="https://www.pinguin.lu/fred">FRED</a> - Cross-platform microsoft registry hive editor</li>
+<li><a href="https://www.nirsoft.net/utils/computer_activity_view.html">LastActivityView</a> - LastActivityView by Nirsoftis a tool for Windows operating system that collects information from various sources on a running system, and displays a log of actions made by the user and events occurred on this computer. </li>
+<li><a href="https://github.com/JPCERTCC/LogonTracer">LogonTracer</a> - Investigate malicious Windows logon by visualizing and analyzing Windows event log</li>
+<li><a href="https://github.com/williballenthin/python-evt">python-evt</a> - Pure Python parser for classic Windows Event Log files (.evt)</li>
+<li><a href="https://github.com/keydet89/RegRipper3.0">RegRipper3.0</a> - RegRipper is an open source Perl tool for parsing the Registry and presenting it for analysis</li>
+<li><a href="https://github.com/airbus-cert/regrippy">RegRippy</a> - A framework for reading and extracting useful forensics data from Windows registry hives</li>
+</ul>
+<h4 id="ntfsmft-processing">NTFS/MFT Processing</h4>
+<ul>
+<li><a href="http://az4n6.blogspot.com/2015/09/whos-your-master-mft-parsers-reviewed.html">MFT-Parsers</a> - Comparison of MFT-Parsers</li>
+<li><a href="https://binaryforay.blogspot.com/2018/06/introducing-mftecmd.html">MFTEcmd</a> - MFT Parser by Eric Zimmerman</li>
+<li><a href="https://github.com/aarsakian/MFTExtractor">MFTExtractor</a> - MFT-Parser</li>
+<li><a href="http://strozfriedberg.github.io/ntfs-linker/">NTFS journal parser</a></li>
+<li><a href="https://github.com/PoorBillionaire/USN-Journal-Parser">NTFS USN Journal parser</a></li>
+<li><a href="https://github.com/Lazza/RecuperaBit">RecuperaBit</a> - Reconstruct and recover NTFS data</li>
+<li><a href="https://github.com/williballenthin/python-ntfs">python-ntfs</a> - NTFS analysis</li>
+</ul>
+<h3 id="os-x-forensics">OS X Forensics</h3>
+<ul>
+<li><a href="https://github.com/sgan81/apfs-fuse">APFS Fuse</a> - A read-only FUSE driver for the new Apple File System</li>
+<li><a href="https://github.com/ydkhatri/mac_apt">mac_apt (macOS Artifact Parsing Tool)</a> - Extracts forensic artifacts from disk images or live machines</li>
+<li><a href="https://github.com/mac4n6/Mac-Locations-Scraper">MacLocationsScraper</a> - Dump the contents of the location database files on iOS and macOS</li>
+<li><a href="https://github.com/mac4n6/macMRU-Parser">macMRUParser</a> - Python script to parse the Most Recently Used (MRU) plist files on macOS into a more human friendly format</li>
+<li><a href="https://github.com/jipegit/OSXAuditor">OSXAuditor</a></li>
+<li><a href="https://github.com/Yelp/osxcollector">OSX Collect</a></li>
+</ul>
+<h3 id="mobile-forensics">Mobile Forensics</h3>
+<ul>
+<li><a href="https://github.com/den4uk/andriller">Andriller</a> - A software utility with a collection of forensic tools for smartphones</li>
+<li><a href="https://github.com/abrignoni/ALEAPP">ALEAPP</a> - An Android Logs Events and Protobuf Parser</li>
+<li><a href="https://www.doubleblak.com/index.php">ArtEx</a> - Artifact Examiner for iOS Full File System extractions</li>
+<li><a href="https://github.com/abrignoni/iLEAPP">iLEAPP</a> - An iOS Logs, Events, And Plists Parser</li>
+<li><a href="https://github.com/mac4n6/iOS-Frequent-Locations-Dumper">iOS Frequent Locations Dumper</a> - Dump the contents of the StateModel#.archive files located in /private/var/mobile/Library/Caches/com.apple.routined/</li>
+<li><a href="https://github.com/jfarley248/MEAT">MEAT</a> - Perform different kinds of acquisitions on iOS devices</li>
+<li><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF">MobSF</a> - An automated, all-in-one mobile application (Android/iOS/Windows) pen-testing, malware analysis and security assessment framework capable of performing static and dynamic analysis.</li>
+<li><a href="https://github.com/vgmoose/OpenBackupExtractor">OpenBackupExtractor</a> - An app for extracting data from iPhone and iPad backups.</li>
+</ul>
+<h3 id="docker-forensics">Docker Forensics</h3>
+<ul>
+<li><a href="https://github.com/docker-forensics-toolkit/toolkit">dof (Docker Forensics Toolkit)</a> - Extracts and interprets forensic artifacts from disk images of Docker Host systems</li>
+<li><a href="https://github.com/google/docker-explorer">Docker Explorer</a> Extracts and interprets forensic artifacts from disk images of Docker Host systems</li>
+</ul>
+<h3 id="internet-artifacts">Internet Artifacts</h3>
+<ul>
+<li><a href="https://www.nirsoft.net/utils/chrome_cache_view.html">ChromeCacheView</a> - A small utility that reads the cache folder of Google Chrome Web browser, and displays the list of all files currently stored in the cache</li>
+<li><a href="https://github.com/eLoopWoo/chrome-url-dumper">chrome-url-dumper</a> - Dump all local stored infromation collected by Chrome</li>
+<li><a href="https://github.com/obsidianforensics/hindsight">hindsight</a> - Internet history forensics for Google Chrome/Chromium</li>
+<li><a href="https://github.com/obsidianforensics/unfurl">unfurl</a> - Extract and visualize data from URLs</li>
+</ul>
+<h3 id="timeline-analysis">Timeline Analysis</h3>
+<ul>
+<li><a href="https://github.com/log2timeline/dftimewolf">DFTimewolf</a> - Framework for orchestrating forensic collection, processing and data export using GRR and Rekall</li>
+<li>:star: <a href="https://github.com/log2timeline/plaso">plaso</a> - Extract timestamps from various files and aggregate them</li>
+<li><a href="https://binaryforay.blogspot.com/2017/04/introducing-timeline-explorer-v0400.html">Timeline Explorer</a> - Timeline Analysis tool for CSV and Excel files. Built for SANS FOR508 students</li>
+<li><a href="https://github.com/airbus-cert/timeliner">timeliner</a> - A rewrite of mactime, a bodyfile reader</li>
+<li><a href="https://github.com/google/timesketch">timesketch</a> - Collaborative forensic timeline analysis</li>
+</ul>
+<h3 id="disk-image-handling">Disk image handling</h3>
+<ul>
+<li><a href="https://github.com/aburgh/Disk-Arbitrator">Disk Arbitrator</a> - A Mac OS X forensic utility designed to help the user ensure correct forensic procedures are followed during imaging of a disk device</li>
+<li><a href="https://github.com/ralphje/imagemounter">imagemounter</a> - Command line utility and Python package to ease the (un)mounting of forensic disk images</li>
+<li><a href="https://github.com/libyal/libewf">libewf</a> - Libewf is a library and some tools to access the Expert Witness Compression Format (EWF, E01)</li>
+<li><a href="https://github.com/forensicmatt/PancakeViewer">PancakeViewer</a> - Disk image viewer based in dfvfs, similar to the FTK Imager viewer</li>
+<li><a href="https://www.pinguin.lu/xmount">xmount</a> - Convert between different disk image formats</li>
+</ul>
+<h3 id="decryption">Decryption</h3>
+<ul>
+<li><a href="https://hashcat.net/hashcat/">hashcat</a> - Fast password cracker with GPU support</li>
+<li><a href="https://www.openwall.com/john/">John the Ripper</a> - Password cracker</li>
+</ul>
+<h3 id="management">Management</h3>
+<ul>
+<li><a href="https://github.com/dfirtrack/dfirtrack">dfirtrack</a> - Digital Forensics and Incident Response Tracking application, track systems</li>
+<li><a href="https://github.com/veeral-patel/incidents">Incidents</a> - Web application for organizing non-trivial security investigations. Built on the idea that incidents are trees of tickets, where some tickets are leads</li>
+</ul>
+<h3 id="picture-analysis">Picture Analysis</h3>
+<ul>
+<li><a href="http://www.getghiro.org/">Ghiro</a> - A fully automated tool designed to run forensics analysis over a massive amount of images</li>
+<li><a href="https://github.com/GuidoBartoli/sherloq">sherloq</a> - An open-source digital photographic image forensic toolset</li>
+</ul>
+<h3 id="metadata-forensics">Metadata Forensics</h3>
+<ul>
+<li><a href="https://exiftool.org/">ExifTool</a> by Phil Harvey</li>
+<li><a href="https://github.com/ElevenPaths/FOCA">FOCA</a> - FOCA is a tool used mainly to find metadata and hidden information in the documents</li>
+</ul>
+<h3 id="steganography">Steganography</h3>
+<ul>
+<li><a href="https://www.sonicvisualiser.org">Sonicvisualizer</a></li>
+<li><a href="https://github.com/StefanoDeVuono/steghide">Steghide</a> - is a steganography program that hides data in various kinds of image and audio files</li>
+<li><a href="https://github.com/samolds/wavsteg">Wavsteg</a> - is a steganography program that hides data in various kinds of image and audio files</li>
+<li><a href="https://github.com/zed-0xff/zsteg">Zsteg</a> - A steganographic coder for WAV files</li>
+</ul>
+<h2 id="learn-forensics">Learn Forensics</h2>
+<ul>
+<li><a href="https://www.amanhardikar.com/mindmaps/ForensicChallenges.html">Forensic challenges</a> - Mindmap of forensic challenges</li>
+<li><a href="https://www.open.edu/openlearn/science-maths-technology/digital-forensics/content-section-0?active-tab=description-tab">OpenLearn</a> - Digital forensic course</li>
+<li><a href="https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/technical-operational">Training material</a> - Online training material by European Union Agency for Network and Information Security for different topics (e.g. <a href="https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/technical-operational/#digital_forensics">Digital forensics</a>, <a href="https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/technical-operational/#network_forensics">Network forensics</a>)</li>
+</ul>
+<h3 id="ctfs-and-challenges">CTFs and Challenges</h3>
+<ul>
+<li><a href="https://champdfa-ccsc-sp20.ctfd.io">Champlain College DFIR CTF</a></li>
+<li><a href="https://cyberdefenders.org/labs/?type=ctf">CyberDefenders</a> </li>
+<li><a href="https://archive.ooo">DefCon CTFs</a> - archive of DEF CON CTF challenges.</li>
+<li><a href="https://github.com/apsdehal/awesome-ctf/blob/master/README.md#forensics">Forensics CTFs</a></li>
+<li><a href="https://www.magnetforensics.com/blog/magnet-weekly-ctf-challenge/">MagnetForensics CTF Challenge</a></li>
+<li><a href="https://www.malwaretech.com/challenges">MalwareTech Challenges</a></li>
+<li><a href="https://www.malware-traffic-analysis.net/training-exercises.html">MalwareTraffic Analysis</a></li>
+<li><a href="https://github.com/stuxnet999/MemLabs">MemLabs</a></li>
+<li><a href="https://nw3.ctfd.io">NW3C Chanllenges</a></li>
+<li><a href="https://betweentwodfirns.blogspot.com/2017/11/dfir-ctf-precision-widgets-of-north.html">Precision Widgets of North Dakota Intrusion</a></li>
+<li><a href="https://challenges.re">ReverseEngineering Challenges</a></li>
+</ul>
+<h2 id="resources">Resources</h2>
+<h3 id="web">Web</h3>
+<ul>
+<li><a href="https://www.forensicfocus.com/">ForensicsFocus</a></li>
+<li><a href="https://resources.infosecinstitute.com/">Insecstitute Resources</a></li>
+<li><a href="https://www.sans.org/digital-forensics-incident-response/">SANS Digital Forensics</a></li>
+</ul>
+<h3 id="blogs">Blogs</h3>
+<ul>
+<li><a href="https://www.flashbackdata.com/blog/">FlashbackData</a></li>
+<li><a href="https://www.netresec.com/index.ashx?page=Blog">Netresec</a></li>
+<li><a href="https://prodigital4n6.com/blog/">roDigitalForensics</a></li>
+<li><a href="https://www.sans.org/blog/?focus-area=digital-forensics">SANS Forensics Blog</a></li>
+<li><a href="https://securityaffairs.co/wordpress/">SecurityAffairs</a> - blog by Pierluigi Paganini</li>
+<li><a href="thisweekin4n6.wordpress.com">thisweekin4n6.wordpress.com</a> - Weekly updates for forensics</li>
+<li><a href="https://blog.digital-forensics.it/">Zena Forensics</a></li>
+</ul>
+<h3 id="books">Books</h3>
+<p><em>more at <a href="http://dfir.org/?q=node/8">Recommended Readings</a> by Andrew Case</em></p>
+<ul>
+<li><a href="https://www.pearson.com/us/higher-education/program/Davidoff-Network-Forensics-Tracking-Hackers-through-Cyberspace/PGM322390.html">Network Forensics: Tracking Hackers through Cyberspace</a> - Learn to recognize hackers’ tracks and uncover network-based evidence</li>
+<li><a href="https://www.memoryanalysis.net/amf">The Art of Memory Forensics</a> - Detecting Malware and Threats in Windows, Linux, and Mac Memory</li>
+<li><a href="https://nostarch.com/nsm">The Practice of Network Security Monitoring</a> - Understanding Incident Detection and Response</li>
+</ul>
+<h3 id="file-system-corpora">File System Corpora</h3>
+<ul>
+<li><a href="https://www.ashemery.com/dfir.html">Digital Forensic Challenge Images</a> - Two DFIR challenges with images</li>
+<li><a href="https://sourceforge.net/projects/dftt/">Digital Forensics Tool Testing Images</a></li>
+<li><a href="https://cfreds.nist.gov">The CFReDS Project</a></li>
+<li><a href="https://cfreds.nist.gov/Hacking_Case.html">Hacking Case (4.5 GB NTFS Image)</a></li>
+</ul>
+<h3 id="twitter">Twitter</h3>
+<ul>
+<li><a href="https://twitter.com/4n6ist">@4n6ist</a></li>
+<li><a href="https://twitter.com/aheadless">@aheadless</a></li>
+<li><a href="https://twitter.com/AppleExaminer">@AppleExaminer</a> - Apple OS X &amp; iOS Digital Forensics</li>
+<li><a href="https://twitter.com/carrier4n6">@carrier4n6</a> - Brian Carrier, author of Autopsy and the Sleuth Kit</li>
+<li><a href="https://twitter.com/CindyMurph">@CindyMurph</a> - Detective &amp; Digital Forensic Examiner</li>
+<li><a href="https://twitter.com/forensikblog">@forensikblog</a> - Computer forensic geek</li>
+<li><a href="https://twitter.com/HECFBlog">@HECFBlog</a> - SANS Certified Instructor</li>
+<li><a href="https://twitter.com/Hexacorn">@Hexacorn</a> - DFIR+Malware</li>
+<li><a href="https://twitter.com/hiddenillusion">@hiddenillusion</a></li>
+<li><a href="https://twitter.com/iamevltwin">@iamevltwin</a> - Mac Nerd, Forensic Analyst, Author &amp; Instructor of SANS FOR518</li>
+<li><a href="https://twitter.com/jaredcatkinson">@jaredcatkinson</a> - PowerShell Forensics</li>
+<li><a href="https://twitter.com/maridegrazia">@maridegrazia</a> - Computer Forensics Examiner</li>
+<li><a href="https://twitter.com/sleuthkit">@sleuthkit</a></li>
+<li><a href="https://twitter.com/williballenthin">@williballenthin</a></li>
+<li><a href="https://twitter.com/XWaysGuide">@XWaysGuide</a></li>
+<li><a href="https://twitter.com/inginformatico">@inginformatico</a> - DFIR analyst and enthusiast</li>
+</ul>
+<p>Vendors:</p>
+<ul>
+<li><a href="https://twitter.com/Belkasoft">@Belkasoft</a></li>
+<li><a href="https://twitter.com/blackbagtech">@blackbagtech</a></li>
+</ul>
+<h3 id="other">Other</h3>
+<ul>
+<li><a href="https://www.reddit.com/r/computerforensics/">/r/computerforensics/</a> - Subreddit for computer forensics</li>
+<li><a href="https://www.reddit.com/r/LearnDigitalForensics/">/r/LearnDigitalForensics</a> - Subreddit for learning Digital Forensics</li>
+<li><a href="https://github.com/Invoke-IR/ForensicPosters">ForensicPosters</a> - Posters of file system structures</li>
+<li><a href="https://www.sans.org/posters/">SANS Posters</a> - Free posters provided by SANS</li>
+</ul>
+<h2 id="related-awesome-lists">Related Awesome Lists</h2>
+<ul>
+<li><a href="https://github.com/ashishb/android-security-awesome">Android Security</a></li>
+<li><a href="https://github.com/paragonie/awesome-appsec">AppSec</a></li>
+<li><a href="https://github.com/apsdehal/awesome-ctf">CTFs</a></li>
+<li><a href="https://github.com/carpedm20/awesome-hacking">Hacking</a></li>
+<li><a href="https://github.com/paralax/awesome-honeypots">Honeypots</a></li>
+<li><a href="https://github.com/meirwah/awesome-incident-response">Incident-Response</a></li>
+<li><a href="https://github.com/onlurking/awesome-infosec">Infosec</a></li>
+<li><a href="https://github.com/rshipp/awesome-malware-analysis">Malware Analysis</a></li>
+<li><a href="https://github.com/enaqx/awesome-pentest">Pentesting</a></li>
+<li><a href="https://github.com/sbilly/awesome-security">Security</a></li>
+<li><a href="https://github.com/v2-dev/awesome-social-engineering">Social Engineering</a></li>
+<li><a href="https://github.com/InQuest/awesome-yara">YARA</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1195 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../0x3_threat_intelligence/">
+      
+      
+        <link rel="next" href="../0x5_ioc_list/">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>🚑 应急响应大合集 - 攻防对抗·蓝队清单</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🚑 应急响应大合集
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/satan1a/awesome-cybersecurity-blueteam-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Toky/BlueTeam-CN
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x1_blue_team-resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎖️ 蓝队资源大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x2_threat_hunting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏹️ 威胁狩猎大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x3_threat_intelligence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✉️ 威胁情报大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🚑 应急响应大合集
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🚑 应急响应大合集
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ir" class="md-nav__link">
+    IR 工具收集
+  </a>
+  
+    <nav class="md-nav" aria-label="IR 工具收集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    对抗模拟
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    工具集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    书籍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    社区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    磁盘镜像创建工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    事件管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux 发行版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    Linux 证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    日志分析工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    内存分析工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    内存镜像工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osx" class="md-nav__link">
+    OSX 证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    其它清单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    其他工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playbooks" class="md-nav__link">
+    Playbooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    进程 Dump 工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    沙盒／逆向工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    时间线工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows 证据收集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x5_ioc_list/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔍 威胁情报数据源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x6_digital_forensics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    👨🏻‍⚕数字取证大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x7_honeypots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🍯 蜜罐大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x8_malware_analysis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🦠 恶意软件分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x9_cloud_security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ☁️云安全大合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xA_vm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    💿 虚拟机&集成环境
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xB_threat_simulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🤖️ BAS与对手仿真
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xC_security_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📦甲方安全项目合集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0xD_security_dataset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊安全领域数据集
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ir" class="md-nav__link">
+    IR 工具收集
+  </a>
+  
+    <nav class="md-nav" aria-label="IR 工具收集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    对抗模拟
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    工具集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    书籍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    社区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    磁盘镜像创建工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    事件管理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux 发行版
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    Linux 证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    日志分析工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    内存分析工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    内存镜像工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#osx" class="md-nav__link">
+    OSX 证据收集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    其它清单
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    其他工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playbooks" class="md-nav__link">
+    Playbooks
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dump" class="md-nav__link">
+    进程 Dump 工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    沙盒／逆向工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    时间线工具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    视频
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows 证据收集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<blockquote>
+<p>转载自<a href="https://github.com/meirwah/awesome-incident-response">awesome-incident-response</a></p>
+</blockquote>
+<h1 id="_1">应急响应大合集</h1>
+<p>用于安全事件响应的工具与资源的列表，旨在帮助安全分析师与 <a href="http://www.acronymfinder.com/Digital-Forensics%2c-Incident-Response-(DFIR).html">DFIR</a> 团队。</p>
+<p>DFIR 团队是组织中负责安全事件响应（包括事件证据、影响修复等）的人员组织，以防止组织将来再次发生该事件。</p>
+<h2 id="_2">目录</h2>
+<ul>
+<li><a href="#对抗模拟">对抗模拟</a></li>
+<li><a href="#工具集">工具集</a></li>
+<li><a href="#书籍">书籍</a></li>
+<li><a href="#社区">社区</a></li>
+<li><a href="#磁盘镜像创建工具">磁盘镜像创建工具</a></li>
+<li><a href="#证据收集">证据收集</a></li>
+<li><a href="#事件管理">事件管理</a></li>
+<li><a href="#Linux发行版">Linux 发行版</a></li>
+<li><a href="#Linux证据收集">Linux 证据收集</a></li>
+<li><a href="#日志分析工具">日志分析工具</a></li>
+<li><a href="#内存分析工具">内存分析工具</a></li>
+<li><a href="#内存镜像工具">内存镜像工具</a></li>
+<li><a href="#osx证据收集">OSX 证据收集</a></li>
+<li><a href="#其它清单">其它清单</a></li>
+<li><a href="#其他工具">其他工具</a></li>
+<li><a href="#playbooks">Playbooks</a></li>
+<li><a href="#进程Dump工具">进程 Dump 工具</a></li>
+<li><a href="#沙盒/逆向工具">沙盒 / 逆向工具</a></li>
+<li><a href="#时间线工具">时间线工具</a></li>
+<li><a href="#视频">视频</a></li>
+<li><a href="#Windows证据收集">Windows 证据收集</a></li>
+</ul>
+<h2 id="ir">IR 工具收集</h2>
+<h3 id="_3">对抗模拟</h3>
+<ul>
+<li><a href="https://github.com/NextronSystems/APTSimulator">APTSimulator</a> - 使用一组工具与输出文件处理操作系统的 Windows 批处理脚本，使得系统看上去像被攻陷了。</li>
+<li><a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team (ART)</a> - 与 Mitre ATT＆CK 框架匹配的便携测试工具。</li>
+<li><a href="https://github.com/jymcheong/AutoTTP">AutoTTP</a> - 自动策略技术与程序。手动重复运行复杂序列进行回归测试，产品评估，为研究人员生成数据。</li>
+<li><a href="https://www.bt3.no/">Blue Team Training Toolkit (BT3)</a> - 用于防御性安全培训的软件，将网络分析培训课程，事件响应演练和 Red Team 合作提升到一个新的水平。</li>
+<li><a href="https://github.com/mitre/caldera">Caldera</a> - 在 Windows Enterprise 网络中攻陷系统后执行敌对行为的自动对手仿真系统。运行时的行为由计划系统和基于 ATT＆CK™ 项目预先配置的对手模型生成。</li>
+<li><a href="https://github.com/TryCatchHCF/DumpsterFire">DumpsterFire</a> - DumpsterFire 工具集是一个模块化、菜单驱动的跨平台工具，用于构建可重复的分布式安全事件。创建 Blue Team 演戏与传感器报警映射关系的自定义事件链。Red Team 可以制造诱饵事件，分散防守方的注意力以支持和扩大战果。</li>
+<li><a href="https://github.com/uber-common/metta">Metta</a> - 用于进行敌对模拟的信息安全防御工具。</li>
+<li><a href="https://github.com/alphasoc/flightsim">Network Flight Simulator</a> - 用于生成恶意网络流量并帮助安全团队评估安全控制和网络可见性的轻量级程序。</li>
+<li><a href="https://github.com/endgameinc/RTA">Red Team Automation (RTA)</a> - RTA 提供了一个旨在让 Blue Team 在经历过 MITRE ATT&amp;CK 模型为指导的攻击行为后的检测能力的脚本框架。</li>
+<li><a href="https://github.com/redhuntlabs/RedHunt-OS">RedHunt-OS</a> - 用于模拟对手与威胁狩猎的虚拟机。</li>
+</ul>
+<h3 id="_4">工具集</h3>
+<ul>
+<li><a href="https://belkasoft.com/ec">Belkasoft Evidence Center</a> -  该工具包可以快速从多个数据源提取电子证据，包括硬盘、硬盘镜像、内存转储、iOS、黑莓与安卓系统备份、UFED、JTAG 与 chip-off 转储。</li>
+<li><a href="https://github.com/PowerShellMafia/CimSweep">CimSweep</a> - CimSweep 是一套基于 CIM/WMI 的工具，提供在所有版本的 Windows 上执行远程事件响应和追踪。</li>
+<li><a href="https://github.com/byt3smith/CIRTKit">CIRTkit</a> - CIRTKit 不仅是一个工具集合，更是一个框架，统筹事件响应与取证调查的进程。</li>
+<li><a href="http://www.cybertriage.com">Cyber Triage</a> - Cyber Triage 远程收集分析终端数据，以帮助确定计算机是否被入侵。其专注易用性与自动化，采用无代理的部署方法使公司在没有重大基础设施及取证专家团队的情况下做出响应。其分析结果用于决定该终端是否应该被擦除或者进行进一步调查。</li>
+<li><a href="http://www.arxsys.fr/discover/">Digital Forensics Framework</a> - DFF 是一个建立在专用 API 之上的开源计算机取证平台，DFF 提出了一种替代目前老旧的数字取证解决方案。其设计简单、更加易于自动化。DFF 接口可以帮助用户进行数字调查取证的主要步骤，专业与非专业人员都可以快速的进行数字取证并执行事件响应。</li>
+<li><a href="https://github.com/mwielgoszewski/doorman">Doorman</a> - Doorman 是一个 osquery 的管理平台，可以远程管理节点的 osquery 配置。它利用 osquery 的 TLS 配置\记录器\分布式读写等优势仅以最小开销和侵入性为管理员提供一组设备的管理可见性。</li>
+<li><a href="https://github.com/mephux/envdb">Envdb</a> - Envdb 将你的生产\开发\云等环境变成数据库集群，你可以使用 osquery 作为基础搜索。它将 osquery 的查询进程和一个agent打包在一起向一个集中位置发送。</li>
+<li><a href="https://github.com/CrowdStrike/falcon-orchestrator">Falcon Orchestrator</a> - Falcon Orchestrator 是由 CrowdStrike 提供的一个基于 Windows 可扩展的应用程序，提供工作流自动化、案例管理与安全应急响应等功能。</li>
+<li><a href="https://github.com/google/grr">GRR Rapid Response</a> - GRR Rapid Response 是一个用来远程现场实时取证的应急响应框架，其带有一个python客户端安装在目标系统以及一个可以管理客户端的 Python 编写的服务器。</li>
+<li><a href="https://kolide.com/fleet">Kolide Fleet</a> - Kolide Fleet 是一个为安全专家定制的先进的主机监控平台。通过利用Facebook经过实战检验的 osquery 项目，Kolide 能够快速回答复杂问题。</li>
+<li><a href="https://github.com/refractionpoint/limacharlie">Limacharlie</a> - 一个终端安全平台，它本身是一个小项目的集合，并提供了一个跨操作系统的低级环境，你可以管理并推送附加功能进入内存给程序扩展功能。</li>
+<li><a href="http://mig.mozilla.org/">MIG</a> - Mozilla Investigator (MIG) 是一个在远程终端执行调查的平台，它可以在大量系统中并行获取数据，从而加速事故调查与日常业务安全</li>
+<li><a href="https://github.com/mozilla/MozDef">MozDef</a> - Mozilla Defense Platform (MozDef) 旨在帮助安全事件处理自动化，并促进事件的实时处理。</li>
+<li><a href="https://github.com/biggiesmallsAG/nightHawkResponse">nightHawk</a> - nightHawk Response Platform 是一个以 ElasticSearch 为后台的异步取证数据呈现的应用程序，设计与 Redline 配合调查。</li>
+<li><a href="http://sourceforge.net/projects/ocfa/">Open Computer Forensics Architecture</a> - Open Computer Forensics Architecture (OCFA) 是另一个分布式开源计算机取证框架，这个框架建立在 Linux 平台上，并使用 postgreSQL 数据库来存储数据。</li>
+<li><a href="https://osquery.io/">Osquery</a> - osquery 可以找到 Linux 与 OSX 基础设施的问题,无论你是要入侵检测、基础架构可靠性检查或者合规性检查，osquery 都能够帮助你提高公司内部的安全组织能力, <em>incident-response pack</em> 可以帮助你进行检测\响应活动。</li>
+<li><a href="https://www.fireeye.com/services/freeware/redline.html">Redline</a> - 为用户提供主机调查工具，通过内存与文件分析来找到恶意行为的活动迹象，包括对威胁评估配置文件的开发</li>
+<li><a href="http://www.sleuthkit.org">The Sleuth Kit &amp; Autopsy</a> - Sleuth Kit 是基于 Unix 和 Windows 的工具，可以帮助计算机取证分析，其中包含各种协助取证的工具，比如分析磁盘镜像、文件系统深度分析等</li>
+<li><a href="https://thehive-project.org/">TheHive</a> - TheHive 是一个可扩展的三合一开源解决方案，旨在让 SOC、CSIRT、CERT 或其他任何信息安全从业人员快速地进行安全事件调查。</li>
+<li><a href="http://www.x-ways.net/forensics/">X-Ways Forensics</a> - X-Ways 是一个用于磁盘克隆、镜像的工具，可以查找已经删除的文件并进行磁盘分析。</li>
+<li><a href="https://github.com/zentralopensource/zentral">Zentral</a> - 与 osquery 强大的端点清单保护能力相结合，通知与行动都灵活的框架，可以快速对 OS X 与 Linux 客户机上的更改做出识别与响应。</li>
+</ul>
+<h3 id="_5">书籍</h3>
+<ul>
+<li><a href="https://medium.com/@sroberts/introduction-to-dfir-d35d5de4c180/">Dfir intro</a>) - 作者:Scott J. Roberts</li>
+<li><a href="http://www.amazon.com/gp/product/1593275099">The Practice of Network Security Monitoring: Understanding Incident Detection and Response</a> - 作者:Richard Bejtlich</li>
+</ul>
+<h3 id="_6">社区</h3>
+<ul>
+<li><a href="http://augmentd.co/">augmentd</a> - 这是一家社区驱动的网站，上面提供了一个可通过不同的常用安全工具部署执行的搜索清单</li>
+<li><a href="https://lists.sans.org/mailman/listinfo/dfir">Sans DFIR mailing list</a> - Mailing list by SANS for DFIR</li>
+<li><a href="https://dfircommunity.slack.com">Slack DFIR channel</a> - Slack DFIR Communitiy channel - <a href="https://rishi28.typeform.com/to/sTbTI8">Signup here</a></li>
+</ul>
+<h3 id="_7">磁盘镜像创建工具</h3>
+<ul>
+<li><a href="http://accessdata.com/product-download/?/support/adownloads#FTKImager">AccessData FTK Imager</a> - AccessData FTK Imager 是一个从任何类型的磁盘中预览可恢复数据的取证工具，FTK Imager 可以在 32\64 位系统上实时采集内存与页面文件。</li>
+<li><a href="https://github.com/vitaly-kamluk/bitscout">Bitscout</a> - Vitaly Kamluk 开发的 Bitscout 可以帮助你定制一个完全可信的 LiveCD/LiveUSB 镜像以供远程数字取证使用（或者你需要的其它任务）。它对系统所有者透明且可被监控，同时可用于法庭质证、可定制且紧凑。 </li>
+<li><a href="http://www.forensicimager.com/">GetData Forensic Imager</a> - GetData Forensic Imager 是一个基于 Windows 程序，将常见的镜像文件格式进行获取\转换\验证取证</li>
+<li><a href="http://guymager.sourceforge.net">Guymager</a> - Guymager 是一个用于 Linux 上媒体采集的免费镜像取证器。</li>
+<li><a href="https://www.magnetforensics.com/magnet-acquire/">Magnet ACQUIRE</a> - Magnet Forensics 开发的 ACQUIRE 可以在不同类型的磁盘上执行取证,包括 Windows\Linux\OS X 与移动操作系统。</li>
+</ul>
+<h3 id="_8">证据收集</h3>
+<ul>
+<li><a href="https://github.com/simsong/bulk_extractor">bulk_extractor</a> - bulk_extractor 是一个计算机取证工具，可以扫描磁盘镜像、文件、文件目录，并在不解析文件系统或文件系统结构的情况下提取有用的信息，由于其忽略了文件系统结构，程序在速度和深入程度上都相比其它工具有了很大的提高。</li>
+<li><a href="https://github.com/rough007/CDQR">Cold Disk Quick Response</a> - 使用精简的解析器列表来快速分析取证镜像文件(dd, E01, .vmdk, etc)并输出报告。</li>
+<li><a href="https://github.com/diogo-fernan/ir-rescue">ir-rescue</a> - <em>ir-rescue</em> 是一个 Windows 批处理脚本与一个 Unix Bash 脚本,用于在事件响应期在主机全面收集证据。</li>
+<li><a href="https://www.brimorlabs.com/tools/">Live Response Collection</a> - BriMor 开发的 Live Response collection 是一个用于从 Windows、OSX、*nix 等操作系统中收集易失性数据的自动化工具。</li>
+<li><a href="https://github.com/ThreatResponse/margaritashotgun">Margarita Shotgun</a> - 用于并行远程内存获取的命令行程序</li>
+</ul>
+<h3 id="_9">事件管理</h3>
+<ul>
+<li><a href="https://www.cybercpr.com">CyberCPR</a> - 处理敏感事件时为支持 GDPR 而构建的社区和商业事件管理工具</li>
+<li><a href="https://www.cyphon.io/">Cyphon</a> - Cyphon 通过一个单一的平台来组织一系列相关联的工作消除了事件管理的开销。它对事件进行收集、处理、分类。</li>
+<li><a href="https://www.demisto.com/product/">Demisto</a> - Demisto 免费的社区版提供全事件生命周期的管理，事件披露报告，团队任务分配与协作，以及众多增强自动化的系统集成（如 Active Directory, PagerDuty, Jira 等）。</li>
+<li><a href="https://github.com/certsocietegenerale/FIR/">FIR</a> - Fast Incident Response (FIR) 是一个网络安全事件管理平台，在设计时考虑了敏捷性与速度。其可以轻松创建、跟踪、报告网络安全应急事件并用于 CSIRT、CERT 与 SOC 等人员。</li>
+<li><a href="https://www.kroll.com/en/services/cyber-risk/investigate-and-respond/kroll-artifact-parser-extractor-kape">KAPE</a> - 审核工具，用于查找最普遍的数字证据然后进行快速地解析，效率很高。</li>
+<li><a href="https://www.bestpractical.com/rtir/">RTIR</a> - Request Tracker for Incident Response (RTIR) 对于安全团队来说是首要的开源事件处理系统,其与世界各地的十多个 CERT 与 CSIRT 合作，帮助处理不断增加的事件报告，RTIR 包含 Request Tracker 的全部功能。</li>
+<li><a href="http://getscot.sandia.gov/">Sandia Cyber Omni Tracker (SCOT)</a> - Sandia Cyber Omni Tracker (SCOT) 是一个应急响应协作与知识获取工具，为事件响应的过程在不给用户带来负担的情况下增加价值。</li>
+<li><a href="https://github.com/defpoint/threat_note">threat_note</a> - 一个轻量级的调查笔记，允许安全研究人员注册、检索他们需要的 IOC 数据。</li>
+</ul>
+<h3 id="linux">Linux 发行版</h3>
+<ul>
+<li><a href="https://forensics.cert.org/#ADIA">ADIA</a> - Appliance for Digital Investigation and Analysis (ADIA) 是一个基于 VMware 的应用程序，用于进行数字取证。其完全由公开软件构建，包含的工具有 Autopsy\Sleuth Kit\Digital Forensics Framework\log2timeline\Xplico\Wireshark。大多数系统维护使用 Webmin。它为中小规模的数字取证设计，可在 Linux、Windows 及 Mac OS 下使用。</li>
+<li><a href="http://www.caine-live.net/index.html">CAINE</a> - Computer Aided Investigative Environment (CAINE) 包含许多帮助调查人员进行分析的工具，包括取证工具。</li>
+<li><a href="https://github.com/rough007/CCF-VM">CCF-VM</a> - CyLR CDQR Forensics Virtual Machine (CCF-VM): 一款多合一的解决方案，能够解析收集的数据，将它转化得易于使用內建的常见搜索，也可并行搜索一个或多个主机。</li>
+<li><a href="http://www.deftlinux.net/">DEFT</a> - Digital Evidence &amp; Forensics Toolkit (DEFT) 是一个用于计算机取证的 Linux 发行版，它与 Windows 上的 Digital Advanced Response Toolkit (DART) 捆绑在一起。DEFT 的轻量版被成为 DEFT Zero，主要关注可用于法庭质证的取证环节。</li>
+<li><a href="https://sourceforge.net/projects/nst/files/latest/download?source=files">NST - Network Security Toolkit</a> - 包括大量的优秀开源网络安全应用程序的 Linux 发行版</li>
+<li><a href="https://sumuri.com/software/paladin/">PALADIN</a> - PALADIN 是一个附带许多开源取证工具的改 Linux 发行版，用于以可被法庭质证的方式执行取证任务</li>
+<li><a href="https://github.com/Security-Onion-Solutions/security-onion">Security Onion</a> - Security Onion 是一个特殊的 Linux 发行版，旨在利用高级的分析工具进行网络安全监控</li>
+<li><a href="http://digital-forensics.sans.org/community/downloads">SIFT Workstation</a> - SANS Investigative Forensic Toolkit (SIFT) 使用前沿的优秀开源工具以实现高级事件响应与入侵深度数字取证，这些功能免费提供并且经常更新。</li>
+</ul>
+<h3 id="linux_1">Linux 证据收集</h3>
+<ul>
+<li><a href="https://github.com/SekoiaLab/Fastir_Collector_Linux">FastIR Collector Linux</a> - FastIR 在 Linux 系统上收集不同的信息并将结果存入 CSV 文件</li>
+</ul>
+<h3 id="_10">日志分析工具</h3>
+<ul>
+<li><a href="https://support.kaspersky.com/13850">Kaspersky CyberTrace</a> - 将威胁数据与 SIEM 集成的分析工具，用户可以在现有安全运营和工作流中利用威胁情报进行安全监控与事件响应。</li>
+<li><a href="https://github.com/jensvoid/lorg">Lorg</a> - 一个用 HTTPD 日志进行高级安全分析与取证的工具</li>
+<li><a href="https://github.com/dogoncouch/logdissect">Logdissect</a> - 用于分析日志文件和其他数据的 CLI 实用程序和 Python API</li>
+<li><a href="https://github.com/airbnb/streamalert">StreamAlert</a> - Serverless, real-time log data analysis framework, capable of ingesting custom data sources and triggering alerts using user-defined logic.</li>
+<li><a href="https://github.com/JPCERTCC/SysmonSearch">SysmonSearch</a> - SysmonSearch 通过聚合事件日志使分析 Windows 事件日志的效率更高。</li>
+</ul>
+<h3 id="_11">内存分析工具</h3>
+<ul>
+<li><a href="https://github.com/JamesHabben/evolve">Evolve</a> - Volatility 内存取证框架的 Web 界面</li>
+<li><a href="https://github.com/ShaneK2/inVtero.net">inVtero.net</a> - 支持 hypervisor 的 Windows x64 高级内存分析</li>
+<li><a href="http://www.gmgsystemsinc.com/knttools/">KnTList</a> - 计算机内存分析工具</li>
+<li><a href="https://github.com/504ensicsLabs/LiME">LiME</a> - LiME 是 Loadable Kernel Module (LKM)，可以从 Linux 以及基于 Linux 的设备采集易失性内存数据。</li>
+<li><a href="https://github.com/JPCERTCC/MalConfScan">MalConfScan</a> - MalConfScan 是使用 Volatility 提取已知恶意软件配置信息的插件，Volatility 是用于事件响应与恶意软件分析的开源内存取证框架。该插件在内存中搜索恶意软件并提取配置信息，此外该工具具有列出恶意代码使用的字符串的功能。</li>
+<li><a href="https://www.fireeye.com/services/freeware/memoryze.html">Memoryze</a> - 由 Mandiant 开发的 Memoryze 是一个免费的内存取证软件，可以帮助应急响应人员在内存中定位恶意部位, Memoryze 也可以分析内存镜像或者在正在运行的系统上把页面文件加入它的分析。</li>
+<li><a href="https://www.fireeye.com/services/freeware/memoryze-for-the-mac.html">Memoryze for Mac</a> - Memoryze for Mac 是 Memoryze 但仅限于 Mac,且功能较少。</li>
+<li><a href="http://www.rekall-forensic.com/">Rekall</a> - 用于从 RAM 中提取样本的开源工具</li>
+<li><a href="http://www.countertack.com/responder-pro">Responder PRO</a> - Responder PRO 是一个工业级的物理内存及自动化恶意软件分析解决方案</li>
+<li><a href="https://github.com/volatilityfoundation/volatility">Volatility</a> - 高级内存取证框架</li>
+<li><a href="https://github.com/mkorman90/VolatilityBot">VolatilityBot</a> - VolatilityBot 是一个自动化工具，帮助研究员减少在二进制程序提取解析阶段的手动任务，或者帮助研究人员进行内存分析调查的第一步</li>
+<li><a href="https://github.com/aim4r/VolDiff">VolDiff</a> - 基于 Volatility 的 恶意软件足迹分析</li>
+<li><a href="http://www.windowsscope.com/index.php?page=shop.product_details&amp;flypage=flypage.tpl&amp;product_id=35&amp;category_id=3&amp;option=com_virtuemart">WindowsSCOPE</a> - 一个用来分析易失性内存的取证与逆向工程工具，被用于对恶意软件进行逆向分析，提供了分析 Windows 内核\驱动程序\DLL\虚拟与物理内存的功能。</li>
+</ul>
+<h3 id="_12">内存镜像工具</h3>
+<ul>
+<li><a href="http://belkasoft.com/ram-capturer">Belkasoft Live RAM Capturer</a> - 轻量级取证工具,即使有反调试\反转储的系统保护下也可以方便地提取全部易失性内存的内容。</li>
+<li><a href="https://github.com/halpomeranz/lmg/">Linux Memory Grabber</a> - 用于 dump Linux 内存并创建 Volatility 配置文件的脚本。</li>
+<li><a href="https://www.magnetforensics.com/free-tool-magnet-ram-capture/">Magnet RAM Capture</a> - Magnet RAM Capture 是一个免费的镜像工具，可以捕获可疑计算机中的物理内存，支持最新版的 Windows。</li>
+<li><a href="http://www.osforensics.com/">OSForensics</a> - OSForensics 可以获取 32/64 位系统的实时内存，可以将每个独立进程的内存空间 dump 下来。</li>
+</ul>
+<h3 id="osx">OSX 证据收集</h3>
+<ul>
+<li><a href="https://github.com/synack/knockknock">Knockknock</a> - 显示那些在 OSX 上被设置为自动执行的那些脚本、命令、程序等。</li>
+<li><a href="https://github.com/ydkhatri/mac_apt">mac_apt - macOS Artifact Parsing Tool</a> - 基于插件的取证框架，可以对正在运行的系统、硬盘镜像或者单个文件。</li>
+<li><a href="https://github.com/jipegit/OSXAuditor">OSX Auditor</a> - OSX Auditor 是一个面向 Mac OS X 的免费计算机取证工具。</li>
+<li><a href="https://github.com/yelp/osxcollector">OSX Collector</a> - OSX Auditor 的实时响应版。</li>
+</ul>
+<h3 id="_13">其它清单</h3>
+<ul>
+<li><a href="https://ericzimmerman.github.io/">Eric Zimmerman Tools</a> - 由 SANS 的讲师 Eric Zimmerman 创建的取证工具列表</li>
+<li><a href="https://github.com/deralexxx/security-apis">List of various Security APIs</a> - 一个包括了在安全领域使用的公开 JSON API 的汇总清单</li>
+</ul>
+<h3 id="_14">其他工具</h3>
+<ul>
+<li><a href="https://thehive-project.org">Cortex</a> - Cortex 可以通过 Web 界面逐个或批量对 IP 地址\邮件地址\URL\域名\文件哈希的分析,还可以使用 REST API 来自动执行这些操作</li>
+<li><a href="https://crits.github.io/">Crits</a> - 一个将分析引擎与网络威胁数据库相结合且带有 Web 界面的工具</li>
+<li><a href="https://github.com/Netflix-Skunkworks/diffy">Diffy</a> - Netflix de  SIRT 开发的 DFIR 工具，允许调查人员快速地跨越云主机（AWS 的 Linux 实例）并通过审查基线的的差异来有效地审查这些实例以便进行后续操作</li>
+<li><a href="https://github.com/diogo-fernan/domfind">domfind</a> - <em>domfind</em> 一个用 Python 编写的 DNS 爬虫，它可以找到在不同顶级域名下面的相同域名.</li>
+<li><a href="https://github.com/Neo23x0/Fenrir">Fenrir</a> - Fenrir 是一个简单的 IOC 扫描器,可以在纯 bash 中扫描任意 Linux/Unix/OSX  系统,由 THOR 与 LOKI 的开发者创作</li>
+<li><a href="https://github.com/keithjjones/fileintel">Fileintel</a> - 为每个文件哈希值提供情报</li>
+<li><a href="https://github.com/Cyb3rWard0g/HELK">HELK</a> - 威胁捕捉</li>
+<li><a href="https://github.com/obsidianforensics/hindsight">Hindsight</a> - 针对 Google Chrome/Chromium 中浏览历史的数字取证</li>
+<li><a href="https://github.com/keithjjones/hostintel">Hostintel</a> - 为每个主机提供情报</li>
+<li><a href="https://github.com/ralphje/imagemounter">imagemounter</a> - 命令行工具及 Python 包，可以简单地 mount/unmount 数字取证的硬盘镜像</li>
+<li><a href="https://github.com/davehull/Kansa/">Kansa</a> - Kansa 是一个 PowerShell 的模块化应急响应框架</li>
+<li><a href="https://github.com/nogoodconfig/pyarascanner">PyaraScanner</a> - PyaraScanner 是一个非常简单的多线程、多规则、多文件的 YARA 扫描脚本</li>
+<li><a href="https://github.com/aboutsecurity/rastrea2r">rastrea2r</a> - 使用 YARA 在 Windows、Linux 与 OS X 上扫描硬盘或内存</li>
+<li><a href="https://raqet.github.io/">RaQet</a> - RaQet 是一个非常规的远程采集与分类工具，允许对那些为取证构建的操作系统进行远端计算机的遴选</li>
+<li><a href="https://www.percona.com/doc/percona-toolkit/2.2/pt-stalk.html">Stalk</a> - 收集关于 MySQL 的取证数据</li>
+<li><a href="https://nccgroup.github.io/Scout2/">Scout2</a> - 帮助 Amazon Web 服务管理员评估其安全态势的工具</li>
+<li><a href="https://github.com/jadacyrus/searchgiant_cli">SearchGiant</a> - 从云服务中获取取证数据的命令行程序</li>
+<li><a href="https://github.com/google/stenographer">Stenographer</a> - Stenographer 是一个数据包捕获解决方案，旨在快速将全部数据包转储到磁盘中，然后提供对这些数据包的快速访问。它存储尽可能多的历史记录并且管理磁盘的使用情况，在大小达到设定的上限时删除记录，非常适合在事件发生前与发生中捕获流量，而不是显式存储所有流量。</li>
+<li><a href="https://github.com/0x4d31/sqhunter">sqhunter</a> - 一个基于 osquery 和 Salt Open (SaltStack) 的威胁捕捉工具，它无需 osquery 的 tls 插件就能发出临时的或者分布式的查询。 sqhunter 也可以查询开放的 sockets，并将它们与威胁情报进行比对。</li>
+<li><a href="https://github.com/CIRCL/traceroute-circl">traceroute-circl</a> - 由 Computer Emergency Responce Center Luxembourg 开发的 traceroute-circl 是一个增强型的 traceroute 来帮助 CSIRT\CERT 的工作人员，通常 CSIRT 团队必须根据收到的 IP 地址处理事件</li>
+<li><a href="https://www.raymond.cc/blog/xray/">X-Ray 2.0</a> - 一个用来向反病毒厂商提供样本的 Windows 实用工具(几乎不再维护)</li>
+</ul>
+<h3 id="playbooks">Playbooks</h3>
+<ul>
+<li><a href="https://www.demisto.com/category/playbooks/">Demisto Playbooks Collection</a> - Playbook 集锦</li>
+<li><a href="https://github.com/certsocietegenerale/IRM">IRM</a> - CERT Societe Generale 开发的事件响应方法论</li>
+<li><a href="https://www.incidentresponse.com/playbooks/">IR Workflow Gallery</a> - 不同的通用事件响应工作流程,例如恶意软件爆发、数据窃取、未经授权的访问等，每个工作流程都有七个步骤:准备、检测、分析、遏制、根除、恢复、事后处理。</li>
+<li><a href="https://response.pagerduty.com/">PagerDuty Incident Response Documentation</a> - 描述 PagerDuty 应急响应过程的文档，不仅提供了关于事件准备的信息，还提供了在此前与之后要做什么工作，源在 <a href="https://github.com/PagerDuty/incident-response-docs">GitHub</a> 上。</li>
+</ul>
+<h3 id="dump">进程 Dump 工具</h3>
+<ul>
+<li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=4060">Microsoft User Mode Process Dumper</a> - 用户模式下的进程 dump 工具，可以 dump 任意正在运行的 Win32 进程内存映像</li>
+<li><a href="http://www.ntsecurity.nu/toolbox/pmdump/">PMDump</a> - PMDump 是一个可以在不停止进程的情况下将进程的内存内容 dump 到文件中的工具</li>
+</ul>
+<h3 id="_15">沙盒／逆向工具</h3>
+<ul>
+<li><a href="https://amaaas.com/index.php/AMAaaS/dashboard">AMAaaS</a> - 安卓恶意软件分析服务，在原生安卓环境中执行</li>
+<li><a href="https://app.any.run/">Any Run</a> - 交互式恶意软件分析服务，对大多数类型的威胁进行静态与动态分析</li>
+<li><a href="https://github.com/ctxis/CAPE">CAPE</a> - 恶意软件配置与 Payload 提取</li>
+<li><a href="https://github.com/cuckoobox">Cuckoo</a> - 开源沙盒工具，高度可定制化</li>
+<li><a href="https://github.com/spender-sandbox/cuckoo-modified">Cuckoo-modified</a> - 社区基于 Cuckoo 的大修版</li>
+<li><a href="https://github.com/keithjjones/cuckoo-modified-api">Cuckoo-modified-api</a> - 一个用来控制 Cuckoo 沙盒设置的 Python 库</li>
+<li><a href="https://www.hybrid-analysis.com/">Hybrid-Analysis</a> - Hybrid-Analysis 是一个由 Payload Security 提供的免费在线沙盒</li>
+<li><a href="https://analyze.intezer.com/#/">Intezer</a> - 深入分析 Windows 二进制文件，检测与已知威胁的 micro-code 相似性，以便提供准确且易于理解的结果</li>
+<li><a href="https://www.joesandbox.com/">Joe Sandbox (Community)</a> - Joe Sandbox 沙盒分析检测 Windows、Android、Mac OS、Linux 和 iOS 中的恶意软件与 URL，查找可疑文件并提供全面、详细的分析报告</li>
+<li><a href="https://github.com/KoreLogicSecurity/mastiff">Mastiff</a> - MASTIFF 是一个静态分析框架，可以自动化的从多种文件格式中提取关键特征。</li>
+<li><a href="https://www.metadefender.com">Metadefender Cloud</a> - Metadefender 是一个免费的威胁情报平台，提供多点扫描、数据清理以及对文件的脆弱性分析</li>
+<li><a href="https://www.reverse.it/">Reverse.IT</a> - 由 CrowdStrike 提供支持的分析工具</li>
+<li><a href="https://valkyrie.comodo.com">Valkyrie Comodo</a> - Valkyrie 使用运行时行为与文件的数百个特征进行分析</li>
+<li><a href="https://github.com/viper-framework/viper">Viper</a> - Viper 是一个基于 Python 的二进制程序分析及管理框架，支持 Cuckoo 与 YARA</li>
+<li><a href="https://www.virustotal.com">Virustotal</a> - Virustotal, Google 的子公司，一个免费在线分析文件/URL的厂商，可以分析病毒\蠕虫\木马以及其他类型被反病毒引擎或网站扫描器识别的恶意内容</li>
+<li><a href="https://github.com/keithjjones/visualize_logs">Visualize_Logs</a> - Cuckoo、Procmon等日志的开源可视化库</li>
+</ul>
+<h3 id="_16">时间线工具</h3>
+<ul>
+<li><a href="https://www.fireeye.com/services/freeware/highlighter.html">Highlighter</a> - Fire/Mandiant 开发的免费工具，来分析日志/文本文件，可以对某些关键字或短语进行高亮显示，有助于时间线的整理</li>
+<li><a href="https://github.com/etsy/morgue">Morgue</a> - 一个 Etsy 开发的 PHP Web 应用，可用于管理事后处理</li>
+<li><a href="https://github.com/log2timeline/plaso">Plaso</a> -  一个基于 Python 用于 log2timeline 的后端引擎</li>
+<li><a href="https://github.com/google/timesketch">Timesketch</a> - 用于协作取证时间线分析的开源工具</li>
+</ul>
+<h3 id="_17">视频</h3>
+<ul>
+<li><a href="https://www.demisto.com/category/videos/">Demisto IR video resources</a> - 应急响应与取证分析的视频资源</li>
+<li><a href="https://www.youtube.com/watch?v=bDcx4UNpKNc">The Future of Incident Response</a> - Bruce Schneier 在 OWASP AppSecUSA 2015 上的分享</li>
+</ul>
+<h3 id="windows">Windows 证据收集</h3>
+<ul>
+<li><a href="https://github.com/OMENScan/AChoir">AChoir</a> - Achoir 是一个将对 Windows 的实时采集工具脚本化变得更标准与简单的框架</li>
+<li><a href="http://binaryforay.blogspot.co.il/p/software.html">Binaryforay</a> - 一个 Windows 取证的免费工具列表 (http://binaryforay.blogspot.co.il/)</li>
+<li><a href="http://www.crowdstrike.com/community-tools/">Crowd Response</a> - 由 CrowdStrike 开发的 Crowd Response 是一个轻量级 Windows 终端应用,旨在收集用于应急响应与安全操作的系统信息，其包含许多模块与输出格式。</li>
+<li><a href="https://dfir-orc.github.io/">DFIR ORC</a> - DFIR ORC 是专门用于证据收集的关键组件，提供了 Windows 计算机的取证快照，代码在 <a href="https://github.com/DFIR-ORC/dfir-orc">GitHub</a> 上找到</li>
+<li><a href="https://github.com/SekoiaLab/Fastir_Collector">FastIR Collector</a> - FastIR Collector 在 Windows 系统中实时收集各种信息并将结果记录在 CSV 文件中，通过对这些信息的分析，我们可以发现早期的入侵痕迹</li>
+<li><a href="https://github.com/jipegit/FECT">FECT</a> - Fast Evidence Collector Toolkit (FECT) 是一个轻量级的应急响应工具集，用于在可疑的 Windows 计算机上取证，它可以让非技术调查人员更专业的进行应急处理。</li>
+<li><a href="https://github.com/rabbitstack/fibratus">Fibratus</a> - 探索与跟踪 Windows 内核的工具。</li>
+<li><a href="https://binalyze.com/products/irec-free/">IREC</a> - 免费、高效、易用的集成 IR 证据收集工具，可收集内存映像、$MFT、事件日志、WMI 脚本、注册表，系统还原点等</li>
+<li><a href="https://www.fireeye.com/services/freeware/ioc-finder.html">IOC Finder</a> - IOC Finder 是由 Mandiant 开发的免费工具，用来收集主机数据并报告存在危险的 IOC，仅支持 Windows。</li>
+<li><a href="https://www.fidelissecurity.com/resources/fidelis-threatscanner">Fidelis ThreatScanner</a> - Fidelis ThreatScanner 是一个由 Fidelis Cybersecurity 开发的免费工具，使用 OpenIOC 和 YARA 来报告终端设备的安全状态，ThreatScanner 衡量系统的运行状态后会出具匹配情况的报告，仅限 Windows。</li>
+<li><a href="https://github.com/Neo23x0/Loki">LOKI</a> - Loki 是一个使用 YARA 与其他 IOC 对终端进行扫描的免费 IR 扫描器</li>
+<li><a href="https://github.com/AlmCo/Panorama">Panorama</a> - Windows 系统运行时的快速事件概览</li>
+<li><a href="https://github.com/Invoke-IR/PowerForensics">PowerForensics</a> - PowerShell 开发的实时硬盘取证框架</li>
+<li><a href="https://github.com/gfoss/PSRecon/">PSRecon</a> - PSRecon 使用 PowerShell 在远程 Windows 主机上提取/整理数据，并将数据发送到安全团队，数据可以通过邮件来传送数据或者在本地留存</li>
+<li><a href="https://code.google.com/p/regripper/wiki/RegRipper">RegRipper</a> - Regripper 是用 Perl 编写的开源工具，可以从注册表中提取/解析数据(键\值\数据)提供分析</li>
+<li><a href="https://code.google.com/p/triage-ir/">TRIAGE-IR</a> - Triage-IR 是一个 Windows 下的 IR 收集工具</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
